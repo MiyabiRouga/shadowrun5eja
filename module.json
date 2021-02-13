@@ -1,0 +1,24 @@
+{
+	"name": "shadowrun5eja",
+	"title": "日本語化（シャドウラン5e）",
+	"description": "Shadowrun 5eを日本語化するためのMod",
+	"version": "0.1",
+	"author": "Brother Sharp, k_1975",
+	"languages": [
+		{
+			"lang": "ja",
+			"system":"shadowrun5e",
+			"name": "日本語",
+			"path": "lang/ja.json"
+		}
+	],
+	"scripts": [],
+  "styles" : [],
+  "packs": [],
+  "dependencies": [],
+	"url" : "https://github.com/BrotherSharper/shadowrun5eja",
+	"download" : "https://github.com/BrotherSharper/shadowrun5eja/archive/master.zip",
+	"manifest" : "https://raw.githubusercontent.com/BrotherSharper/shadowrun5eja/master/module.json",
+  "minimumCoreVersion": "0.6.0",
+  "compatibleCoreVersion": "0.7.9"
+}
