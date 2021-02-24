@@ -16,7 +16,7 @@
         "Equipment": "装備",
         "Lifestyle": "ライフスタイル",
         "Modification": "修正",
-        "Quality": "クォリティ",
+        "Quality": "資質",
         "Sin": "SIN",
         "Spell": "呪文",
         "SpritePower": "スプライトパワー",
@@ -35,8 +35,8 @@
     "SR5.Specializations": "専門化",
     "SR5.Specialization": "専門化",
     "SR5.Rtg": "Rtg",
-    "SR5.RtgAboveZero": "レーティング > 0",
-    "SR5.Qty": "資質",
+    "SR5.RtgAboveZero": "Rtg>0",
+    "SR5.Qty": "個数",
     "SR5.Add": "追加",
     "SR5.Languages": "言語",
     "SR5.Actions": "動作",
@@ -52,13 +52,13 @@
     "SR5.NormalSkillButton": "ノーマル",
 
     "SR5.Movement": "移動",
-    "SR5.Overflow": "オーバーフロウ",
+    "SR5.Overflow": "オーバーフロー",
     "SR5.Nuyen": "新円",
     "SR5.Equipped": "装備済み",
 
     "SR5.Gear": "装備",
     "SR5.Matrix": "マトリックス",
-    "SR5.Biography": "バイオ",
+    "SR5.Biography": "経歴",
     "SR5.Lifestyle": "ライフスタイル",
     "SR5.Miscellaneous": "その他",
     "SR5.Magic": "魔法",
@@ -95,8 +95,7 @@
     "SR5.DrainResist": "ドレイン抵抗",
 
     "SR5.Metatype": "メタタイプ",
-    "SR5.Quality": "クォリティ",
-
+    "SR5.Quality": "資質",
     "SR5.ImportCharacter": "インポートキャラクター",
     "SR5.Karma": "現在カルマ",
     "SR5.CareerKarma": "累積カルマ",
@@ -110,7 +109,7 @@
 
     "SR5.Rating": "レーティング",
     "SR5.Cost": "費用",
-    "SR5.Availability": "入手血",
+    "SR5.Availability": "入手値",
     "SR5.Conceal": "隠蔽度",
     "SR5.Wireless": "ワイアレス",
 
@@ -120,7 +119,7 @@
 
     "SR5.Contacts": "コンタクト",
     "SR5.ContactType": "タイプ",
-    "SR5.Connection": "コネ血",
+    "SR5.Connection": "コネ値",
     "SR5.Loyalty": "忠実度",
 
     "SR5.LifestyleType": "タイプ",
@@ -153,7 +152,7 @@
     "SR5.CreateItem": "制作アイテム",
     "SR5.CreateItemWeapon": "制作・武器",
     "SR5.CreateItemArmor": "制作・アーマー",
-    "SR5.CreateItemDevice": "制作・デばイス",
+    "SR5.CreateItemDevice": "制作・デバイス",
     "SR5.CreateItemEquipment": "制作装備",
     "SR5.CreateItemCyberware": "制作・サイバーウェア",
     "SR5.CreateItemBioware": "制作・バイオウェア",
@@ -205,10 +204,9 @@
     "SR5.PowerPoints": "PP",
     "SR5.PowerLevel": "レベル",
     "SR5.ToggleEquip": "トグル装備",
-
-    "SR5.Armor": "アーマー",
-    "SR5.ArmorValue": "アーマー数値",
-    "SR5.ModifiedArmor": "修正. アーマー",
+    "SR5.Armor": "装甲",
+    "SR5.ArmorValue": "装甲値",
+    "SR5.ModifiedArmor": "修正装甲値",
     "SR5.Accessory": "精度",
 
     "SR5.DeviceType": "タイプ",
@@ -334,7 +332,7 @@
     "SR5.SkillSpellcasting": "呪文行使",
     "SR5.SkillSummoning": "召喚",
     "SR5.SkillCompiling": "コンパイル",
-    "SR5.SkillDecompiling": "でコンパイル",
+    "SR5.SkillDecompiling": "デコンパイル",
     "SR5.SkillRegistering": "レジスター",
     "SR5.SkillAeronauticsMechanic": "航空機整備",
     "SR5.SkillAutomotiveMechanic": "自動車整備",
@@ -582,9 +580,9 @@
 
     "SR5.COMBAT": {
         "ReduceInitByOne": "イニシアティブ -1",
-		"ReduceInitBythree": "イニシアティブ -3",
+        "ReduceInitBythree": "イニシアティブ -3",
         "ReduceInitByFive": "イニシアティブ -5",
-		"ReduceInitByseven": "イニシアティブ -7",
+        "ReduceInitByseven": "イニシアティブ -7",
         "ReduceInitByTen": "イニシアティブ -10"
     },
 
