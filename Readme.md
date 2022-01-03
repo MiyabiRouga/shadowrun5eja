@@ -20,7 +20,7 @@ Shadowrun5eシステム用の翻訳ファイルを追加し、日本語化する
 ![インストール方法](https://i.imgur.com/4zYL873.jpg)
 
 
-### ユーザガイド
+### ユーザガイド(製作：雅　狼餓)
 GM向け情報 https://drive.google.com/file/d/1G1l-NUEWVMfc1xVHWFjod55i1vL4DMc7/view
 
 PL向け情報 https://drive.google.com/file/d/1P3DqAhUuP514aamT1-kIYoiWbhZzOP_q/view
