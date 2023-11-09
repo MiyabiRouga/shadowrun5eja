@@ -10,9 +10,6 @@
 
 * リンク： https://github.com/MiyabiRouga/shadowrun5eja/releases/latest/download/module.json
 
-### 内容
-Shadowrun5eシステム用の翻訳ファイルを追加し、日本語化するモッドです。
-
 このモッドを使用するには先にモッドとしてインストールし、ゲーム内でモッドを有効化する必要があります。
 
 使用方法
@@ -20,6 +17,10 @@ FVTTを起動→モッド・拡張機能をクリック
 モジュールインストールをクリック
 一番下のURLを指定に以下のURLをいれて、インストール
 https://github.com/MiyabiRouga/shadowrun5eja/releases/latest/download/module.json
+
+
+### 内容
+Shadowrun5eシステム用の翻訳ファイルを追加し、日本語化するモッドです。
 
 
 ### ユーザガイド(製作：雅　狼餓)
