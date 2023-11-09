@@ -10,11 +10,11 @@
 
 * リンク： https://github.com/MiyabiRouga/shadowrun5eja/releases/latest/download/module.json
 
-このモッドを使用するには先にモッドとしてインストールし、ゲーム内でモッドを有効化する必要があります。
+このモッドを使用するには先にモッドとしてインストールし、ゲーム内でモッドを有効化する必要があります。  
 
-使用方法
-FVTTを起動→モッド・拡張機能をクリック
-モジュールインストールをクリック
+※使用方法  
+FVTTを起動→モッド・拡張機能をクリック  
+モジュールインストールをクリック  
 一番下のURLを指定に以下のURLをいれて、インストール
 https://github.com/MiyabiRouga/shadowrun5eja/releases/latest/download/module.json
 
