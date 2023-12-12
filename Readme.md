@@ -2,7 +2,7 @@
 
 * **製作者**: Brother Sharp
 * **翻訳ファイル提供者**: k_1975, ragi256, yucky, MiyabiRouga
-* **modバージョン**: 1.1
+* **modバージョン**: 1.2
 
 ### インストール方法
 
@@ -12,11 +12,9 @@
 
 このモッドを使用するには先にモッドとしてインストールし、ゲーム内でモッドを有効化する必要があります。  
 
-※使用方法  
+※使用方法　
 FVTTを起動→モッド・拡張機能をクリック  
-モジュールインストールをクリック  
-一番下のURLを指定に以下のURLをいれて、インストール
-https://github.com/MiyabiRouga/shadowrun5eja/releases/latest/download/module.json
+Shadowrun5e用 日本語化モッド　を探し、インストール
 
 
 ### 内容
