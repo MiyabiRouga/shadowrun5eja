@@ -73,16 +73,17 @@
         "TokenHealthBars": "トークンの体力バー",
         "TokenHealthBarsDescription": "ダメージトラックはミラーリングされず、トークン上に空のヘルスバーとして表示されます。"
     },
+    "SR5.AP": "AP",
     "SR5.Accessory": "アクセサリ",
     "SR5.Accuracy": "精度",
     "SR5.Action": "アクション",
-    "SR5.Actions": "行動",
     "SR5.ActionType": "タイプ",
     "SR5.ActionTypeComplex": "複雑",
     "SR5.ActionTypeFree": "簡易",
     "SR5.ActionTypeNone": "なし",
     "SR5.ActionTypeSimple": "単純",
     "SR5.ActionTypeVaries": "変動",
+    "SR5.Actions": "行動",
     "SR5.Active": "能動",
     "SR5.ActiveDefense": "能動防御",
     "SR5.ActiveEffect": {
@@ -131,7 +132,6 @@
     "SR5.AmmoFull": "弾丸マックス",
     "SR5.AmmoGelRounds": "ゲル弾の弾数",
     "SR5.Aoe": "効果範囲",
-    "SR5.AP": "AP",
     "SR5.ApplyWounds": "負傷を適用",
     "SR5.Armor": "装甲",
     "SR5.ArmorHardened": "硬化装甲",
@@ -169,6 +169,11 @@
     "SR5.Bullet": "ラウンド",
     "SR5.BulletCount": "弾丸の数",
     "SR5.Bullets": "ラウンド",
+    "SR5.COMBAT": {
+        "ReduceInitByOne": "イニシアティブ -1",
+        "ReduceInitByFive": "イニシアティブ -5",
+        "ReduceInitByTen": "イニシアティブ -10"
+    },
     "SR5.CallInAction": {
         "ActorType": "アクターの種類",
         "Compilation": "コンパイル",
@@ -204,11 +209,6 @@
     "SR5.Close": "閉じる",
     "SR5.Collapse": "折りたたむ",
     "SR5.CollapseAll": "全て折りたたむ",
-    "SR5.COMBAT": {
-        "ReduceInitByOne": "イニシアティブ -1",
-        "ReduceInitByFive": "イニシアティブ -5",
-        "ReduceInitByTen": "イニシアティブ -10"
-    },
     "SR5.CommonProgram": "一般プログラム",
     "SR5.Compilation": {
         "DropSprite": "レジスターするスプライトをドラッグ＆ドロップ",
@@ -269,6 +269,9 @@
     "SR5.CyberwareGradeDelta": "デルタ",
     "SR5.CyberwareGradeStandard": "スタンダード",
     "SR5.CyberwareGradeUsed": "中古",
+    "SR5.DIALOG.MissingModuleContent": "ソースPDFを表示するためには、pdfpagerモジュールがインストールされ、コードに一致するPDFが作成されている必要があります。",
+    "SR5.DP": "DP",
+    "SR5.DV": "DV",
     "SR5.Damage": "ダメージ",
     "SR5.DamageApplication": {
         "ApplyDamage": "負傷の適用",
@@ -305,7 +308,6 @@
     "SR5.DeviceCatCyberdeck": "サイバーデッキ",
     "SR5.DeviceCatRCC": "リガー・コマンド・コンソール",
     "SR5.DeviceType": "タイプ",
-    "SR5.DIALOG.MissingModuleContent": "ソースPDFを表示するためには、pdfpagerモジュールがインストールされ、コードに一致するPDFが作成されている必要があります。",
     "SR5.Dialogs": {
         "Common": {
             "Cancel": "キャンセル"
@@ -321,7 +323,6 @@
     "SR5.DmgTypeStun": "精神",
     "SR5.Dodge": "回避",
     "SR5.DontApplyWounds": "負傷は適用しない",
-    "SR5.DP": "DP",
     "SR5.Drain": "ドレイン",
     "SR5.DrainResist": "ドレイン抵抗",
     "SR5.DrainValue": "ドレイン",
@@ -331,7 +332,6 @@
     "SR5.DurationInstant": "インスタント",
     "SR5.DurationPermanent": "永続",
     "SR5.DurationSustained": "維持",
-    "SR5.DV": "DV",
     "SR5.Echo": "エコー",
     "SR5.Echoes": "エコー",
     "SR5.EditAmmo": "弾薬を編集",
@@ -347,12 +347,6 @@
     "SR5.ElementFire": "炎",
     "SR5.ElementRadiation": "放射能",
     "SR5.Emerged": "発現者",
-    "SR5.EnvironmentHigh": "高",
-    "SR5.EnvironmentLow": "低",
-    "SR5.EnvironmentMedium": "中",
-    "SR5.EnvironmentModifier": "環境修正",
-    "SR5.EnvironmentNone": "なし",
-    "SR5.EnvironmentVeryHigh": "非常に高い",
     "SR5.EnvModifiersApplication": {
         "ClearModifiers": "個人修正のクリア",
         "Extreme": "重度(修正が-6)の状況が2つ以上重なった場合",
@@ -390,6 +384,12 @@
             "Title": "風"
         }
     },
+    "SR5.EnvironmentHigh": "高",
+    "SR5.EnvironmentLow": "低",
+    "SR5.EnvironmentMedium": "中",
+    "SR5.EnvironmentModifier": "環境修正",
+    "SR5.EnvironmentNone": "なし",
+    "SR5.EnvironmentVeryHigh": "非常に高い",
     "SR5.Equip": "装備",
     "SR5.Equipment": "装備",
     "SR5.Equipped": "装備済み",
@@ -413,6 +413,12 @@
     "SR5.Extended": "継続",
     "SR5.ExtendedHits": "蓄積ヒット数",
     "SR5.ExtendedTest": "継続テスト",
+    "SR5.FOUNDRY": {
+        "Actor": "アクター",
+        "Item": "アイテム",
+        "Scene": "シーン",
+        "Token": "トークン"
+    },
     "SR5.Fade": "フェイディング",
     "SR5.FadeAttribute": "フェイディングに使用する能力値",
     "SR5.FadeValue": "フェイディング",
@@ -420,12 +426,6 @@
     "SR5.Filter": "フィルター",
     "SR5.FireMode": "射撃モード",
     "SR5.Force": "フォース",
-    "SR5.FOUNDRY": {
-        "Actor": "アクター",
-        "Item": "アイテム",
-        "Scene": "シーン",
-        "Token": "トークン"
-    },
     "SR5.FullDefense": "全力防御",
     "SR5.FullDefenseAttribute": "全力防御使用能力値",
     "SR5.Gear": "装備",
@@ -585,12 +585,12 @@
         "Sheet": {
             "AddOne": "1つ加算",
             "ClearNetwork": "全てのデバイスからネットワークをクリア",
+            "ItemEffects": "アイテム効果",
             "MissingNetworkDevices": "ネットワークデバイスをドラッグ＆ドロップで追加することができます。",
             "NetworkDevices": "ネットワークデバイス",
             "PAN": "PAN",
             "SubtractOne": "1つ減算",
-            "WAN": "広域ネットワーク（WAN）",
-            "ItemEffects": "アイテム効果"
+            "WAN": "広域ネットワーク（WAN）"
         },
         "Sidebar": {
             "Changelog": "変更履歴",
@@ -832,6 +832,7 @@
     "SR5.Run": "走行",
     "SR5.RunningSilent": "サイレント状態",
     "SR5.RunningSpeed": "走行速度",
+    "SR5.SIN": "SIN",
     "SR5.SecondAttribute": "副能力値",
     "SR5.SecondChance": "振り直し",
     "SR5.SelectTokenMessage": "最初にトークンを選択する必要があります",
@@ -839,7 +840,6 @@
     "SR5.SheetActor": "アクターシート",
     "SR5.SheetItem": "アイテムシート",
     "SR5.Side": "サイド",
-    "SR5.SIN": "SIN",
     "SR5.SituationalModifier": "状況修正",
     "SR5.SituationalModifiersApplication": {
         "Category": {
@@ -894,6 +894,7 @@
         "ExoticMelee": "特殊近接武器",
         "ExoticRange": "特殊射撃武器",
         "FirstAid": "応急処置",
+        "Flight": "飛行",
         "Forgery": "偽造",
         "FreeFall": "自由落下",
         "Gunnery": "砲術",
@@ -1059,8 +1060,8 @@
     },
     "SR5.Sprite": {
         "Level": "レベル",
-        "Registered": "レジスターされている",
-        "Services": "助力",
+        "Registered": "レジスター済み",
+        "Services": "タスク（助力）",
         "Type": "タイプ",
         "Types": {
             "Companion": "コンパニオン/Companion",
@@ -1082,7 +1083,7 @@
     "SR5.Successes": "成功",
     "SR5.Summoning": {
         "DropSpirit": "束縛する精霊をドラッグ＆ドロップ",
-        "FixedSpirit": "束縛/レジスタ",
+        "FixedSpirit": "束縛／レジスタ",
         "SpiritType": "精霊の種類"
     },
     "SR5.Suppressing": "制圧",
@@ -1296,6 +1297,7 @@
             "OffRoadHandling": "操縦値 (オフロード)",
             "OffRoadSpeed": "最高速度 (オフロード)",
             "Pilot": "パイロット",
+            "Seats": "乗員数",
             "Sensor": "センサー",
             "Speed": "最高速度"
         },
@@ -1387,7 +1389,7 @@
                 "LightMachinegun": "ライトマシンガン",
                 "LightPistol": "ライトピストル",
                 "MachinePistol": "マシンピストル",
-                "Manual": "マニュアル",
+                "Manual": "マニュアル（手動設定）",
                 "MediumCrossbow": "ミディアムクロスボウ",
                 "MediumHeavyMachinegun": "ミディアム／ヘビーマシンガン",
                 "MissileLauncher": "ミサイルランチャー",
