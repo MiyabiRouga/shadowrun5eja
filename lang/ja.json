@@ -1,37 +1,7 @@
 {
-    "ACTOR.TypeCharacter": "キャラクター",
-    "ACTOR.TypeCritter": "クリッター",
-    "ACTOR.TypeIc": "IC",
-    "ACTOR.TypeSpirit": "精霊",
-    "ACTOR.TypeSprite": "スプライト",
-    "ACTOR.TypeVehicle": "ヴィークル/ドローン",
     "CONTROLS.SR5.EnvironmentalModifiers": "環境修正",
     "CONTROLS.SR5.OverwatchScoreTracker": "監視指数",
     "CONTROLS.SR5.SituationalModifiers": "環境修正",
-    "ITEM.TypeAction": "アクション",
-    "ITEM.TypeAdept_power": "アデプトパワー",
-    "ITEM.TypeAmmo": "弾薬",
-    "ITEM.TypeArmor": "アーマー",
-    "ITEM.TypeBioware": "バイオウェア",
-    "ITEM.TypeCall_in_action": "召喚/コンパイル",
-    "ITEM.TypeComplex_form": "複合体",
-    "ITEM.TypeContact": "コンタクト",
-    "ITEM.TypeCritter_power": "クリッターパワー",
-    "ITEM.TypeCyberware": "サイバーウェア",
-    "ITEM.TypeDevice": "デバイス",
-    "ITEM.TypeEcho": "エコー",
-    "ITEM.TypeEquipment": "装備",
-    "ITEM.TypeHost": "ホスト",
-    "ITEM.TypeLifestyle": "ライフスタイル",
-    "ITEM.TypeMetamagic": "メタマジック",
-    "ITEM.TypeModification": "装備の改造",
-    "ITEM.TypeProgram": "プログラム",
-    "ITEM.TypeQuality": "資質",
-    "ITEM.TypeRitual": "儀式",
-    "ITEM.TypeSin": "SIN",
-    "ITEM.TypeSpell": "呪文",
-    "ITEM.TypeSprite_power": "スプライトパワー",
-    "ITEM.TypeWeapon": "武器",
     "SETTINGS": {
         "ApplyLimitsName": "ロール時にリミットを適用する",
         "ApplyLimitsDescription": "ロール時にリミットは適用させるべきです",
@@ -71,9 +41,10 @@
         "ShowTokenNameForChatOutputName": "ロールカードにトークン名を使用する",
         "ShowTokenNameForChatOutputDescription": "トークンの名前は、利用可能時にアクターネームの代わりに出力されたロールカードを使用する必要があります",
         "TokenHealthBars": "トークンの体力バー",
-        "TokenHealthBarsDescription": "ダメージトラックはミラーリングされず、トークン上に空のヘルスバーとして表示されます。"
+        "TokenHealthBarsDescription": "ダメージトラックはミラーリングされず、トークン上に空のヘルスバーとして表示されます。",
+        "UseDamageConditionDescription": "システムはトークンの状態モニターに従ってマークをつけます。",
+        "UseDamageConditionName": "トークンのステータス効果にシステム処理を使用する"
     },
-    "SR5.AP": "AP",
     "SR5.Accessory": "アクセサリ",
     "SR5.Accuracy": "精度",
     "SR5.Action": "アクション",
@@ -97,6 +68,7 @@
         },
         "New": "新しい効果",
         "OnlyForWireless": "ワイヤレスがアクティブ時のみに適用",
+        "OnlyForItemTest": "親アイテムのテストのみに適用",
         "OnlyForEquipped": "アイテムを装備している時のみに適用",
         "Types": {
             "Inactive": "非活性効果",
@@ -132,6 +104,7 @@
     "SR5.AmmoFull": "弾丸マックス",
     "SR5.AmmoGelRounds": "ゲル弾の弾数",
     "SR5.Aoe": "効果範囲",
+    "SR5.AP": "AP",
     "SR5.ApplyWounds": "負傷を適用",
     "SR5.Armor": "装甲",
     "SR5.ArmorHardened": "硬化装甲",
@@ -404,7 +377,8 @@
         "MarksCantBePlacedOn": "選択されたアクタータイプはマークを受け取ることができません。",
         "MissingSkill": "アクターは要求された技能を持っていません。",
         "SkillWithoutAttribute": "技能に能力値が設定されていません。",
-        "TestExpectsVehicleOnly": "このテストは、ビークルタイプのアクターでのみ行えます。"
+        "TestExpectsVehicleOnly": "このテストは、ビークルタイプのアクターでのみ行えます。",
+        "NoAvailableActorFound": "このアクションで使用可能なアクターが見つかりませんでした。"
     },
     "SR5.EssenceCost": "エッセンス",
     "SR5.Expand": "展開",
@@ -432,6 +406,13 @@
     "SR5.Glitch": "グリッチ!",
     "SR5.GlitchCritical": "クリティカルグリッジ！",
     "SR5.Glitches": "グリッジ:",
+    "SR5.GMRequest": {
+        "General": "あなたのGMは、あなたに次のことを要求している。",
+        "Threshold": " しきい値",
+        "RollSkill": "技能テスト",
+        "RollAttribute": "能力値テスト",
+        "Teamwork": "チームワークテスト"
+    },
     "SR5.GoodCover": "完全遮蔽",
     "SR5.HackingProgram": "ハッキングプログラム",
     "SR5.GroupContact": "グループ",
@@ -439,6 +420,7 @@
     "SR5.Hits": "ヒット",
     "SR5.Host": {
         "Attributes": "能力値",
+        "CustomAttributes": "カスタム属性",
         "DropICActor": "ICアクターをセキュリティ対応順にドラッグ＆ドロップする。",
         "ICOrder": "IC 起動順序",
         "MissingIC": "欠落 IC",
@@ -679,9 +661,13 @@
         "Ammo": "発射するための弾薬が不足している",
         "Edge": "消費するエッジが残っていない",
         "Initiative": "イニシアチブのスコアが足りない",
-        "SomeAmmo": "選択したモードで射撃するための弾薬が足りない、防御側の修正値が減少する。"
+        "SomeAmmo": "選択したモードで射撃するための弾薬が足りない、防御側の修正値が減少する。",
+        "SomeAmmoMelee": "近接攻撃を行うための弾薬が不足しています。"
     },
     "SR5.Modification": "改造",
+    "SR5.ModificationCategories": "改造のカテゴリー",
+    "SR5.ModificationCategory": "改造カテゴリー",
+    "SR5.ModificationSlots": "改造スロット",
     "SR5.Modified": "修正後",
     "SR5.ModifiedArmor": "修正装甲値",
     "SR5.ModifiedDamage": "修正後ダメージ",
@@ -747,6 +733,7 @@
     "SR5.Mundane": "マンディン",
     "SR5.Name": "名前",
     "SR5.NetHits": "純ヒット",
+    "SR5.New": "新しい",
     "SR5.NoCover": "遮蔽なし",
     "SR5.NoSelectableToken": "キャンバス上に選択可能なトークンがありません",
     "SR5.None": "無し",
@@ -784,6 +771,7 @@
     "SR5.PowerPoints": "パワーポイント",
     "SR5.PowerType": "パワータイプ",
     "SR5.Powers": "パワー",
+    "SR5.PP": "PP",
     "SR5.Program": "プログラム",
     "SR5.ProgramType": "タイプ",
     "SR5.Programs": "プログラム",
@@ -934,6 +922,12 @@
         "Summoning": "召喚",
         "Survival": "サバイバル",
         "Swimming": "水泳",
+        "Teamwork": {
+            "Glitched": "グリッチ",
+            "ParticipantActor": "アクターを選択",
+            "RollIt": "ロールする",
+            "TakePart": "テストに参加"
+        },
         "ThrowingWeapons": "投擲武器",
         "Tracking": "トラッキング",
         "UnarmedCombat": "素手戦闘"
@@ -1060,8 +1054,10 @@
     },
     "SR5.Sprite": {
         "Level": "レベル",
+        "MissingTechnomancer": "アクティブなテクノマンサーは存在しません",
         "Registered": "レジスター済み",
         "Services": "タスク（助力）",
+        "Technomancer": "テクノマンサー",
         "Type": "タイプ",
         "Types": {
             "Companion": "コンパニオン/Companion",
@@ -1155,6 +1151,7 @@
             "Grunt": "このアクターにグラント・ルールを適用する",
             "Metatype": "選択したメタヒューマンの能力値修正を適用します",
             "MissingSummoner": "召喚者をドラッグ＆ドロップするか、召喚アクションを行ってください",
+            "MissingTechnomancer": "召喚者をドラッグ＆ドロップするか、コンパイルアクションを行ってください",
             "NPC": "NPCとして、メタヒューマンの能力値修正を適用します",
             "ResetActorForNewRun": "ダメージやエッジなどをリセットして、新しいランを行う"
         },
@@ -1167,18 +1164,20 @@
             "SpriteType": "スプライトの種類"
         },
         "Effect": {
-            "ApplyTo": "この効果の変更は、この対象にのみ適用されます。",
             "AlterApplyToWithChanges": "効果が適用される対象を変更する前に変更を取り除きます。",
-            "OnlyForWireless": "この効果は、ワイヤレスが有効なアイテムにのみ適用されます。",
-            "OnlyFilteredUsed": "この効果は、少なくとも1つの選択に一致するテストにのみ適用されます。",
-            "OnlyAllFilteredUsed": "この効果は、すべての選択に一致するテストにのみ適用されます。",
+            "ApplyTo": "この効果の変更は、この対象にのみ適用されます。",
+            "DocumentEffects": "このドキュメントに直接適用される効果",
             "ItemEffects": "このドキュメント上のアイテムから収集された効果",
-            "DocumentEffects": "このドキュメントに直接適用される効果"
+            "OnlyAllFilteredUsed": "この効果は、すべての選択に一致するテストにのみ適用されます。",
+            "OnlyFilteredUsed": "この効果は、少なくとも1つの選択に一致するテストにのみ適用されます。",
+            "OnlyForItemTest": "親アイテムのテストにのみ適用されます。",
+            "OnlyForWireless": "この効果は、ワイヤレスが有効なアイテムにのみ適用されます。"
         },
         "Item": {
             "ActionModifier": "テストのデフォルト修正の代わりに使用するプール修正を選択します",
             "ActionRollMode": "このアクションを実行するときのデフォルトのロールモードです。グローバルチャットの設定を上書きします。",
-            "AmmoReplaceDamage": "武器のダメージを修正するのではなく、置き換えるように設定する"
+            "AmmoReplaceDamage": "武器のダメージを修正するのではなく、置き換えるように設定する",
+            "DisabledForPreparedActor": "用意されたアクターの使用により無効化されました。"
         },
         "Modifiers": {
             "armor": "アーマーの修正値",
@@ -1225,6 +1224,10 @@
             "RecoilBeforeAttack": "攻撃前に反動を進行させます。",
             "RecoilCompensation": "武器アクセサリの補正値を含む反動補正合計",
             "ResetRecoil": "反動の蓄積値をリセット（要射撃以外の単純動作以上の行動）"
+        },
+        "Ritual": {
+            "Force": "儀式のフォース",
+            "ReagentDrams": "儀式を封結する際のドレインを減らす為に使用された原質のドラム数"
         },
         "SituationalModifier": {
             "Recoil": "発射した弾丸の量"
@@ -1291,6 +1294,14 @@
         "IsOffRoad": "オフロード？",
         "Maneuvering": "機動",
         "MissingDriver": "アクターをドライバーとしてドラッグ＆ドロップする",
+        "ModificationCategoryTypes": {
+            "body": "躯体",
+            "cosmetic": "外見",
+            "electromagnetic": "電磁",
+            "power_train": "駆動装置",
+            "protection": "防護",
+            "weapons": "武器"
+        },
         "Stats": {
             "Acceleration": "加速値",
             "Handling": "操縦値",
@@ -1312,6 +1323,7 @@
             "Water": "船舶"
         }
     },
+    "SR5.Vehicle.Vehicle": "ヴィークル",
     "SR5.VehicleImport.MissingPermission": "アクターを作成する権限がありません",
     "SR5.Vision": {
         "AstralPerception": "アストラル知覚",
@@ -1415,5 +1427,36 @@
         "Type": "タイプ",
         "Weapon": "武器"
     },
-    "SR5.Wireless": "ワイアレス"
+    "SR5.Wireless": "ワイアレス",
+    "TYPES.Actor.character": "キャラクター",
+    "TYPES.Actor.critter": "クリッター（旧）",
+    "TYPES.Actor.ic": "IC",
+    "TYPES.Actor.spirit": "精霊",
+    "TYPES.Actor.sprite": "スプライト",
+    "TYPES.Actor.vehicle": "ヴィークル/ドローン",
+    "TYPES.Item.action": "アクション",
+    "TYPES.Item.adept_power": "アデプトパワー",
+    "TYPES.Item.ammo": "弾薬",
+    "TYPES.Item.armor": "アーマー",
+    "TYPES.Item.bioware": "バイオウェア",
+    "TYPES.Item.call_in_action": "召喚/コンパイル",
+    "TYPES.Item.complex_form": "複合体",
+    "TYPES.Item.contact": "コンタクト",
+    "TYPES.Item.critter_power": "クリッターパワー",
+    "TYPES.Item.cyberware": "サイバーウェア",
+    "TYPES.Item.device": "デバイス",
+    "TYPES.Item.echo": "エコー",
+    "TYPES.Item.equipment": "装備",
+    "TYPES.Item.host": "ホスト",
+    "TYPES.Item.lifestyle": "ライフスタイル",
+    "TYPES.Item.metamagic": "メタマジック",
+    "TYPES.Item.modification": "装備の改造",
+    "TYPES.Item.program": "プログラム",
+    "TYPES.Item.quality": "資質",
+    "TYPES.Item.ritual": "儀式",
+    "TYPES.Item.sin": "SIN",
+    "TYPES.Item.spell": "呪文",
+    "TYPES.Item.sprite_power": "スプライトパワー",
+    "TYPES.Item.weapon": "武器"
+
 }
