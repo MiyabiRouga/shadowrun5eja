@@ -17,7 +17,7 @@
   "packs": [],
   "dependencies": [],
 	"url" : "https://github.com/MiyabiRouga/shadowrun5eja",
-	"download" : "https://github.com/MiyabiRouga/shadowrun5eja/releases/download/1.5/SR5ja_rel.zip",
+	"download" : "https://github.com/MiyabiRouga/shadowrun5eja/releases/download/1.6/SR5ja_rel.zip",
 	"manifest" : "https://github.com/MiyabiRouga/shadowrun5eja/releases/latest/download/module.json",
   "minimumCoreVersion": "0.18.2",
   "compatibleCoreVersion": "11"
