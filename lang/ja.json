@@ -104,6 +104,7 @@
             "TargetedActor": "ターゲットとなるアクター",
             "TestItem": "アイテムによるテスト"
         },
+        "CannotAddTestViaItemToActor": "アクターに「アイテムを使用したテスト」タイプの「アクティブ・エフェクト」を追加できません",
         "Modes": {
             "Modify": "修正"
         },
@@ -204,7 +205,6 @@
         "LatestChangelog": "最新の変更履歴",
         "Reason": "最新バージョンにアップデートされました!",
         "ReportIssues": "バグや機能要望の報告をお願いします。",
-        "ReportUsingBugReporter": "バグ報告モジュールを使用すると、Foundry セッション内から GitHub アカウントなしで直接バグを報告することができます!",
         "Title": "Shadowrun5eアップデート"
     },
     "SR5.Character": {
@@ -476,7 +476,7 @@
             "Binder": "バインダー/Binder",
             "BlackIC": "ブラック/Black IC",
             "Blaster": "ブラスター/Blaster",
-            "BlooGoo": "ブルー・スライム/Blauer Schleim",
+            "BlueGoo": "ブルー・スライム/Blauer Schleim",
             "Bloodhound": "猟犬/Bloodhound",
             "Catapult": "カタパルト/Catapult",
             "Crash": "クラッシュ/Crash",
@@ -833,6 +833,7 @@
     "SR5.Qty": "個数",
     "SR5.Quality": "資質",
     "SR5.QualityType": "資質タイプ",
+    "SR5.QualityTypeLifeModule": "ライフモジュール",
     "SR5.QualityTypeNegative": "不利",
     "SR5.QualityTypePositive": "有利",
     "SR5.Quantity": "数量",
@@ -1398,6 +1399,7 @@
         "CantRecoverPhysicalWithStunDamage": "精神ダメージが残っている場合、身体ダメージは回復できない",
         "CantReloadAtAllDueToAmmo": "弾薬がなくなりました！",
         "CantReloadFullyDueToAmmo": "完全にリロード（再装填）するのに十分な弾薬がありませんでした！",
+        "CantReloadPartialDueToAmmo": "複雑なリロードアクションのために十分な弾薬がありませんでした！",
         "CantReloadWithoutSpareClip": "予備のクリップがなくなりました！",
         "CantSecondChanceAGlitch": "テスト結果はグリッジです。このテストは振り直しできません。",
         "CantSecondChanceWithoutNoneHits": "このテストは振り直しできません。ヒットのみが残ります",
@@ -1423,6 +1425,16 @@
             "Melee": "近接",
             "Range": "射撃",
             "Thrown": "投擲"
+        },
+        "Cliptype": {
+            "RemovableClip": "着脱式クリップ",
+            "BreakAction": "中折れ式",
+            "BeltFed": "ベルト（弾帯）式",
+            "InternalMagazin": "マガジン内蔵式",
+            "MuzzleLoader": "先込め式",
+            "Cylinder": "シリンダー式",
+            "Drum": "ドラム",
+            "Bow": "弓"
         },
         "Mod": "武器アクセサリ（Mod)",
         "Mode": {
@@ -1480,6 +1492,8 @@
         },
         "Reach": "リーチ",
         "Reload": "リロード",
+        "FullReload": "全弾リロード",
+        "PartialReload": "一部をリロード",
         "Type": "タイプ",
         "Weapon": "武器"
     },
