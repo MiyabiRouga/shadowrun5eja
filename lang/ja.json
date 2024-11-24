@@ -176,7 +176,6 @@
     "SR5.Base": "基本",
     "SR5.BaseValue": "基本値",
     "SR5.Biography": "経歴",
-    "SR5.Blackmail": "ブラックメイル",
     "SR5.BlastRadius": "爆発半径",
     "SR5.Block": "ブロック",
     "SR5.Bonus": "ボーナス",
@@ -233,8 +232,16 @@
     "SR5.ComplexForms": "複合体",
     "SR5.Conceal": "隠蔽度",
     "SR5.ConditionMonitor": "コンディションモニタ",
-    "SR5.Connection": "コネ値",
-    "SR5.ContactType": "タイプ",
+    "SR5.Contact": {
+        "Blackmail": "ブラックメイル",
+        "Connection": "コネ値",
+        "Family": "ファミリー",
+        "Group": "グループ",
+        "LinkedActor": "アクター",
+        "Loyalty": "忠実度",
+        "DropActor": "アクターをドラッグ＆ドロップして、このコンタクトにリンクします。",
+        "Type": "タイプ"
+    },
     "SR5.Contacts": "コンタクト",
     "SR5.Continue": "続行",
     "SR5.Cost": "費用",
@@ -437,7 +444,6 @@
     "SR5.Fade": "フェイディング",
     "SR5.FadeAttribute": "フェイディングに使用する能力値",
     "SR5.FadeValue": "フェイディング",
-    "SR5.Family": "ファミリー",
     "SR5.Filter": "フィルター",
     "SR5.FireMode": "射撃モード",
     "SR5.Force": "フォース",
@@ -456,7 +462,6 @@
     "SR5.Glitches": "グリッジ:",
     "SR5.GoodCover": "完全遮蔽",
     "SR5.HackingProgram": "ハッキングプログラム",
-    "SR5.GroupContact": "グループ",
     "SR5.Help": "ヘルプ",
     "SR5.Hits": "ヒット",
     "SR5.Host": {
@@ -655,7 +660,6 @@
     "SR5.LivingPersona": "生体ペルソナ",
     "SR5.Load": "ロード",
     "SR5.Loaded": "ロード済",
-    "SR5.Loyalty": "忠実度",
     "SR5.MIGRATION.BeginMigration": "マイグレーション開始",
     "SR5.MIGRATION.BeginNotification": "シャドウランのシステム移行をバージョンアップで開始",
     "SR5.MIGRATION.DoNotCloseNotification": "ゲームを終了したり、FoundryVTTをシャットダウンしたりしないでください。",
@@ -851,7 +855,6 @@
     "SR5.RecoilCompensation": "反動修正",
     "SR5.RemoveBonus": "ボーナスを削除する",
     "SR5.RemoveSpecialization": "専門化を削除する",
-    "SR5.ResetOverwatchScore": "監視指数(OS)のリセット",
     "SR5.Resist": "抵抗",
     "SR5.RestoreDefaultSkills": "デフォルトのスキルに戻す",
     "SR5.RightClickToClear": "右クリックでクリア",
@@ -1211,6 +1214,9 @@
         },
         "CallInAction": {
             "ActorType": "呼びだす対象"
+        },
+        "Contact": {
+            "LinkActor": "アクターをドラッグ＆ドロップして、このコンタクトにリンクします。"
         },
         "CompilationTest": {
             "Level": "スプライトのレベル",
