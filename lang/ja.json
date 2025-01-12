@@ -1358,9 +1358,11 @@
         "Maneuvering": "機動",
         "MissingDriver": "アクターをドライバーとしてドラッグ＆ドロップする",
         "ModificationCategoryTypes": {
-            "body": "躯体",
+            "body": "ボディ",
             "cosmetic": "外見",
             "electromagnetic": "電磁",
+            "enhancement": "強化",
+            "exotic": "特殊",
             "power_train": "駆動装置",
             "protection": "防護",
             "weapons": "武器"
@@ -1533,5 +1535,6 @@
     "TYPES.Item.sin": "SIN",
     "TYPES.Item.spell": "呪文",
     "TYPES.Item.sprite_power": "スプライトパワー",
+    "TYPES.Item.vehicle": "ヴィークル",
     "TYPES.Item.weapon": "武器"
 }
