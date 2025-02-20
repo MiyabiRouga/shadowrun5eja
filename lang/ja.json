@@ -268,7 +268,13 @@
             "Special": "特殊",
             "Sustained": "維持"
         },
+        "IsOptional": "選択性",
         "Karma": "カルマ",
+        "Optional": {
+            "DisabledOption": "追加：無効",
+            "EnabledOption": "追加：有効",
+            "Standard": "標準"
+        },
         "Range": "範囲",
         "Ranges": {
             "LineOfSight": "視界内",
@@ -302,6 +308,7 @@
     "SR5.DamageReplace": "ダメージ置換",
     "SR5.DamageType": "ダメージタイプ",
     "SR5.DamageValue": "DV",
+    "SR5.DefaultCategoryVisibility": "空のカテゴリーを表示する",
     "SR5.Defaulting": "デフォルティング",
     "SR5.Defender": "防御",
     "SR5.DefenderNetHits": "防御側純ヒット",
@@ -592,6 +599,10 @@
             "CreateInventory": "インベントリの作成場所",
             "CritterPowers": "クリッターパワー",
             "DeviceRating": "レーティング",
+            "DisabledOptionCritterPowers": "追加クリッターパワー：無効",
+            "DisabledOptionSpritePowers": "追加スプライトパワー：無効",
+            "EnabledOptionCritterPowers": "追加クリッターパワー：有効",
+            "EnabledOptionSpritePowers": "追加スプライトパワー：有効",
             "ICConfiguration": "ICの設定",
             "Matrix": "マトリックス",
             "PersonalInventory": "個人",
@@ -1004,7 +1015,7 @@
         "Cast": "呪文行使",
         "CatCombat": "戦闘",
         "CatDetection": "探知",
-        "CatHealth": "治癒",
+        "CatHealth": "身体",
         "CatIllusion": "幻影",
         "CatManipulation": "操作",
         "Category": "カテゴリー",
@@ -1127,6 +1138,12 @@
         }
     },
     "SR5.SpritePower": {
+        "IsOptional": "選択性",
+        "Optional": {
+            "DisabledOption": "追加：無効",
+            "EnabledOption": "追加：有効",
+            "Standard": "標準"
+        },
         "Type": "タイプ"
     },
     "SR5.Stock": "ストック",
@@ -1212,16 +1229,17 @@
             "NPC": "NPCとして、メタヒューマンの能力値修正を適用します",
             "ResetActorForNewRun": "ダメージやエッジなどをリセットして、新しいランを行う"
         },
+        "Actor.DefaultCategoryVisibility": "アイテムがない場合でもカテゴリーを表示する",
         "CallInAction": {
             "ActorType": "呼びだす対象"
-        },
-        "Contact": {
-            "LinkActor": "アクターをドラッグ＆ドロップして、このコンタクトにリンクします。"
         },
         "CompilationTest": {
             "Level": "スプライトのレベル",
             "PreparedSprite": "召喚アクションで作成されたアクターを使う",
             "SpriteType": "スプライトの種類"
+        },
+        "Contact": {
+            "LinkActor": "アクターをドラッグ＆ドロップして、このコンタクトにリンクします。"
         },
         "Effect": {
             "AlterApplyToWithChanges": "効果が適用される対象を変更する前に変更を取り除きます。",
@@ -1444,6 +1462,7 @@
             "Drum": "ドラム",
             "Bow": "弓"
         },
+        "FullReload": "全弾リロード",
         "Mod": "武器アクセサリ（Mod)",
         "Mode": {
             "BurstFire": "BF",
@@ -1460,6 +1479,7 @@
             "SingleShotShort": "SS"
         },
         "Mods": "武器アクセサリ（Mod)",
+        "PartialReload": "一部をリロード",
         "Range": {
             "Category": {
                 "AerodynamicThrownGrenade": "空力型手榴弾",
@@ -1500,8 +1520,6 @@
         },
         "Reach": "リーチ",
         "Reload": "リロード",
-        "FullReload": "全弾リロード",
-        "PartialReload": "一部をリロード",
         "Type": "タイプ",
         "Weapon": "武器"
     },

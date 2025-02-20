@@ -2,7 +2,7 @@
 
 * **製作者**: Brother Sharp
 * **翻訳ファイル提供者**: k_1975, ragi256, yucky, MiyabiRouga
-* **modバージョン**: 1.9
+* **modバージョン**: 2.0
 
 ### インストール方法
 
