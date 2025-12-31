@@ -58,7 +58,7 @@
         "TokenRulerColorSprintingDescription": "走行速度を超え、全力疾走が必要な範囲の移動距離の表示色",
         "TokenRulerColorWalking": "トークン移動：歩行（Walking）時の色",
         "TokenRulerColorWalkingDescription": "歩行速度の範囲内における移動距離の表示色",
-        "TokenRulerOpacity": "Tトークン移動：不透明度",
+        "TokenRulerOpacity": "トークン移動：不透明度",
         "TokenRulerOpacityDescription": "トークンのルーラー（定規）表示の不透明度（0 = 完全に透明、1 = 完全に不透明）",
         "TokenUseRoutingLib": "URoutingLibを使用する",
         "UseDamageConditionDescription": "システムはトークンの状態モニターに従ってマークをつけます。",
