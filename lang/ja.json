@@ -1,7 +1,11 @@
 {
-    "CONTROLS.SR5.EnvironmentalModifiers": "環境修正",
-    "CONTROLS.SR5.OverwatchScoreTracker": "監視指数",
-    "CONTROLS.SR5.SituationalModifiers": "環境修正",
+    "CONTROLS": {
+        "SR5": {
+            "EnvironmentalModifiers": "環境修正",
+            "OverwatchScoreTracker": "監視指数",
+            "SituationalModifiers": "環境修正"
+        }
+    },
     "SETTINGS": {
         "ApplyLimitsName": "ロール時にリミットを適用する",
         "ApplyLimitsDescription": "ロール時にリミットは適用させるべきです",
@@ -9,10 +13,14 @@
         "AutomateMultiDefenseModifierDescription": "複数回攻撃された場合、自動的に防御修正がかかる",
         "AutomateProgressiveRecoil": "反動蓄積の自動化",
         "AutomateProgressiveRecoilDescription": "リセットされるまで、反動の蓄積を維持する",
+        "CompendiumBrowserBlacklist": "コンペンディウム・ブラウザのブラックリスト",
+        "CompendiumBrowserBlacklistDescription": "コンペンディウム・ブラウザに表示しないコンペンディウムのリスト",
         "DefaultOpposedTestActorSelection": "対抗テストにおけるトークンの選択を上書きする",
         "DefaultOpposedTestActorSelectionDescription": "テストに使用されたターゲットで常に選択されたトークンを上書きする",
         "DiagonalMovementDescription": "グリッドを使用時の斜め移動の処理",
         "DiagonalMovementName": "斜め移動",
+        "DieFaceLabels": "テストダイスの面ラベル",
+        "DieFaceLabelsDescription": "[[Dice So Nice] テストダイスの各面（1〜6）のラベルをカンマ区切りで入力してください。",
         "DisplayDefaultRollCardDescription": "デフォルトのロールカードをシャドウランロールカードと一緒に表示する必要があります",
         "DisplayDefaultRollCardName": "デフォルトのロールカード表示",
         "EstimateDiagonal": "斜め移動したとして見積もる (1-2-1)",
@@ -44,1515 +52,3036 @@
         "ShowTokenNameForChatOutputDescription": "トークンの名前は、利用可能時にアクターネームの代わりに出力されたロールカードを使用する必要があります",
         "TokenHealthBars": "トークンの体力バー",
         "TokenHealthBarsDescription": "ダメージトラックはミラーリングされず、トークン上に空のヘルスバーとして表示されます。",
+        "TokenRulerColorRunning": "トークン移動：走行（Running）時の色",
+        "TokenRulerColorRunningDescription": "走行速度の範囲内における移動距離の表示色",
+        "TokenRulerColorSprinting": "トークン移動：全力疾走（Sprinting）時の色",
+        "TokenRulerColorSprintingDescription": "走行速度を超え、全力疾走が必要な範囲の移動距離の表示色",
+        "TokenRulerColorWalking": "トークン移動：歩行（Walking）時の色",
+        "TokenRulerColorWalkingDescription": "歩行速度の範囲内における移動距離の表示色",
+        "TokenRulerOpacity": "Tトークン移動：不透明度",
+        "TokenRulerOpacityDescription": "トークンのルーラー（定規）表示の不透明度（0 = 完全に透明、1 = 完全に不透明）",
+        "TokenUseRoutingLib": "URoutingLibを使用する",
         "UseDamageConditionDescription": "システムはトークンの状態モニターに従ってマークをつけます。",
         "UseDamageConditionName": "トークンのステータス効果にシステム処理を使用する",
         "UseImportIconOverridesDescription": "アイテムをインポートする際、種類が異なるアイテムであっても、適切な場合に同じアイコンを使用することができます。カスタムアイコンを使用している場合は、このチェックボックスをオフにしてください。",
         "UseImportIconOverridesName": "デフォルトインポートアイコンのオーバーライドを使用する"
     },
-    "SR5.AP": "AP",
-    "SR5.Accessory": "アクセサリ",
-    "SR5.Accuracy": "精度",
-    "SR5.Action": "アクション",
-    "SR5.ActionCategory": {
-        "Addiction": "依存症テスト",
-        "AddictionMental": "依存症タイプ：精神的",
-        "AddictionPhysical": "依存症タイプ：肉体的",
-        "Attack": "攻撃アクション",
-        "AttackMelee": "近接攻撃",
-        "AttackRanged": "射撃攻撃",
-        "AttackThrown": "投擲攻撃",
-        "BruteForce": "強制介入する",
-        "Climbing": "登攀",
-        "Compiling": "コンパイル",
-        "ComplexForm": "複雑動作",
-        "Defense": "防御",
-        "DefenseSuppression": "制圧射撃",
-        "Drain": "ドレイン",
-        "Fade": "フェイディング",
-        "HackOnTheFly": "即興ハッキング",
-        "Magic": "魔法",
-        "Matrix": "マトリックス動作",
-        "Recovery": "回復",
-        "RecoveryPhysical": "身体ダメージの回復",
-        "RecoveryStun": "精神ダメージの回復",
-        "Resist": "抵抗",
-        "ResistDisease": "病気への抵抗",
-        "ResistToxin": "毒物への抵抗",
-        "Resonance": "共振力系動作",
-        "Rigging": "リギング",
-        "Social": "社交",
-        "SpellCombat": "戦闘呪文",
-        "SpellDetection": "探知呪文",
-        "SpellHealing": "身体呪文",
-        "SpellIllusion": "幻影呪文",
-        "SpellManipulation": "操作呪文",
-        "SpellRitual": "儀式",
-        "Summoning": "召喚"
-    },
-    "SR5.ActionType": "タイプ",
-    "SR5.ActionTypeComplex": "複雑",
-    "SR5.ActionTypeFree": "簡易",
-    "SR5.ActionTypeNone": "なし",
-    "SR5.ActionTypeSimple": "単純",
-    "SR5.ActionTypeVaries": "変動",
-    "SR5.Actions": "行動",
-    "SR5.Active": "能動",
-    "SR5.ActiveDefense": "能動防御",
-    "SR5.ActiveEffect": {
-        "ApplyTo": "適用先",
-        "ApplyTos": {
-            "TargetedActor": "ターゲットとなるアクター",
-            "TestItem": "アイテムによるテスト"
-        },
-        "CannotAddTestViaItemToActor": "アクターに「アイテムを使用したテスト」タイプの「アクティブ・エフェクト」を追加できません",
-        "Modes": {
-            "Modify": "修正"
-        },
-        "New": "新しい効果",
-        "OnlyForWireless": "ワイヤレスがアクティブ時のみに適用",
-        "OnlyForItemTest": "親アイテムのテストのみに適用",
-        "OnlyForEquipped": "アイテムを装備している時のみに適用",
-        "Test": {
-            "ActionCategories": "アクションカテゴリフィルタ",
-            "Attributes": "能力値フィルタ",
-            "Limits": "リミットフィルタ",
-            "Skills": "技能フィルタ",
-            "Tests": "テストフィルタ"
-        }
-    },
-    "SR5.ActiveSkills": "能動技能",
-    "SR5.ActorTypes": {
-        "Character": "キャラクター",
-        "Critter": "クリッター",
-        "IC": "IC",
-        "Spirit": "精霊",
-        "Sprite": "スプライト",
-        "Vehicle": "ヴィークル"
-    },
-    "SR5.Add": "追加",
-    "SR5.AddAmmo": "弾薬を追加",
-    "SR5.AddFifteenMinutesToOverwatch": "マトリックス内で15分ごとに2d6を振る",
-    "SR5.AddFiveToOverwatch": "監視指数+5",
-    "SR5.AddMod": "修正（Mod）を追加",
-    "SR5.AddOneToOverwatch": "監視指数+1",
-    "SR5.AddSkill": "技能の追加",
-    "SR5.AdeptPower": {
-        "Types": {
-            "Active": "能動",
-            "Passive": "受動"
-        }
-    },
-    "SR5.Agent": "エージェント",
-    "SR5.Ammo": "弾薬",
-    "SR5.AmmoFull": "弾丸マックス",
-    "SR5.AmmoGelRounds": "ゲル弾の弾数",
-    "SR5.Aoe": "効果範囲",
-    "SR5.ApplyWounds": "負傷を適用",
-    "SR5.Armor": "装甲",
-    "SR5.ArmorHardened": "硬化装甲",
-    "SR5.ArmorHardenedFull": "硬化装甲",
-    "SR5.ArmorValue": "装甲値",
-    "SR5.Attacker": "攻撃者",
-    "SR5.AttackerHits": "攻撃側のヒット数",
-    "SR5.AttackerNetHits": "攻撃側純ヒット数",
-    "SR5.AttrAgility": "敏捷力",
-    "SR5.AttrBody": "強靭力",
-    "SR5.AttrCharisma": "魅力",
-    "SR5.AttrEdge": "エッジ",
-    "SR5.AttrEssence": "エッセンス",
-    "SR5.AttrIntuition": "直感力",
-    "SR5.AttrLogic": "論理力",
-    "SR5.AttrMagic": "魔力",
-    "SR5.AttrReaction": "反応力",
-    "SR5.AttrResonance": "共振力",
-    "SR5.AttrStrength": "筋力",
-    "SR5.AttrWillpower": "意志力",
-    "SR5.Attribute": "能力値",
-    "SR5.Attributes": "能力値",
-    "SR5.Availability": "入手値",
-    "SR5.Awakened": "覚醒者",
-    "SR5.AwakenedEmerged": "覚醒者/発現者",
-    "SR5.Barrel": "バレル",
-    "SR5.Base": "基本",
-    "SR5.BaseValue": "基本値",
-    "SR5.Biography": "経歴",
-    "SR5.BlastRadius": "爆発半径",
-    "SR5.Block": "ブロック",
-    "SR5.Bonus": "ボーナス",
-    "SR5.Bonuses": "ボーナス",
-    "SR5.Bullet": "ラウンド",
-    "SR5.BulletCount": "弾丸の数",
-    "SR5.Bullets": "ラウンド",
-    "SR5.COMBAT": {
-        "ReduceInitByOne": "イニシアティブ -1",
-        "ReduceInitByFive": "イニシアティブ -5",
-        "ReduceInitByTen": "イニシアティブ -10"
-    },
-    "SR5.CallInAction": {
-        "ActorType": "アクターの種類",
-        "Compilation": "コンパイル",
-        "CreateCompilation": "コンパイルアクションの作成",
-        "CreateSummoning": "召還アクションの作成",
-        "Summoning": "召還"
-    },
-    "SR5.CanDefault": "デフォルティング可",
-    "SR5.Capacity": "容量",
-    "SR5.CareerKarma": "累積カルマ",
-    "SR5.ChangelogApplication": {
-        "Changelog": "新機能や修正点についてはGitHubをご覧ください。",
-        "IssuesOverview": "概要",
-        "LatestChangelog": "最新の変更履歴",
-        "Reason": "最新バージョンにアップデートされました!",
-        "ReportIssues": "バグや機能要望の報告をお願いします。",
-        "Title": "Shadowrun5eアップデート"
-    },
-    "SR5.Character": {
-        "Modifiers": {
-            "NPCMetatypeAttribute": "NPCのメタタイプの属性"
-        },
-        "Types": {
-            "Dwarf": "ドワーフ",
-            "Elf": "エルフ",
-            "Human": "ヒューマン",
-            "Ork": "オーク",
-            "Troll": "トロール"
-        }
-    },
-    "SR5.ClearMarks": "マークを消す",
-    "SR5.Close": "閉じる",
-    "SR5.Collapse": "折りたたむ",
-    "SR5.CollapseAll": "全て折りたたむ",
-    "SR5.CommonProgram": "一般プログラム",
-    "SR5.Compilation": {
-        "DropSprite": "レジスターするスプライトをドラッグ＆ドロップ",
-        "FixedSprite": "スプライトをレジスター",
-        "SpriteType": "スプライトの種類"
-    },
-    "SR5.ComplexForm": "複合体",
-    "SR5.ComplexForms": "複合体",
-    "SR5.Conceal": "隠蔽度",
-    "SR5.ConditionMonitor": "コンディションモニタ",
-    "SR5.Contact": {
-        "Blackmail": "ブラックメイル",
-        "Connection": "コネ値",
-        "Family": "ファミリー",
-        "Group": "グループ",
-        "LinkedActor": "アクター",
-        "Loyalty": "忠実度",
-        "DropActor": "アクターをドラッグ＆ドロップして、このコンタクトにリンクします。",
-        "Type": "タイプ"
-    },
-    "SR5.Contacts": "コンタクト",
-    "SR5.Continue": "続行",
-    "SR5.Cost": "費用",
-    "SR5.Cover": "遮蔽",
-    "SR5.Create": "作成 {type}",
-    "SR5.CritterPower": {
-        "Categories": {
-            "Drake": "ドレイク",
-            "Echoes": "エコー",
-            "Emergent": "発現者",
-            "FreeSpirit": "自由精霊",
-            "Mundane": "マンディン",
-            "Paranormal": "超常生物",
-            "ParanormalInfected": "超常生物/感染種",
-            "Shapeshifter": "シェイプシフター",
-            "Weakness": "弱点"
-        },
-        "Category": "カテゴリー",
-        "Duration": "効果時間",
-        "Durations": {
-            "Always": "常時",
-            "Instant": "即時",
-            "Permanent": "永続",
-            "Special": "特殊",
-            "Sustained": "維持"
-        },
-        "IsOptional": "選択性",
-        "Karma": "カルマ",
-        "Optional": {
-            "DisabledOption": "追加：無効",
-            "EnabledOption": "追加：有効",
-            "Standard": "標準"
-        },
-        "Range": "範囲",
-        "Ranges": {
-            "LineOfSight": "視界内",
-            "LineOfSightArea": "視界内 (範囲)",
-            "Self": "自身",
-            "Special": "特殊",
-            "Touch": "接触"
-        },
-        "Type": "タイプ",
-        "Types": {
-            "Mana": "マナ",
-            "Physical": "物理"
-        }
-    },
-    "SR5.Cyberware": "サイバーウェア",
-    "SR5.CyberwareGrade": "等級",
-    "SR5.CyberwareGradeAlpha": "アルファ",
-    "SR5.CyberwareGradeBeta": "ベータ",
-    "SR5.CyberwareGradeDelta": "デルタ",
-    "SR5.CyberwareGradeStandard": "スタンダード",
-    "SR5.CyberwareGradeUsed": "中古",
-    "SR5.DIALOG.MissingModuleContent": "ソースPDFを表示するためには、pdfpagerモジュールがインストールされ、コードに一致するPDFが作成されている必要があります。",
-    "SR5.DP": "DP",
-    "SR5.DV": "DV",
-    "SR5.Damage": "ダメージ",
-    "SR5.DamageApplication": {
-        "ApplyDamage": "負傷の適用",
-        "ApplyUnmodifiedDamage": "負傷の適用はしない",
-        "Title": "ダメージ適用"
-    },
-    "SR5.DamageReplace": "ダメージ置換",
-    "SR5.DamageType": "ダメージタイプ",
-    "SR5.DamageValue": "DV",
-    "SR5.DefaultCategoryVisibility": "空のカテゴリーを表示する",
-    "SR5.Defaulting": "デフォルティング",
-    "SR5.Defender": "防御",
-    "SR5.DefenderNetHits": "防御側純ヒット",
-    "SR5.Defense": "防御",
-    "SR5.DefenseTest": "防御テスト",
-    "SR5.Del": "削除",
-    "SR5.DeleteAmmo": "弾薬を削除",
-    "SR5.DeleteConfirmationApplication": {
-        "Cancel": "いいえ",
-        "Consent": "よろしいですか?",
-        "Delete": "はい",
-        "Description": "削除したアイテムは元にもどせません!",
-        "Title": "アイテム削除   "
-    },
-    "SR5.DeleteItem": "アイテムを削除",
-    "SR5.DeleteLicense": "ライセンスの削除",
-    "SR5.DeleteMod": "修正（Mod)の削除",
-    "SR5.DeleteSkill": "技能を削除",
-    "SR5.Description": "説明",
-    "SR5.Descriptors": "特性",
-    "SR5.Details": "詳細",
-    "SR5.DetectionSpellExtended": "持続",
-    "SR5.Device": "機器",
-    "SR5.DeviceCatCommlink": "コムリンク",
-    "SR5.DeviceCatCyberdeck": "サイバーデッキ",
-    "SR5.DeviceCatRCC": "リガー・コマンド・コンソール",
-    "SR5.DeviceType": "タイプ",
-    "SR5.Dialogs": {
-        "Common": {
-            "Cancel": "キャンセル"
-        },
-        "RangedWeaponTest": {
-            "EnvironmentalOverwriteSet": "環境修正が手動で固定値に設定されました!"
-        }
-    },
-    "SR5.DicePool": "ダイスプール",
-    "SR5.DicePoolModifier": "ダイスプール修正",
-    "SR5.DmgTypeMatrix": "マトリックス",
-    "SR5.DmgTypePhysical": "身体",
-    "SR5.DmgTypeStun": "精神",
-    "SR5.Dodge": "回避",
-    "SR5.DontApplyWounds": "負傷は適用しない",
-    "SR5.Drain": "ドレイン",
-    "SR5.DrainResist": "ドレイン抵抗",
-    "SR5.DrainValue": "ドレイン",
-    "SR5.Dropoff": "外す",
-    "SR5.DuckOrCover": "伏せもしくは遮蔽を取る",
-    "SR5.Duration": "効果時間",
-    "SR5.DurationInstant": "インスタント",
-    "SR5.DurationPermanent": "永続",
-    "SR5.DurationSustained": "維持",
-    "SR5.Echo": "エコー",
-    "SR5.Echoes": "エコー",
-    "SR5.EditAmmo": "弾薬を編集",
-    "SR5.EditItem": "アイテムを編集",
-    "SR5.EditMod": "修正（Mod)を編集",
-    "SR5.EditSkill": "スキルを編集",
-    "SR5.Effect": "効果",
-    "SR5.Effects": "効果",
-    "SR5.Element": "属性",
-    "SR5.ElementAcid": "酸",
-    "SR5.ElementCold": "冷気",
-    "SR5.ElementElectricity": "電撃",
-    "SR5.ElementFire": "炎",
-    "SR5.ElementRadiation": "放射能",
-    "SR5.Emerged": "発現者",
-    "SR5.EnvModifiersApplication": {
-        "ClearModifiers": "個人修正のクリア",
-        "Extreme": "重度(修正が-6)の状況が2つ以上重なった場合",
-        "LightGlare": {
-            "Good": "明るい/発光体なし",
-            "Heavy": "完全な暗闇/眩い発光体",
-            "Light": "薄暗がり/弱い発光体",
-            "Moderate": "暗がり/中度の発光体",
-            "Title": "光/大光量"
-        },
-        "Modifier": {
-            "Title": "修正"
-        },
-        "Range": {
-            "Good": "近距離",
-            "Heavy": "超遠距離",
-            "Light": "中距離",
-            "Moderate": "遠距離",
-            "Title": "射程"
-        },
-        "Title": "環境修正",
-        "Total": "結果",
-        "Visibility": {
-            "Good": "クリア",
-            "Heavy": "強い雨/濃霧/濃い霧",
-            "Light": "小雨/薄い霧/薄い煙",
-            "Moderate": "中度の雨/霧/煙",
-            "Title": "視界"
-        },
-        "Wind": {
-            "Good": "無風またはそよ風",
-            "Heavy": "強風",
-            "Light": "軽風",
-            "Moderate": "中度の風",
-            "Title": "風"
-        }
-    },
-    "SR5.EnvironmentHigh": "高",
-    "SR5.EnvironmentLow": "低",
-    "SR5.EnvironmentMedium": "中",
-    "SR5.EnvironmentModifier": "環境修正",
-    "SR5.EnvironmentNone": "なし",
-    "SR5.EnvironmentVeryHigh": "非常に高い",
-    "SR5.Equip": "装備",
-    "SR5.Equipment": "装備",
-    "SR5.Equipped": "装備済み",
-    "SR5.Errors": {
-        "CanOnlyAddTechnologyItemsToANetwork": "ネットワークに追加できるのは、テクノロジーアイテムのみです。",
-        "CantEditAppliedItemEffects": "アイテムによって適用されたアクティブなエフェクトを編集することはできません。",
-        "DefaultInventoryCantBeRemoved": "デフォルトのインベントリは削除できません",
-        "InventoryAlreadyExists": "この名前のインベントリはすでに存在しています。",
-        "KeyNotModifyableByActiveEffect": "アクティブエフェクトモードの修正は、MODのプロパティにのみ影響を与えることができます。",
-        "MarkCouldNotBePlaced": "内部エラーです。マークを配置できませんでした。",
-        "MarksCantBePlacedBy": "アクターはマークを置くことができません。",
-        "MarksCantBePlacedOn": "選択されたアクタータイプはマークを受け取ることができません。",
-        "MissingSkill": "アクターは要求された技能を持っていません。",
-        "SkillWithoutAttribute": "技能に能力値が設定されていません。",
-        "TestExpectsVehicleOnly": "このテストは、ビークルタイプのアクターでのみ行えます。",
-        "NoAvailableActorFound": "このアクションで使用可能なアクターが見つかりませんでした。"
-    },
-    "SR5.EssenceCost": "エッセンス",
-    "SR5.Expand": "展開",
-    "SR5.ExpandAll": "すべて展開",
-    "SR5.Extend": "継続",
-    "SR5.Extended": "継続",
-    "SR5.ExtendedHits": "蓄積ヒット数",
-    "SR5.ExtendedTest": "継続テスト",
-    "SR5.FOUNDRY": {
-        "Actor": "アクター",
-        "Item": "アイテム",
-        "Scene": "シーン",
-        "Token": "トークン"
-    },
-    "SR5.Fade": "フェイディング",
-    "SR5.FadeAttribute": "フェイディングに使用する能力値",
-    "SR5.FadeValue": "フェイディング",
-    "SR5.Filter": "フィルター",
-    "SR5.FireMode": "射撃モード",
-    "SR5.Force": "フォース",
-    "SR5.FullDefense": "全力防御",
-    "SR5.FullDefenseAttribute": "全力防御使用能力値",
-    "SR5.GMRequest": {
-        "General": "あなたのGMは、あなたに次のことを要求している。",
-        "RollAttribute": "能力値テスト",
-        "RollSkill": "技能テスト",
-        "Teamwork": "チームワークテスト",
-        "Threshold": "しきい値"
-    },
-    "SR5.Gear": "装備",
-    "SR5.Glitch": "グリッチ!",
-    "SR5.GlitchCritical": "クリティカルグリッジ！",
-    "SR5.Glitches": "グリッジ:",
-    "SR5.GoodCover": "完全遮蔽",
-    "SR5.HackingProgram": "ハッキングプログラム",
-    "SR5.Help": "ヘルプ",
-    "SR5.Hits": "ヒット",
-    "SR5.Host": {
-        "Attributes": "能力値",
-        "CustomAttributes": "カスタム属性",
-        "DropICActor": "ICアクターをセキュリティ対応順にドラッグ＆ドロップする。",
-        "ICOrder": "IC 起動順序",
-        "MissingIC": "欠落 IC",
-        "Rating": "レーティング"
-    },
-    "SR5.HotSim": "ホットシム",
-    "SR5.IC": {
-        "MissingHost": "ホストアイテムをドラッグ＆ドロップする。",
-        "Type": "タイプ",
-        "Types": {
-            "Acid": "アシッド/Acid",
-            "Binder": "バインダー/Binder",
-            "BlackIC": "ブラック/Black IC",
-            "Blaster": "ブラスター/Blaster",
-            "BlueGoo": "ブルー・スライム/Blauer Schleim",
-            "Bloodhound": "猟犬/Bloodhound",
-            "Catapult": "カタパルト/Catapult",
-            "Crash": "クラッシュ/Crash",
-            "Flicker": "フリッカー/Flicker",
-            "Jammer": "ジャマ―/Jammer",
-            "Killer": "キラー/Killer",
-            "Marker": "マーカー/Marker",
-            "Patrol": "パトロール/Patrol",
-            "Probe": "プローブ/Probe",
-            "Scramble": "スクランブル/Scramble",
-            "Shocker": "ショッカー/Shocker",
-            "Sleuther": "スルーサー/Sleuther",
-            "Sparky": "スパーキー/Sparky",
-            "TarBaby": "タールベイビー/Tar Baby",
-            "Track": "トラック/Track"
-        }
-    },
-    "SR5.Import": {
-        "Spirit": {
-            "SpiritTypeNotFound": "スピリットのタイプが見つかりませんでした。ChummerからエクスポートしたJSONファイルを使用してGitHubのissueを開いてください。"
-        }
-    },
-    "SR5.ImportCharacter": "キャラクターをインポートする",
-    "SR5.Incoming": "ダメージ値",
-    "SR5.IncomingDamage": "抵抗前ダメージ値",
-    "SR5.IncomingDrain": "抵抗前ドレイン値",
-    "SR5.IncomingFade": "抵抗前フェイディング値",
-    "SR5.Information": "情報",
-    "SR5.Infos": {
-        "CantModifyHostContent": "ICアクター内部からホストデータを変更できない。",
-        "ConsumedEquippedAmmo": "装備弾薬の消費弾数",
-        "ResetProgressiveRecoil": "蓄積した反動をリセットして、発射した弾丸をゼロにする"
-    },
-    "SR5.InitCatAstral": "アストラル",
-    "SR5.InitCatMatrix": "マトリックス",
-    "SR5.InitCatMeatspace": "物理",
-    "SR5.Initiation": "階梯",
-    "SR5.Initiative": "イニシアティブ",
-    "SR5.Internal": "内蔵",
-    "SR5.IsCritter": "クリッター",
-    "SR5.IsFreshImport": "このアイテムはChummerからインポートされ、手動での確認が必要です。",
-    "SR5.IsGrunt": "グラント",
-    "SR5.IsNPC": "NPC",
-    "SR5.Item": "アイテム",
-    "SR5.ItemMod": "アイテム修正",
-    "SR5.ItemName": "アイテム",
-    "SR5.ItemTypes": {
+    "SR5": {
+        "AP": "AP",
+        "Accessory": "アクセサリ",
+        "Accuracy": "精度",
         "Action": "アクション",
-        "AdeptPower": "アデプトパワー",
-        "Ammo": "弾薬",
-        "Armor": "アーマー",
-        "Bioware": "バイオウェア",
-        "ComplexForm": "複合体",
-        "Contact": "コンタクト",
-        "CritterPower": "クリッターパワー",
-        "Cyberware": "サイバーウェア",
-        "Device": "デバイス",
-        "Echo": "エコー",
-        "Equipment": "装備",
-        "Host": "ホスト",
-        "Lifestyle": "ライフスタイル",
-        "Modification": "改造",
-        "Metamagic": "メタマジック",
-        "Program": "プログラム",
-        "Quality": "資質",
-        "Ritual": "儀式",
-        "Sin": "SIN",
-        "Spell": "呪文",
-        "SpritePower": "スプライトパワー",
-        "Weapon": "武器"
-    },
-    "SR5.Karma": "現在カルマ",
-    "SR5.Keybinding": {
-        "HideTestDialog": {
-            "Hint": "任意のボタンからロールを行う際にダイアログをスキップする",
-            "Label": "テストダイアログを非表示にする"
+        "ActionCategory": {
+            "Addiction": "依存症テスト",
+            "AddictionMental": "依存症タイプ：精神的",
+            "AddictionPhysical": "依存症タイプ：肉体的",
+            "Attack": "攻撃アクション",
+            "AttackMatrix": "マトリックス攻撃",
+            "AttackMelee": "近接攻撃",
+            "AttackRanged": "射撃攻撃",
+            "AttackThrown": "投擲攻撃",
+            "BruteForce": "強制介入する",
+            "Climbing": "登攀",
+            "Compiling": "コンパイル",
+            "ComplexForm": "複雑動作",
+            "Defense": "防御",
+            "DefenseMatrix": "マトリックス防御",
+            "DefenseSuppression": "制圧射撃",
+            "Drain": "ドレイン",
+            "Fade": "フェイディング",
+            "HackOnTheFly": "即興ハッキング",
+            "Magic": "魔法",
+            "Matrix": "マトリックス動作",
+            "Recovery": "回復",
+            "RecoveryPhysical": "身体ダメージの回復",
+            "RecoveryStun": "精神ダメージの回復",
+            "Resist": "抵抗",
+            "ResistBiofeedback": "生体信号フィードバックダメージ抵抗",
+            "ResistDisease": "病気への抵抗",
+            "ResistMatrix": "マトリックス・ダメージ抵抗",
+            "ResistToxin": "毒物への抵抗",
+            "Resonance": "共振力系動作",
+            "Rigging": "リギング",
+            "Social": "社交",
+            "SpellCombat": "戦闘呪文",
+            "SpellDetection": "探知呪文",
+            "SpellHealing": "身体呪文",
+            "SpellIllusion": "幻影呪文",
+            "SpellManipulation": "操作呪文",
+            "SpellRitual": "儀式",
+            "Summoning": "召喚"
         },
-        "OverwatchScoreTracker": {
-            "Hint": "監視指数トラッカーを開く",
-            "Label": "監視指数 スコアトラッカー"
+        "ActionType": "タイプ",
+        "ActionTypeComplex": "複雑",
+        "ActionTypeFree": "簡易",
+        "ActionTypeNone": "なし",
+        "ActionTypeSimple": "単純",
+        "ActionTypeVaries": "変動",
+        "Actions": "行動",
+        "Active": "能動",
+        "ActiveDefense": "能動防御",
+        "ActiveEffect": {
+            "ApplyTo": "適用先",
+            "ApplyTos": {
+                "TargetedActor": "ターゲットとなるアクター",
+                "TestItem": "アイテムによるテスト"
+            },
+            "CannotAddTestViaItemToActor": "アクターに「アイテムを使用したテスト」タイプの「アクティブ・エフェクト」を追加できません",
+            "FIELDS": {
+                "applyByTest": {
+                    "label": "アイテム経由のテストに適用"
+                },
+                "applyTo": {
+                    "hint": "異なるターゲットへの適用設定",
+                    "label": "適用先"
+                },
+                "onlyForEquipped": {
+                    "hint": "装備中のアイテムにのみ適用する",
+                    "label": "装備中のみ"
+                },
+                "onlyForItemTest": {
+                    "hint": "親アイテムのテストにのみ適用する",
+                    "label": "アイテムテストのみ"
+                },
+                "onlyForWireless": {
+                    "hint": "ワイヤレス機能が有効な場合のみ適用する",
+                    "label": "ワイヤレス時のみ"
+                },
+                "selection_attributes": {
+                    "hint": "使用する能力値に基づいてテストをフィルタリングする",
+                    "label": "能力値フィルター"
+                },
+                "selection_categories": {
+                    "hint": "使用するアクションカテゴリに基づいてテストをフィルタリングする",
+                    "label": "アクションカテゴリ・フィルター"
+                },
+                "selection_limits": {
+                    "hint": "使用するリミットに基づいてテストをフィルタリングする",
+                    "label": "リミット・フィルター"
+                },
+                "selection_skills": {
+                    "hint": "使用する技能に基づいてテストをフィルタリングする",
+                    "label": "技能フィルター"
+                },
+                "selection_tests": {
+                    "hint": "使用するテストに基づいてテストをフィルタリングする",
+                    "label": "テスト・フィルター"
+                }
+            },
+            "Modes": {
+                "Modify": "修正"
+            },
+            "New": "新しい効果"
         },
-        "ShowItemCard": {
-            "Hint": "ロールの代わりにアイテムカードのみをチャットに表示",
-            "Label": "アイテムカードを表示する"
+        "ActiveSkills": "能動技能",
+        "Actor": {
+            "FIELDS": {
+                "attributes": {
+                    "edge": {
+                        "base": {
+                            "label": "エッジ",
+                            "hint": "エッジはキャラクターの運、神々の加護であり、逆境を覆すための説明のつかない要因です。"
+                        }
+                    }
+                },
+                "modifiers": {
+                    "walk": {
+                        "label": "歩行",
+                        "hint": "敏捷力の倍数による歩行距離を修正します"
+                    },
+                    "run": {
+                        "label": "走行",
+                        "hint": "敏捷力の倍数による走行距離を修正します"
+                    },
+                    "physical_limit": {
+                        "label": "身体リミット",
+                        "hint": "身体リミットを修正します"
+                    },
+                    "astral_limit": {
+                        "label": "アストラル・リミット",
+                        "hint": "アストラル・リミットを修正します"
+                    },
+                    "social_limit": {
+                        "label": "社交リミット",
+                        "hint": "社交リミットを修正します"
+                    },
+                    "mental_limit": {
+                        "label": "精神リミット",
+                        "hint": "精神リミットを修正します"
+                    },
+                    "astral_initiative": {
+                        "label": "アストラル・イニシアティブ",
+                        "hint": "アストラル・イニシアティブの基本値を修正します"
+                    },
+                    "astral_initiative_dice": {
+                        "label": "アストラル・イニシアティブ・ダイス",
+                        "hint": "アストラル・イニシアティブ・ダイス数を修正します"
+                    },
+                    "matrix_initiative": {
+                        "label": "マトリックス・イニシアティブ",
+                        "hint": "マトリックス・イニシアティブの基本値を修正します"
+                    },
+                    "matrix_initiative_dice": {
+                        "label": "マトリックス・イニシアティブ・ダイス",
+                        "hint": "マトリックス・イニシアティブ・ダイス数を修正します"
+                    },
+                    "meat_initiative": {
+                        "label": "肉体世界イニシアティブ",
+                        "hint": "肉体世界のイニシアティブ基本値を修正します"
+                    },
+                    "meat_initiative_dice": {
+                        "label": "肉体世界イニシアティブ・ダイス",
+                        "hint": "肉体世界のイニシアティブ・ダイス数を修正します"
+                    },
+                    "stun_track": {
+                        "label": "精神ダメージ計数欄",
+                        "hint": "精神ダメージ計数欄の枠数を修正します"
+                    },
+                    "matrix_track": {
+                        "label": "マトリックス・ダメージ計数欄",
+                        "hint": "マトリックス・ダメージ計数欄の枠数を修正します"
+                    },
+                    "physical_track": {
+                        "label": "身体ダメージ計数欄",
+                        "hint": "身体ダメージ計数欄の枠数を修正します"
+                    },
+                    "physical_overflow_track": {
+                        "label": "身体オーバーフロー計数欄",
+                        "hint": "身体オーバーフローの枠数を修正します"
+                    },
+                    "wound_tolerance": {
+                        "label": "負傷耐性",
+                        "hint": "負傷修正が発生するまでのダメージ量を修正します"
+                    },
+                    "pain_tolerance_stun": {
+                        "label": "苦痛耐性（精神）",
+                        "hint": "最初の負傷修正を受ける前に無視できるダメージ量を修正します"
+                    },
+                    "pain_tolerance_physical": {
+                        "label": "苦痛耐性（身体）",
+                        "hint": "最初の負傷修正を受ける前に無視できるダメージ量を修正します"
+                    },
+                    "armor": {
+                        "label": "装甲",
+                        "hint": "装甲の合計値を修正します"
+                    },
+                    "multi_defense": {
+                        "label": "複数回防御",
+                        "hint": "1コンバット・ターン内に複数回防御を行う際のダイスプールを修正します"
+                    },
+                    "reach": {
+                        "label": "リーチ",
+                        "hint": "近接攻撃のリーチを修正します"
+                    },
+                    "defense": {
+                        "label": "防御",
+                        "hint": "防御テストのダイスプールを修正します"
+                    },
+                    "defense_dodge": {
+                        "label": "防御（回避）",
+                        "hint": "回避（Dodge）による割り込み防御アクションの修正値を加算します"
+                    },
+                    "defense_parry": {
+                        "label": "防御（受け流し）",
+                        "hint": "受け流し（Parry）による割り込み防御アクションの修正値を加算します"
+                    },
+                    "defense_block": {
+                        "label": "防御（ブロック）",
+                        "hint": "ブロック（Block）による割り込み防御アクションの修正値を加算します"
+                    },
+                    "defense_melee": {
+                        "label": "近接防御",
+                        "hint": "近接攻撃に対する防御ダイスプールに修正を加えます"
+                    },
+                    "defense_ranged": {
+                        "label": "遠隔防御",
+                        "hint": "遠隔攻撃に対する防御ダイスプールに修正を加えます"
+                    },
+                    "soak": {
+                        "label": "ダメージ抵抗（浸透）",
+                        "hint": "身体ダメージ抵抗テストのダイスプールを修正します"
+                    },
+                    "recoil": {
+                        "label": "反動",
+                        "hint": "反動テストのダイスプールを修正します"
+                    },
+                    "drain": {
+                        "label": "ドレイン",
+                        "hint": "ドレイン抵抗テストのダイスプールを修正します"
+                    },
+                    "fade": {
+                        "label": "フェイド",
+                        "hint": "フェイド抵抗テストのダイスプールを修正します"
+                    },
+                    "essence": {
+                        "label": "エッセンス",
+                        "hint": "エッセンス能力値を修正します"
+                    },
+                    "public_grid": {
+                        "label": "パブリック格子",
+                        "hint": "パブリック格子接続時の修正値を調整します"
+                    },
+                    "mark_damage": {
+                        "label": "マーク・ダメージ",
+                        "hint": "自身に付与されたマーク（MARK）ごとに受けるダメージ量を修正します"
+                    },
+                    "place_two_marks": {
+                        "label": "マーク2個付与",
+                        "hint": "同時に2つのマークを付与する際の修正値を調整します"
+                    },
+                    "place_three_marks": {
+                        "label": "マーク3個付与",
+                        "hint": "同時に3つのマークを付与する際の修正値を調整します"
+                    },
+                    "composure": {
+                        "label": "自制心",
+                        "hint": "自制心テストのダイスプールを修正します"
+                    },
+                    "lift_carry": {
+                        "label": "持ち上げ／運搬",
+                        "hint": "持ち上げ／運搬テストのダイスプールを修正します"
+                    },
+                    "judge_intentions": {
+                        "label": "真意察知",
+                        "hint": "真意察知テストのダイスプールを修正します"
+                    },
+                    "memory": {
+                        "label": "記憶力",
+                        "hint": "記憶力テストのダイスプールを修正します"
+                    },
+                    "global": {
+                        "label": "グローバル",
+                        "hint": "ダメージ減少テストを除く、すべてのテストのダイスプールを修正します"
+                    }
+                },
+                "category_visibility": {
+                    "default": {
+                        "label": "空のカテゴリを表示",
+                        "hint": "中身が空のタブや所持品カテゴリを表示するかどうか設定します"
+                    }
+                },
+                "full_defense_attribute": {
+                    "label": "全力防御使用能力値",
+                    "hint": "割り込みアクション「全力防御」を使用する際に加算する能力値を選択します"
+                },
+                "magic": {
+                    "label": "魔法",
+                    "attribute": {
+                        "label": "ドレイン抵抗能力値",
+                        "hint": "魔術師やアデプトがドレインに抵抗する際に使用する能力値です"
+                    }
+                },
+                "technomancer": {
+                    "label": "テクノマンサー",
+                    "attribute": {
+                        "label": "フェイド抵抗能力値",
+                        "hint": "テクノマンサーがフェイドに抵抗する際に使用する能力値です"
+                    }
+                },
+                "special": {
+                    "label": "覚醒者／発現者",
+                    "hint": "キャラクターが覚醒者（魔術師/アデプト）か発現者（テクノマンサー）かを選択します"
+                }
+            },
+            "NoFavoritesSelected": "お気に入りが選択されていません"
         },
-        "ShowSituationModifiers": {
-            "Hint": "環境修正モニタを開く",
-            "Label": "環境修正モニタ"
-        }
-    },
-    "SR5.KnockedDown": "転倒",
-    "SR5.KnowledgeSkillAcademic": "学術",
-    "SR5.KnowledgeSkillInterests": "趣味",
-    "SR5.KnowledgeSkillProfessional": "職業",
-    "SR5.KnowledgeSkillStreet": "ストリート",
-    "SR5.Labels": {
-        "Action": {
-            "ActiveTest": "テスト",
-            "Category": "カテゴリー",
-            "DamageResistanceTest": "ダメージ抵抗テスト",
-            "Modifier": "修正",
-            "Modifiers": "修正",
-            "OpposedTest": "対抗テスト",
-            "SpiritType": "精霊の種類",
+        "ActorTypes": {
+            "Character": "キャラクター",
+            "Critter": "クリッター",
+            "IC": "IC",
+            "Spirit": "精霊",
+            "Sprite": "スプライト",
+            "Vehicle": "ヴィークル"
+        },
+        "Add": "追加",
+        "AddAmmo": "弾薬を追加",
+        "AddFifteenMinutesToOverwatch": "マトリックス内で15分ごとに2d6を振る",
+        "AddFiveToOverwatch": "監視指数+5",
+        "AddMod": "修正（Mod）を追加",
+        "AddOneToOverwatch": "監視指数+1",
+        "AddSkill": "技能の追加",
+        "AdeptPower": {
+            "Types": {
+                "Active": "能動",
+                "Passive": "受動"
+            },
+            "FIELDS": {
+                "pp": {
+                    "label": "パワーポイント",
+                    "hint": "このパワーの習得に必要なパワーポイント（PP）の消費量"
+                },
+                "type": {
+                    "label": "パワー・タイプ",
+                    "hint": "アデプト・パワーの種別"
+                },
+                "drain": {
+                    "label": "ドレイン",
+                    "hint": "このアデプト・パワーの使用後にドレインが発生するかどうか"
+                },
+                "level": {
+                    "label": "レベル",
+                    "hint": "このアデプト・パワーのレベル（レベルがある場合）"
+                }
+            }
+        },
+        "Agent": "エージェント",
+        "Ammo": {
+            "label": "弾薬",
+            "FIELDS": {
+                "damage": {
+                    "label": "ダメージ",
+                    "hint": "この弾薬によるダメージ。武器のダメージに加算されるか、武器の値を置き換えます。"
+                },
+                "damageType": {
+                    "label": "ダメージ種別",
+                    "hint": "この弾薬が与えるダメージの種別。"
+                },
+                "element": {
+                    "label": "属性",
+                    "hint": "このダメージが持つ属性（火炎、冷気など）。"
+                },
+                "replaceDamage": {
+                    "label": "ダメージ置換",
+                    "hint": "この弾薬のダメージ値を武器のダメージ値と置き換える場合にチェックします。"
+                },
+                "ap": {
+                    "label": "AP",
+                    "hint": "この弾薬の装甲貫通力（AP）。武器のAPに加算されるか、武器の値を置き換えます。"
+                },
+                "replaceAP": {
+                    "label": "AP置換",
+                    "hint": "この弾薬のAPを武器のAPと置き換える場合にチェックします。"
+                },
+                "accuracy": {
+                    "label": "精度",
+                    "hint": "この弾薬による精度修正値。"
+                },
+                "blast": {
+                    "radius": {
+                        "label": "爆発半径",
+                        "hint": "この弾薬の爆発半径（メートル）。"
+                    },
+                    "dropoff": {
+                        "label": "威力減衰",
+                        "hint": "1メートルあたりのダメージ減少量を修正します。"
+                    }
+                }
+            }
+        },
+        "AmmoFull": "弾薬満タン",
+        "AmmoGelRounds": "ゲル弾",
+        "Aoe": "効果範囲",
+        "ApplyWounds": "負傷を適用",
+        "Armor": {
+            "label": "装甲",
+            "FIELDS": {
+                "armor": {
+                    "value": {
+                        "label": "装甲値",
+                        "hint": "このアイテムが提供する装甲の量。"
+                    },
+                    "mod": {
+                        "label": "アクセサリー",
+                        "hint": "この装甲がアクセサリー（ベースの装甲値に加算されるタイプ）である場合にチェックします。"
+                    },
+                    "hardened": {
+                        "label": "硬化装甲",
+                        "hint": "この装甲が強化装甲（Hardened Armor）である場合にチェックします。"
+                    },
+                    "acid": {
+                        "label": "耐酸性",
+                        "hint": "酸による攻撃に対する追加装甲。"
+                    },
+                    "electricity": {
+                        "label": "非導電性",
+                        "hint": "電気による攻撃に対する追加装甲。"
+                    },
+                    "cold": {
+                        "label": "断熱",
+                        "hint": "冷気による攻撃に対する追加装甲。"
+                    },
+                    "fire": {
+                        "label": "耐火性",
+                        "hint": "火炎による攻撃に対する追加装甲。"
+                    },
+                    "radiation": {
+                        "label": "耐放射線性",
+                        "hint": "放射線による攻撃に対する追加装甲。"
+                    }
+                }
+            }
+        },
+        "ArmorHardened": "硬化",
+        "ArmorHardenedFull": "硬化装甲",
+        "ArmorValue": "装甲値",
+        "Attack": "攻撃",
+        "Attacker": "攻撃者",
+        "AttackerHits": "攻撃側のヒット数",
+        "AttackerNetHits": "攻撃側純ヒット数",
+        "AttrAgility": "敏捷力",
+        "AttrBody": "強靭力",
+        "AttrCharisma": "魅力",
+        "AttrEdge": "エッジ",
+        "AttrEssence": "エッセンス",
+        "AttrIntuition": "直感力",
+        "AttrLogic": "論理力",
+        "AttrMagic": "魔力",
+        "AttrReaction": "反応力",
+        "AttrResonance": "共振力",
+        "AttrStrength": "筋力",
+        "AttrWillpower": "意志力",
+        "Attribute": "能力値",
+        "Attributes": "能力値",
+        "Availability": "入手値",
+        "Awakened": "覚醒者",
+        "AwakenedEmerged": "覚醒者/発現者",
+        "Barrel": "バレル",
+        "Base": "基本",
+        "BaseValue": "基本値",
+        "BiofeedbackDamage": "生体信号フィードバックダメージ",
+        "Biography": "経歴",
+        "BlastRadius": "爆発半径",
+        "Blitz": "ブリッツ",
+        "Block": "ブロック",
+        "Bonus": "ボーナス",
+        "Bonuses": "ボーナス",
+        "Broken": "破壊",
+        "Bullet": "ラウンド",
+        "BulletCount": "弾丸の数",
+        "Bullets": "ラウンド",
+        "COMBAT": {
+            "ReduceInitByFive": "イニシアティブ -5",
+            "ReduceInitByOne": "イニシアティブ -1",
+            "ReduceInitByTen": "イニシアティブ -10"
+        },
+        "CallInAction": {
+            "ActorType": "アクター種別",
+            "Compilation": "コンパイル",
+            "Compile": "コンパイル実行",
+            "CreateCompilation": "コンパイル・アクションを作成",
+            "CreateSummoning": "召喚アクションを作成",
+            "FIELDS": {
+                "spirit": {
+                    "type": {
+                        "label": "精霊種別",
+                        "hint": "召喚する精霊の種別。精霊のアクターが設定されている場合は無効化されます"
+                    },
+                    "force": {
+                        "label": "フォース",
+                        "hint": "召喚する精霊のフォース。精霊のアクターが設定されている場合は無効化されます"
+                    }
+                },
+                "sprite": {
+                    "type": {
+                        "label": "スプライト種別",
+                        "hint": "コンパイルするスプライトの種別。スプライトのアクターが設定されている場合は無効化されます"
+                    },
+                    "level": {
+                        "label": "レベル",
+                        "hint": "召喚するスプライトのレベル。スプライトのアクターが設定されている場合は無効化されます"
+                    }
+                },
+                "actor_type": {
+                    "label": "種別",
+                    "hint": "このアクションが召喚するアクターの種別"
+                }
+            },
+            "Summon": "召喚",
+            "Summoning": "召喚実行"
+        },
+        "CanDefault": "デフォルティング可",
+        "Capacity": "容量",
+        "CareerKarma": "通算カルマ",
+        "ChangelogApplication": {
+            "Changelog": "新機能や修正についてはGitHubを確認してください",
+            "IssuesOverview": "問題の概要",
+            "LatestChangelog": "最新の変更履歴",
+            "Reason": "最新バージョンにアップデートされました！",
+            "ReportIssues": "バグ報告や機能要望はこちらへお願いします",
+            "Title": "Shadowrun5e アップデート"
+        },
+        "Character": {
+            "FIELDS": {
+                "metatype": {
+                    "label": "メタタイプ",
+                    "hint": "キャラクターのメタタイプ。NPCの場合、これによって能力値が調整されます"
+                },
+                "nuyen": {
+                    "label": "新円",
+                    "hint": "このキャラクターが所持している新円の額"
+                },
+                "karma": {
+                    "value": {
+                        "label": "現在カルマ",
+                        "hint": "このキャラクターが現在使用可能なカルマ"
+                    },
+                    "max": {
+                        "label": "通算カルマ",
+                        "hint": "このキャラクターがこれまでに獲得した通算カルマ"
+                    }
+                },
+                "notoriety": {
+                    "label": "悪名",
+                    "hint": "キャラクターの悪い評判"
+                },
+                "public_awareness": {
+                    "label": "世間の注目",
+                    "hint": "メディア、当局、そして一般市民にどれだけ名前が知られているか"
+                },
+                "street_cred": {
+                    "label": "街の噂",
+                    "hint": "キャラクターがこれまでに成し遂げた功績"
+                },
+                "matrix_full_defense_attribute": {
+                    "label": "マトリックス全力防御使用能力値",
+                    "hint": "マトリックス全力防御アクションを行う際に加算する能力値"
+                },
+                "is_critter": {
+                    "label": "クリッター",
+                    "hint": "クリッター・パワーの使用を許可する"
+                },
+                "is_npc": {
+                    "label": "NPC設定",
+                    "hint": "NPCとしてマークし、追加機能（能力値の自動調整など）を有効にする"
+                },
+                "npc": {
+                    "is_grunt": {
+                        "label": "グラント（Grunt）",
+                        "hint": "このアクターにグラント（Grunt）用ルールを適用する"
+                    }
+                }
+            },
+            "Modifiers": {
+                "NPCMetatypeAttribute": "NPCメタタイプ能力値"
+            },
+            "Types": {
+                "Dwarf": "ドワーフ",
+                "Elf": "エルフ",
+                "Human": "ヒューマン",
+                "Ork": "オーク",
+                "Troll": "トロル"
+            }
+        },
+        "ClearMarks": "マークを消す",
+        "Close": "閉じる",
+        "Collapse": "折りたたむ",
+        "CollapseAll": "全て折りたたむ",
+        "CommonProgram": "一般プログラム",
+        "CompendiaSettings": {
+            "Description": "これらのパックはシステムで使用されます。独自のパックで上書きすることも可能ですが、削除は推奨されません。",
+            "GeneralActionsPack": {
+                "hint": "能力値のみを使用するすべての一般アクションに使用されるコンペンディウムです。",
+                "label": "一般アクション"
+            },
+            "ICActionsPack": {
+                "hint": "IC（侵入対抗プログラム）のアクションに使用され、ICの種別ごとにフィルタリングされます。",
+                "label": "ICアクション"
+            },
+            "Label": "コンペンディウム・パック",
+            "MatrixActionsPack": {
+                "hint": "すべてのマトリックス・アクションに使用されるコンペンディウムです。",
+                "label": "マトリックス・アクション"
+            },
+            "Title": "システム・コンペンディウム"
+        },
+        "CompendiumBrowser": {
+            "Filters": {
+                "ClearSearch": "検索をクリア",
+                "SearchPlaceholder": "検索結果...",
+                "System": "システム",
+                "World": "ワールド"
+            },
+            "Tabs": {
+                "Actors": "アクター",
+                "Items": "アイテム",
+                "Settings": "設定"
+            },
+            "Title": "コンペンディウム・ブラウザ"
+        },
+        "Compendiums": {
+            "Folders": {
+                "Root": "SR5e インポート"
+            },
+            "sr5critter": "クリッター＆精霊＆スプライト",
+            "sr5drone": "ドローン＆車両",
+            "sr5gear": "装甲＆装備品",
+            "sr5magic": "呪文＆コンプレックス・フォーム",
+            "sr5misc": "その他",
+            "sr5modification": "改造・モジュール",
+            "sr5trait": "資質＆パワー",
+            "sr5ware": "バイオウェア＆サイバーウェア",
+            "sr5weapon": "武器"
+        },
+        "Compilation": {
+            "DropSprite": "レジスターするスプライトをドラッグ＆ドロップ",
+            "FixedSprite": "スプライトをレジスター",
             "SpriteType": "スプライトの種類"
         },
-        "ActorSheet": {
-            "CreateInventory": "インベントリの作成場所",
-            "CritterPowers": "クリッターパワー",
-            "DeviceRating": "レーティング",
-            "DisabledOptionCritterPowers": "追加クリッターパワー：無効",
-            "DisabledOptionSpritePowers": "追加スプライトパワー：無効",
-            "EnabledOptionCritterPowers": "追加クリッターパワー：有効",
-            "EnabledOptionSpritePowers": "追加スプライトパワー：有効",
-            "ICConfiguration": "ICの設定",
-            "Matrix": "マトリックス",
-            "PersonalInventory": "個人",
-            "ResetActorForNewRun": "新規ランリセット",
-            "Rituals": "儀式",
-            "RollDronePerception": "ドローンの知覚",
-            "RollDroneInfiltration": "ドローンの潜入",
-            "RollPilotVehicleTest": "パイロットヴィークル",
-            "SetMonitor": "モニターは手動で設定する必要があります。",
-            "Spells": "呪文",
-            "SpiritConfiguration": "精霊の設定",
-            "SpriteConfiguration": "スプライトの設定",
-            "SpritePowers": "スプライトのパワー",
-            "TestKBoardModifiers": "{skip}: ダイアログをスキップ. {descr}: 表示のみの記述",
-            "VehicleConfiguration": "ヴィークル設定"
+        "ComplexForm": {
+            "Durations": {
+                "Immediate": "即時",
+                "Permanent": "永続",
+                "Sustained": "維持"
+            },
+            "FIELDS": {
+                "target": {
+                    "label": "対象",
+                    "hint": "この複合体の有効な対象"
+                },
+                "duration": {
+                    "label": "持続時間",
+                    "hint": "即時（即座に効果を発揮し、持続しない）、維持（効果を維持し続けられる）、永続（レベルと同じ戦闘ターンの間維持し続けることで、維持をやめた後も効果が定着する）。"
+                },
+                "fade": {
+                    "label": "フェイディング",
+                    "hint": "フェイディングは、スレッディング時に選択したレベルに加算され、抵抗すべきダメージ量を決定します。"
+                }
+            }
         },
-        "Inventory": {
-            "All": "全て",
-            "Carried": "運搬中",
-            "OpenInventory": "所持品"
+        "ComplexForms": "複合体",
+        "Conceal": "秘匿",
+        "ConditionMonitor": "コンディション・モニター",
+        "Connection": "コネクション",
+        "ConnectToNetwork": "ネットワークに接続",
+"Contact": {
+            "FIELDS": {
+                "type": {
+                    "label": "種別",
+                    "hint": "コネの種別は、装備、仕事、情報など、その相手がどのようなアクセス権を持っているかを決定します。"
+                },
+                "connection": {
+                    "label": "コネ値",
+                    "hint": "コネの持つ影響力を1から12の尺度で表します。コネクション値が高いほど、その相手は強力な権力を持っています。"
+                },
+                "blackmail": {
+                    "label": "強請（ゆすり）",
+                    "hint": "コネに対して、取引を強制させるための何らかの弱みを握っています。"
+                },
+                "loyalty": {
+                    "label": "忠誠",
+                    "hint": "そのコネをどれだけ信頼できるかを1から6の尺度で表します。忠誠値が高いほど、その相手は進んで協力してくれます。"
+                },
+                "family": {
+                    "label": "家族",
+                    "hint": "「血は水よりも濃い」と言われるように、家族をコネとして持っていることを示します。"
+                },
+                "group": {
+                    "label": "グループ",
+                    "hint": "コネが個人ではなくグループ（ギャング、企業、オタク集団など）であることを示します。"
+                },
+                "linkedActor": {
+                    "label": "アクター",
+                    "hint": "このコネに対応するアクターデータ"
+                }
+            },
+            "Blackmail": "強請",
+            "Connection": "コネ値",
+            "DropActor": "アクターをドラッグ＆ドロップしてこのコネにリンクさせます",
+            "Family": "家族",
+            "Group": "グループ",
+            "LinkedActor": "アクター",
+            "Loyalty": "忠誠度",
+            "LoyaltyConnectionLabel": "L / C",
+            "LoyaltyConnectionHelp": "忠誠度 / コネ値",
+            "Type": "種別"
         },
-        "Message": {
-            "ClickToSelect": "クリックするとシーンで選択できます",
-            "TestEffects": "適用された効果"
+        "ContactType": "種類",
+        "Contacts": "コンタクト",
+        "Content": {
+            "Actions": {
+                "Armor": "装甲",
+                "Biofeedback Resist": "生体信号フィルター",
+                "BruteForce": "強制介入（ブルートフォース）",
+                "ChangeConfiguration": "設定変更",
+                "ChangeIcon": "アイコン変更",
+                "CheckOverwatchScore": "監視指数確認",
+                "Composure": "自制心判定",
+                "ControlDevice": "機器を制御",
+                "CrackFile": "ファイルをクラック（プロテクト解除）",
+                "CrashProgram": "プログラムをクラッシュさせる（強制終了）",
+                "DataSpike": "データスパイク",
+                "DisarmDataBomb": "データ爆弾解除",
+                "Drain": "ドレイン抵抗",
+                "DroneInfiltration": "ドローン隠密",
+                "DronePerception": "ドローン知覚",
+                "DronePilotVehicle": "ドローン操縦",
+                "EditFile": "ファイル編集",
+                "EnterexitHost": "ホストへの出入り",
+                "EraseMark": "マーク消去",
+                "EraseMatrixSignature": "マトリックス痕跡消去",
+                "Fade": "フェイディング抵抗",
+                "FormatDevice": "デバイス初期化",
+                "FullMatrixDefense": "マトリックス全力防御",
+                "GridHop": "グリッド移動",
+                "HackOnTheFly": "即興ハッキング",
+                "Hide": "隠伏",
+                "InviteMark": "マークを招待",
+                "JackOut": "ジャックアウト",
+                "JamSignals": "ジャミングを行う",
+                "JudgeIntentions": "意図を計る",
+                "JumpIntoRiggedDevice": "リギング・デバイスへのジャンプイン",
+                "LiftCarry": "持ち上げ／運搬",
+                "MatrixDamageResist": "マトリックス・ダメージ抵抗",
+                "MatrixDefenseTest": "マトリックス防御テスト",
+                "MatrixPerception": "マトリックス知覚",
+                "MatrixSearch": "マトリックス検索",
+                "Memory": "記憶力判定",
+                "NaturalRecoveryPhysical": "自然回復（身体）",
+                "NaturalRecoveryStun": "自然回復（精神）",
+                "PhysicalDamageResist": "身体ダメージ抵抗",
+                "PhysicalDefense": "身体防御",
+                "RebootDevice": "デバイス再起動",
+                "SendMessage": "メッセージ送信",
+                "SetDataBomb": "データ爆弾設置",
+                "Snoop": "盗聴（スヌープ）",
+                "SpoofCommand": "コマンド偽装",
+                "SwitchInterfaceMode": "インターフェース・モード切り替え",
+                "TraceIcon": "アイコン追跡"
+            }
         },
-        "Sheet": {
-            "AddOne": "1つ加算",
-            "ClearNetwork": "全てのデバイスからネットワークをクリア",
-            "ItemEffects": "アイテム効果",
-            "MissingNetworkDevices": "ネットワークデバイスをドラッグ＆ドロップで追加することができます。",
-            "NetworkDevices": "ネットワークデバイス",
-            "PAN": "PAN",
-            "SubtractOne": "1つ減算",
-            "WAN": "広域ネットワーク（WAN）"
+        "ContextOptions": {
+            "AddAttributeEffect": "能力値への効果を追加",
+            "AddSkillEffect": "技能への効果を追加",
+            "DeleteEffect": "効果を削除",
+            "DeleteItem": "アイテムを削除",
+            "DeleteSkill": "技能を削除",
+            "EditEffect": "効果を編集",
+            "EditItem": "アイテムを編集",
+            "EditSkill": "技能を編集",
+            "MoveItem": "アイテムを移動",
+            "Source": "参照を開く",
+            "View": "表示",
+            "ViewItem": "アイテムを表示"
         },
-        "Sidebar": {
-            "Changelog": "変更履歴",
-            "Issues": "問題",
-            "Wiki": "Wiki"
-        }
-    },
-    "SR5.Languages": "言語",
-    "SR5.LastRoll": "最後に促されたロール",
-    "SR5.Level": "レベル",
-    "SR5.License": "免許",
-    "SR5.Licenses": "免許",
-    "SR5.Lifestyle": "ライフスタイル",
-    "SR5.LifestyleComforts": "快適さ",
-    "SR5.LifestyleGuests": "ゲスト",
-    "SR5.LifestyleHigh": "上流",
-    "SR5.LifestyleLow": "下流",
-    "SR5.LifestyleLuxory": "贅沢",
-    "SR5.LifestyleMiddle": "中流",
-    "SR5.LifestyleNeighborhood": "周辺",
-    "SR5.LifestyleOther": "その他",
-    "SR5.LifestyleSecurity": "治安",
-    "SR5.LifestyleSquatter": "不法居住",
-    "SR5.LifestyleStreet": "ストリート",
-    "SR5.LifestyleType": "タイプ",
-    "SR5.Lifestyles": "ライフスタイル",
-    "SR5.Limit": "リミット",
-    "SR5.LimitAstral": "アストラル",
-    "SR5.LimitMental": "精神",
-    "SR5.LimitPhysical": "身体",
-    "SR5.LimitSocial": "社交",
-    "SR5.LivingPersona": "生体ペルソナ",
-    "SR5.Load": "ロード",
-    "SR5.Loaded": "ロード済",
-    "SR5.MIGRATION.BeginMigration": "マイグレーション開始",
-    "SR5.MIGRATION.BeginNotification": "シャドウランのシステム移行をバージョンアップで開始",
-    "SR5.MIGRATION.DoNotCloseNotification": "ゲームを終了したり、FoundryVTTをシャットダウンしたりしないでください。",
-    "SR5.MIGRATION.SuccessConfirm": "クローズ",
-    "SR5.MIGRATION.SuccessDescription": "このワールドに属する既存のコンペンディウムパックは、この移行の過程で更新されました。",
-    "SR5.MIGRATION.SuccessHeader": "マイグレーション完了",
-    "SR5.MIGRATION.SuccessNotification": "シャドーランのシステム、バージョン移行に成功",
-    "SR5.MIGRATION.SuccessPacksInfo": "FoundryVTTの現在の技術的な制限により、アクターパックは手動で更新する必要があります。",
-    "SR5.MIGRATION.SuccessTitle": "成功",
-    "SR5.MIGRATION.WarningBackup": "バックアップをとっていない場合は、下の「移行を開始する」ボタンを押す前にバックアップをとってください。",
-    "SR5.MIGRATION.WarningDescription": "アップデートはGMのみが行うことができ、アップデート中にサーバーを停止したり、ブラウザを閉じたりすると、お客様のワールドに取り返しのつかないダメージを与える可能性があります。",
-    "SR5.MIGRATION.WarningHeader": "マイグレーションに関する注意事項",
-    "SR5.MIGRATION.WarningRequired": "シャドウラン5Eのシステムは、必要なアップデートを開始しなければなりません。",
-    "SR5.MIGRATION.WarningTitle": "警告",
-    "SR5.Magic": "魔法",
-    "SR5.ManualGlitches": "手動グリッジ",
-    "SR5.ManualHits": "手動ヒット",
-    "SR5.ManualOverride": "手動操作優先",
-    "SR5.MarkImportedItemReviewed": "インポートされたアイテムをレビュー済みにマークする",
-    "SR5.MarkImportedItemTooltip": "インポートされたアイテムをレビュー済みとしてマークします。",
-    "SR5.MarkImportsReviewed": "インポートされたアイテムをレビュー済みとマークする",
-    "SR5.MarkImportsTooltip": "このアクター上のインポートされたすべてのアイテムをレビュー済みとしてマークします。",
-    "SR5.Marks": "マーク",
-    "SR5.MatrixAttrAttack": "アタック",
-    "SR5.MatrixAttrDataProc": "データ処理",
-    "SR5.MatrixAttrFirewall": "ファイアウォール",
-    "SR5.MatrixAttrSleaze": "スリーズ",
-    "SR5.MatrixTarget": "マトリックスターゲット",
-    "SR5.MeleeWeaponAttack": "近接武器攻撃",
-    "SR5.MentalLimit": "精神リミット",
-    "SR5.Metamagic": "メタマジック",
-    "SR5.Metamagics": "メタマジック",
-    "SR5.Metatype": "メタタイプ",
-    "SR5.MigrationComplete": "マイグレーション完了",
-    "SR5.MigrationUpdateCompendiumNoUpdateActor": "FoundryVTTの技術的な制限により、現時点ではアクターのコンペディアムパックを更新できません。これらのパックを手動で更新する必要があります.",
-    "SR5.MigrationUpdateCompendiumUpdateMessage": "ワールド内に存在するワールド用のコンペディアムパックは同じ様に更新されました",
-    "SR5.Migrator": {
-        "Version18_0_0": {
-            "Line1": "バージョン0.18.0以降、所有アイテムにかかる効果は、それらをアクターにコピーする必要なく直接適用されます。",
-            "Line2": "以前にコピーされた効果は削除または無効化する必要があり、アイテムとアクターの効果が変更を適用するのを防ぐためです。デフォルトでは、アイテムの起源を持つすべての効果が削除されます。",
-            "Line3": "アクターに直接作成された効果は影響を受けません。",
-            "Line4": "効果や効果モジュールを多用しており、'アイテム所有効果'に自信がない場合は、このマイグレーションを無効にして、無効化された効果を確認してください。無効化された効果はそのように表示されます。",
-            "Line5": "また、アクターアイテムの有効な効果は今後適用されます。アクターの効果タブで適用されたすべての効果を確認できます。",
-            "OnlyDisable": "効果を無効にするのみ",
-            "Warning": "注意！"
-        }
-    },
-    "SR5.Miscellaneous": "その他",
-    "SR5.MissingItemForOpposedTest": "行動用のアイテムがないため対抗テストができません",
-    "SR5.MissingRessource": {
-        "Ammo": "発射するための弾薬が不足している",
-        "Edge": "消費するエッジが残っていない",
-        "Initiative": "イニシアチブのスコアが足りない",
-        "SomeAmmo": "選択したモードで射撃するための弾薬が足りない、防御側の修正値が減少する。",
-        "SomeAmmoMelee": "近接攻撃を行うための弾薬が不足しています。"
-    },
-    "SR5.ModPoints": "改造スロット",
-    "SR5.Modification": "改造",
-    "SR5.ModificationCategories": "改造のカテゴリー",
-    "SR5.ModificationCategory": "改造カテゴリー",
-    "SR5.ModificationSlots": "改造スロット",
-    "SR5.Modified": "修正後",
-    "SR5.ModifiedArmor": "修正装甲値",
-    "SR5.ModifiedDamage": "修正後ダメージ",
-    "SR5.ModifiedDrain": "修正後ドレイン",
-    "SR5.ModifiedFade": "修正後フェイディング",
-    "SR5.Modifier": "修正",
-    "SR5.ModifierTypes": {
-        "Armor": "装甲",
-        "AstralDice": "アストラルイニシアティブダイス",
-        "AstralInit": "アストラルイニシアティブ",
-        "AstralLimit": "アストラルリミット",
-        "BackgroundCount": "背景放射",
-        "Composure": "冷静",
+        "Continue": "続行",
+        "ControlRig": "コントロール・リグ",
+        "Cost": "コスト",
+        "Cover": "遮蔽",
+        "Create": "{type}を作成",
+        "CritterPower": {
+            "FIELDS": {
+                "optional": {
+                    "label": "選択ルール",
+                    "hint": "このクリッター・パワーが「選択的パワー」であるかどうか"
+                },
+                "powerType": {
+                    "label": "パワー種別",
+                    "hint": "クリッター・パワーの種別"
+                },
+                "duration": {
+                    "label": "持続時間",
+                    "hint": "クリッター・パワーの効果持続時間"
+                },
+                "range": {
+                    "label": "射程",
+                    "hint": "クリッター・パワーの射程"
+                },
+                "karma": {
+                    "label": "カルマ",
+                    "hint": "このクリッター・パワーの習得に必要なカルマコスト"
+                }
+            },
+            "Categories": {
+                "Drake": "ドレイク",
+                "Echoes": "エコー",
+                "Emergent": "発現体",
+                "FreeSpirit": "自由精霊",
+                "Mundane": "非覚醒（マンデイン）",
+                "Paranormal": "超常生物",
+                "ParanormalInfected": "超常生物／感染者",
+                "Shapeshifter": "シェイプシフター",
+                "Weakness": "弱点"
+            },
+            "Category": "カテゴリ",
+            "Duration": "持続時間",
+            "Durations": {
+                "Always": "常時",
+                "Instant": "即時",
+                "Permanent": "永続",
+                "Special": "特殊",
+                "Sustained": "維持"
+            },
+            "IsOptional": "選択可否",
+            "Karma": "カルマ",
+            "Optional": {
+                "DisabledOption": "選択的（無効）",
+                "EnabledOption": "選択的（有効）",
+                "Standard": "標準（デフォルト）"
+            },
+            "Range": "射程",
+            "Ranges": {
+                "LineOfSight": "視認範囲（LOS）",
+                "LineOfSightArea": "視認範囲内全域（LOS/A）",
+                "Self": "自身",
+                "Special": "特殊",
+                "Touch": "接触"
+            },
+            "Type": "種別",
+            "Types": {
+                "Mana": "マナ",
+                "Physical": "物理"
+            }
+        },
+        "Cyberware": "サイバーウェア",
+        "CyberwareGrade": "等級",
+        "CyberwareGradeAlpha": "アルファ",
+        "CyberwareGradeBeta": "ベータ",
+        "CyberwareGradeDelta": "デルタ",
+        "CyberwareGradeGamma": "ガンマ",
+        "CyberwareGradeGrey": "グレイ",
+        "CyberwareGradeStandard": "スタンダード",
+        "CyberwareGradeUsed": "中古",
+        "DIALOG": {
+            "MissingModuleContent": "ソースPDFを表示するには、pdf-pagerモジュールがインストールされており、かつコードに一致するPDFが作成されている必要があります。"
+        },
+        "DP": "DP",
+        "DV": "DV",
+        "Damage": "ダメージ",
+        "DamageApplication": {
+            "ApplyDamage": "負傷の適用",
+            "ApplyUnmodifiedDamage": "負傷の適用はしない",
+            "Title": "ダメージ適用"
+        },
+"DamageReplace": "ダメージ置換",
+        "DamageType": "種別",
+        "DamageValue": "ダメージ値",
+        "DefaultCategoryVisibility": "空のカテゴリを表示",
+        "Defaulting": "デフォルティング",
+        "Defender": "防御側",
+        "DefenderNetHits": "防御側純ヒット数",
         "Defense": "防御",
-        "DefenseBlock": "防御 (ブロック)",
-        "DefenseDodge": "防御 (回避)",
-        "DefenseMelee": "防御 (近接攻撃)",
-        "DefenseMulti": "防御 (全力防御)",
-        "DefenseParry": "防御 (受け流し)",
-        "DefenseRanged": "防御 (射撃)",
+        "DefenseTest": "防御テスト",
+        "Del": "削除",
+        "DeleteAmmo": "弾薬を削除",
+        "DeleteConfirmationApplication": {
+            "Cancel": "いいえ",
+            "Consent": "本当に削除しますか？",
+            "Delete": "はい",
+            "Description": "アイテムを削除すると元に戻せません！",
+            "Title": "アイテムの削除"
+        },
+        "DeleteItem": "アイテムを削除",
+        "DeleteLicense": "ライセンスを削除",
+        "DeleteMod": "改造・モジュールを削除",
+        "DeleteSkill": "技能を削除",
+        "Description": "解説",
+        "Descriptors": "特性子",
+        "Details": "詳細",
+        "DetectionSpellExtended": "超広域",
+        "Device": {
+            "label": "デバイス",
+            "FIELDS": {
+                "category": {
+                    "label": "デバイス種別",
+                    "hint": "デバイスの種類（コムリンク、デッキ等）"
+                }
+            }
+        },
+        "DeviceCatCommlink": "コムリンク",
+        "DeviceCatCyberdeck": "サイバーデッキ",
+        "DeviceCatRCC": "リガー・コマンド・コンソール（RCC）",
+        "DeviceType": "種別",
+        "Dialogs": {
+            "Common": {
+                "Cancel": "キャンセル"
+            },
+            "RangedWeaponTest": {
+                "EnvironmentalOverwriteSet": "環境修正が手動で固定値に設定されています！"
+            }
+        },
+        "DicePool": "ダイスプール",
+        "DicePoolModifier": "ダイスプール修正",
+        "DirectConnection": "直結",
+        "DmgTypeMatrix": "マトリックス",
+        "DmgTypePhysical": "身体",
+        "DmgTypeStun": "精神",
+        "Dodge": "回避",
+        "DontApplyWounds": "負傷を適用しない",
         "Drain": "ドレイン",
-        "Environmental": "環境修正",
-        "EnvironmentalLight": "環境修正 (光)",
-        "EnvironmentalRange": "環境修正 (射程)",
-        "EnvironmentalVisibility": "環境修正 (視界)",
-        "EnvironmentalWind": "環境修正 (風)",
-        "Essence": "エッセンス",
+        "DrainAttribute": ドレイン能力値",
+        "DrainValue": "ドレイン",
+        "Dropoff": "外す",
+        "DuckOrCover": "伏せもしくは遮蔽を取る",
+        "Duration": "効果時間",
+        "DurationInstant": "インスタント",
+        "DurationPermanent": "永続",
+        "DurationSustained": "維持",
+        "Echo": "エコー",
+        "Echoes": "エコー",
+        "EditAmmo": "弾薬を編集",
+        "EditItem": "アイテムを編集",
+        "EditMod": "修正（Mod)を編集",
+        "EditSkill": "スキルを編集",
+        "Effect": "効果",
+        "Effects": "効果",
+        "Element": "属性",
+        "ElementAcid": "酸",
+        "ElementCold": "冷気",
+        "ElementElectricity": "電撃",
+        "ElementFire": "炎",
+        "ElementRadiation": "放射能",
+        "Emerged": "発現者",
+        "EnvModifiersApplication": {
+            "ClearModifiers": "個人修正のクリア",
+            "Extreme": "重度(修正が-6)の状況が2つ以上重なった場合",
+            "LightGlare": {
+                "Good": "明るい/発光体なし",
+                "Heavy": "完全な暗闇/眩い発光体",
+                "Light": "薄暗がり/弱い発光体",
+                "Moderate": "暗がり/中度の発光体",
+                "Title": "光/大光量"
+            },
+            "Modifier": {
+                "Title": "修正"
+            },
+            "Range": {
+                "Good": "近距離",
+                "Heavy": "超遠距離",
+                "Light": "中距離",
+                "Moderate": "遠距離",
+                "Title": "射程"
+            },
+            "Title": "環境修正",
+            "Total": "結果",
+            "Visibility": {
+                "Good": "クリア",
+                "Heavy": "強い雨/濃霧/濃い霧",
+                "Light": "小雨/薄い霧/薄い煙",
+                "Moderate": "中度の雨/霧/煙",
+                "Title": "視界"
+            },
+            "Wind": {
+                "Good": "無風またはそよ風",
+                "Heavy": "強風",
+                "Light": "軽風",
+                "Moderate": "中度の風",
+                "Title": "風"
+            }
+        },
+        "EnvironmentHigh": "高",
+        "EnvironmentLow": "低",
+        "EnvironmentMedium": "中",
+        "EnvironmentModifier": "環境修正",
+        "EnvironmentNone": "なし",
+        "EnvironmentVeryHigh": "非常に高い",
+        "Equip": "装備",
+        "Equipment": "装備",
+        "Equipped": "装備済み",
+        "Errors": {
+            "CantConnectICToGrid": "ICアクターを格子（グリッド）ネットワークに接続することはできません",
+            "CantConnectToPAN": "指定されたドキュメントをPAN（個人用エリアネットワーク）に追加することはできません",
+            "CantConnectToWAN": "指定されたドキュメントをWAN（広域エリアネットワーク）に追加することはできません",
+            "CantEditAppliedItemEffects": "アイテムによって適用されているアクティブな効果を編集することはできません",
+            "DefaultInventoryCantBeRemoved": "デフォルトのインベントリは削除できません",
+            "InventoryAlreadyExists": "この名前のインベントリはすでに存在しています。",
+            "KeyNotModifyableByActiveEffect": "アクティブ効果のモード「修正（modify）」は、modプロパティに対してのみ有効です",
+            "MarkCouldNotBePlaced": "内部エラー：マークを配置できませんでした",
+            "MarksCantBePlacedBy": "マークを配置できるのはペルソナのみです",
+            "MarksCantBePlacedOn": "選択されたアクター種別はマークを受け取ることができません",
+            "MarksCantBePlacedWithoutPersona": "選択されたアクターにはアクティブなペルソナが存在しません",
+            "MasterDeviceIsMissing": "マスターデバイスが見つかりません。ローカルデバイスの値を使用します",
+            "MissingSkill": "アクターが要求された技能を所持していません",
+            "NoAvailableActorFound": "このアクションに使用できるアクターが見つかりませんでした",
+            "SkillWithoutAttribute": "この技能には対応する能力値が設定されていません",
+            "TestExpectsVehicleOnly": "この判定は車両種別のアクターでのみ実行可能です",
+            "TooManyActionsWithCategory": "アクターが持つカテゴリ「{category}」のアクションは、正確に1つである必要があります"
+        },
+        "EssenceCost": "エッセンス",
+        "Expand": "展開",
+        "ExpandAll": "すべて展開",
+        "Extend": "継続",
+        "Extended": "継続",
+        "ExtendedHits": "蓄積ヒット数",
+        "ExtendedTest": "継続テスト",
+        "FOUNDRY": {
+            "Actor": "アクター",
+            "Item": "アイテム",
+            "Scene": "シーン",
+            "Token": "トークン"
+        },
         "Fade": "フェイディング",
-        "Global": "グローバル",
-        "JudgeIntentions": "意図を計る",
-        "LiftCarry": "持ち上げ/運搬",
-        "MatrixDice": "マトリックスイニシアティブダイス",
-        "MatrixInit": "マトリックスイニシアティブ",
-        "MatrixTrack": "マトリックスＣＭ",
-        "MeatSpaceDice": "通常イニシアティブダイス",
-        "MeatSpaceInit": "通常イニシアティブ",
-        "Memory": "記憶",
+        "FadeAttribute": "フェイディングに使用する能力値",
+        "FadeValue": "フェイディング",
+        "Filter": "フィルター",
+        "FireMode": "射撃モード",
+        "Force": "フォース",
+        "FullDefense": "全力防御",
+        "FullDefenseAttribute": "全力防御使用能力値",
+        "FullMatrixDefense": "マトリックス全力防御",
+        "GMRequest": {
+            "General": "あなたのGMは、あなたに次のことを要求している。",
+            "RollAttribute": "能力値テスト",
+            "RollSkill": "技能テスト",
+            "Teamwork": "チームワークテスト",
+            "Threshold": "しきい値"
+        },
+        "Gear": "装備",
+        "Glitch": "グリッチ!",
+        "GlitchCritical": "クリティカルグリッジ！",
+        "Glitches": "グリッジ:",
+        "GoodCover": "完全遮蔽",
+        "Grid": {
+            "FIELDS": {
+                "category": {
+                    "label": "グリッド種別",
+                    "hint": "公共グリッドに接続している間はマイナスの修正が適用されます。ローカルグリッドおよびグローバルグリッドには修正はありません"
+                }
+            }
+        },
+        "Grids": "グリッド",
+        "HackingProgram": "ハッキングプログラム",
+        "Help": "ヘルプ",
+        "Hits": "ヒット",
+        "Host": {
+            "Attributes": "能力値",
+            "CustomAttributes": "カスタム属性",
+            "DropICActor": "ICアクターをセキュリティ対応順にドラッグ＆ドロップする。",
+            "ICOrder": "IC 起動順序",
+            "MissingIC": "欠落 IC",
+            "Rating": "レーティング"
+        },
+        "Hosts": "Hosts",
+        "HotSim": "ホットシム",
+        "IC": {
+            "FIELDS": {
+                "icType": {
+                    "label": "IC種別",
+                    "hint": "IC（侵入対抗プログラム）の種別"
+                },
+                "host": {
+                    "label": "ホスト",
+                    "hint": "ICの種別",
+                    "rating": {
+                        "label": "レーティング",
+                        "hint": "このICが稼働しているホストのレーティング"
+                    }
+                }
+            },
+            "MissingHost": "ホストアイテムをドラッグ＆ドロップする。",
+            "Type": "タイプ",
+            "Types": {
+                "Acid": "アシッド/Acid",
+                "Binder": "バインダー/Binder",
+                "BlackIC": "ブラック/Black IC",
+                "Blaster": "ブラスター/Blaster",
+                "Bloodhound": "猟犬/Bloodhound",
+                "BlueGoo": "ブルー・スライム/Blauer Schleim",
+                "Catapult": "カタパルト/Catapult",
+                "Crash": "クラッシュ/Crash",
+                "Flicker": "フリッカー/Flicker",
+                "Jammer": "ジャマ―/Jammer",
+                "Killer": "キラー/Killer",
+                "Marker": "マーカー/Marker",
+                "Patrol": "パトロール/Patrol",
+                "Probe": "プローブ/Probe",
+                "Scramble": "スクランブル/Scramble",
+                "Shocker": "ショッカー/Shocker",
+                "Sleuther": "スルーサー/Sleuther",
+                "Sparky": "スパーキー/Sparky",
+                "TarBaby": "タールベイビー/Tar Baby",
+                "Track": "トラック/Track"
+            }
+        },
+        "Import": {
+            "ActorImporter": {
+                "Title": "アクター・インポーター"
+            },
+            "BulkImporter": {
+                "Title": "一括インポーター"
+            },
+            "Spirit": {
+                "SpiritTypeNotFound": "精霊の種別が見つかりませんでした。ChummerからエクスポートしたJSONファイルを添えて、GitHubのIssueで報告してください。"
+            },
+            "ImporterSourcesConfig": {
+                "Title": "インポーター・ソース設定"
+            }
+        },
+        "ImportCharacter": "キャラクターをインポートする",
+        "Incoming": "ダメージ値",
+        "IncomingDamage": "抵抗前ダメージ値",
+        "IncomingDrain": "抵抗前ドレイン値",
+        "IncomingFade": "抵抗前フェイディング値",
+        "Information": "情報",
+        "Infos": {
+            "CantModifyHostContent": "ICアクター内部からホストデータを変更できない。",
+            "ConsumedEquippedAmmo": "装備弾薬の消費弾数",
+            "ResetProgressiveRecoil": "蓄積した反動をリセットして、発射した弾丸をゼロにする"
+        },
+        "InitCatAstral": "アストラル",
+        "InitCatMatrix": "マトリックス",
+        "InitCatMeatspace": "物理",
+        "Initiation": "階梯",
+        "Initiative": "イニシアティブ",
+        "Internal": "内蔵",
+        "InventoryRename": {
+            "Title": "インベントリ名の変更",
+            "Submit": "決定",
+            "Cancel": "キャンセル",
+            "NewName": "新しい名前"
+        },
+        "IsCritter": "クリッター",
+        "IsFreshImport": "このアイテムはChummerからインポートされ、手動での確認が必要です。",
+        "IsGrunt": "グラント",
+        "IsNPC": "NPC",
+        "Item": {
+            "FIELDS": {
+                "description": {
+                    "base": {
+                        "label": "解説",
+                        "hint": "アイテムの説明"
+                    },
+                    "source": {
+                        "label": "出典",
+                        "hint": "アイテムの参照元（PDFのページ、URL、ジャーナルなど）"
+                    }
+                },
+                "ammo": {
+                    "spare_clips": {
+                        "value": {
+                            "label": "現在の予備弾倉数",
+                            "hint": "アクターが所持している残りの予備弾倉（スペアクリップ）数"
+                        },
+                        "max": {
+                            "label": "最大予備弾倉数",
+                            "hint": "アクターがこの武器用に保持できる予備弾倉の最大数"
+                        }
+                    },
+                    "clip_type": {
+                        "label": "装填方式",
+                        "hint": "武器が使用する装填メカニズムの種類"
+
+                    }
+                },
+                "action": {
+                    "categories": {
+                        "label": "カテゴリ",
+                        "hint": "この判定に含まれるアクションカテゴリ。これらはアクティブ効果の対象に指定できます"
+                    },
+                    "modifiers": {
+                        "label": "修正値",
+                        "hint": "この判定に影響を与えるアクション修正値"
+                    },
+                    "test": {
+                        "label": "判定種別",
+                        "hint": "このアクションに使用する特定の判定タイプ"
+                    },
+                    "type": {
+                        "label": "アクション種別",
+                        "hint": "この技能が使用するアクションの種類（単純、複雑など）"
+                    },
+                    "extended": {
+                        "label": "延長判定",
+                        "hint": "これが延長判定であるかどうか"
+                    },
+                    "skill": {
+                        "label": "技能",
+                        "hint": "このアクションで使用する技能。使用しない場合は空欄にします"
+                    },
+                    "spec": {
+                        "label": "専門化",
+                        "hint": "判定に技能専門化の修正（+2）を適用するかどうか"
+                    },
+                    "attribute": {
+                        "label": "能力値",
+                        "hint": "判定に使用する能力値"
+                    },
+                    "attribute2": {
+                        "label": "第2能力値",
+                        "hint": "判定に使用するもう一つの能力値"
+                    },
+                    "armor": {
+                        "label": "装甲",
+                        "hint": "アクターの装甲値を判定に加算するかどうか"
+                    },
+                    "mod": {
+                        "label": "修正",
+                        "hint": "判定に適用される任意の修正値"
+                    },
+                    "damage": {
+                        "type": {
+                            "base": {
+                                "label": "ダメージ種別",
+                                "hint": "このアクションが与えるダメージの種類"
+                            }
+                        },
+                        "base": {
+                            "label": "基本ダメージ",
+                            "hint": "このアクションが与えるダメージの基本値"
+                        },
+                        "base_formula_operator": {
+                            "label": "演算子",
+                            "hint": "ダメージ基本値が能力値にどのように影響するか（加算など）"
+                        },
+                        "attribute": {
+                            "label": "ダメージ能力値",
+                            "hint": "ダメージ計算に使用する能力値"
+                        },
+                        "biofeedback": {
+                            "label": "生体信号フィードバックダメージ",
+                            "hint": "このアクションが生体信号フィードバックダメージも与えるかどうか。これはアクティブ効果の対象にできます"
+                        },
+                        "element": {
+                            "base": {
+                                "label": "属性",
+                                "hint": "ダメージの属性（火炎、電気など）。属性がない場合は空欄にします"
+                            }
+                        },
+                        "ap": {
+                            "base": {
+                                "label": "AP",
+                                "hint": "ダメージの装甲貫通力（AP）"
+                            },
+                            "base_formula_operator": {
+                                "label": "演算子",
+                                "hint": "AP基本値が能力値にどのように影響するか"
+                            },
+                            "attribute": {
+                                "label": "AP能力値",
+                                "hint": "AP計算に使用する能力値"
+                            }
+                        }
+                    },
+                    "limit": {
+                        "base": {
+                            "label": "限界値",
+                            "hint": "判定に使用される限界値。特定の限界値が選択されている場合に加算されます"
+                        },
+                        "attribute": {
+                            "label": "限界",
+                            "hint": "判定に使用されるアクターの特定の限界値（精度、身体、精神、社交など）"
+                        }
+                    },
+                    "threshold": {
+                        "base": {
+                            "label": "目標ヒット数",
+                            "hint": "判定で達成する必要がある目標値（しきい値）"
+                        }
+                    },
+                    "roll_mode": {
+                        "label": "ロール・モード",
+                        "hint": "判定のロール・モード。空欄の場合、ユーザーが選択したモードを使用します"
+                    },
+                    "opposed": {
+                        "test": {
+                            "label": "対抗判定",
+                            "hint": "アクションの対象が実行する必要がある判定"
+                        },
+                        "skill": {
+                            "label": "技能",
+                            "hint": "対抗判定に使用する技能。使用しない場合は空欄にします"
+                        },
+                        "attribute": {
+                            "label": "能力値",
+                            "hint": "対抗判定に使用する能力値"
+                        },
+                        "attribute2": {
+                            "label": "第2能力値",
+                            "hint": "対抗判定に使用するもう一つの能力値"
+                        },
+                        "armor": {
+                            "label": "装甲",
+                            "hint": "アクターの装甲値を対抗判定に加算するかどうか"
+                        },
+                        "mod": {
+                            "label": "修正",
+                            "hint": "対抗判定に適用される任意の修正値"
+                        },
+                        "resist": {
+                            "test": {
+                                "label": "抵抗判定",
+                                "hint": "対抗判定の後にダメージを軽減するために実行する判定"
+                            },
+                            "attribute": {
+                                "label": "能力値",
+                                "hint": "抵抗判定に使用する能力値"
+                            },
+                            "attribute2": {
+                                "label": "第2能力値",
+                                "hint": "抵抗判定に使用するもう一つの能力値"
+                            },
+                            "armor": {
+                                "label": "装甲",
+                                "hint": "アクターの装甲値を抵抗判定に加算するかどうか"
+                            }
+                        }
+                    }
+                },
+                "grade": {
+                    "label": "グレード",
+                    "hint": "サイバーウェア／バイオウェアのグレード（標準、アルファ等）"
+                },
+                "essence": {
+                    "label": "エッセンス",
+                    "hint": "サイバーウェア／バイオウェアのエッセンス・コスト"
+                },
+                "capacity": {
+                    "label": "容量",
+                    "hint": "サイバーウェア／バイオウェアの容量（キャパシティ）"
+                },
+                "technology": {
+                    "master": {
+                        "label": "マスター・デバイス",
+                        "hint": "このアイテムがスレーブ化されているマスター・デバイス（PANやWANの形成）"
+                    },
+                    "cost": {
+                        "label": "価格",
+                        "hint": "このアイテムの購入費用"
+                    },
+                    "availability": {
+                        "label": "入手値",
+                        "hint": "アイテムの入手値。入手しやすさを決定します"
+                    },
+                    "equipped": {
+                        "label": "装備中",
+                        "hint": "アイテムを装備しているかどうか"
+                    },
+                    "wireless": {
+                        "label": "ワイヤレス",
+                        "hint": "アイテムのワイヤレス機能の状態"
+                    },
+                    "condition_monitor": {
+                        "value": {
+                            "label": "状態モニターのダメージ",
+                            "hint": "アイテムの状態モニターに蓄積された現在のダメージ"
+                        }
+                    },
+                    "rating": {
+                        "label": "レーティング",
+                        "hint": "アイテムのデバイス・レーティング。マトリックス・アクションに関係します"
+                    },
+                    "quantity": {
+                        "label": "数量",
+                        "hint": "このアイテムが表す個数"
+                    },
+                    "show_quantity": {
+                        "label": "数量を表示",
+                        "hint": "アクターシートやアイテムシートの見出しに数量を表示するかどうか"
+                    },
+                    "conceal": {
+                        "base" : {
+                            "label": "秘匿性",
+                            "hint": "このデバイスが他者からどれだけ隠されているか"
+                        }
+                    }
+                }
+            }
+        },
+        "ItemMod": "アイテム修正",
+        "ItemName": "アイテム",
+        "ItemTypes": {
+            "Action": "アクション",
+            "AdeptPower": "アデプトパワー",
+            "Ammo": "弾薬",
+            "Armor": "アーマー",
+            "Bioware": "バイオウェア",
+            "ComplexForm": "複合体",
+            "Contact": "コンタクト",
+            "CritterPower": "クリッターパワー",
+            "Cyberware": "サイバーウェア",
+            "Device": "デバイス",
+            "Echo": "エコー",
+            "Equipment": "装備",
+            "Gear": "装備",
+            "Grid": "グリッド",
+            "Host": "ホスト",
+            "License": "ライセンス",
+            "Lifestyle": "ライフスタイル",
+            "Metamagic": "メタマジック",
+            "Modification": "改造",
+            "Program": "プログラム",
+            "Quality": "資質",
+            "Ritual": "儀式",
+            "Sin": "SIN",
+            "Spell": "呪文",
+            "SpritePower": "スプライトパワー",
+            "Weapon": "武器"
+        },
+        "Karma": "カルマ",
+        "KarmaManager": {
+            "Title": "カルマ・マネージャー",
+            "Submit": "決定",
+            "Cancel": "キャンセル",
+            "StartingKarma": "開始時カルマ",
+            "CurrentKarma": "キャラクターが現在保持しているカルマ量",
+            "CareerKarma": "キャラクターがこれまでに獲得した累計カルマ量",
+            "FinalKarma": "最終カルマ",
+            "FinalCurrentKarma": "決定後にキャラクターが保持することになるカルマ量",
+            "FinalCareerKarma": "決定後にキャラクターの累計カルマとなる値"
+        },
+        "Keybinding": {
+            "HideTestDialog": {
+                "Hint": "判定ボタンを押した際、ダイアログを表示せずにロールを実行します",
+                "Label": "判定ダイアログを隠す"
+            },
+            "OverwatchScoreTracker": {
+                "Hint": "監視スコア・トラッカーを開きます",
+                "Label": "監視スコア・トラッカー"
+            },
+            "ShowItemCard": {
+                "Hint": "判定を行わず、チャットにアイテムカードのみを表示します",
+                "Label": "アイテムカードを表示"
+            },
+            "ShowSituationModifiers": {
+                "Hint": "状況修正の選択画面を開きます",
+                "Label": "状況修正"
+            },
+            "SuccessTestPrompt": {
+                "Hint": "標準的な成功テストを実行するためのプロンプトを表示します",
+                "Label": "成功テストのプロンプト"
+            },
+            "AddRemoveSomeQty": {
+                "Hint": "一度に数量を5増減させます",
+                "Label": "数量を5増減"
+            },
+            "AddRemoveManyQty": {
+                "Hint": "一度に数量を20増減させます",
+                "Label": "数量を20増減"
+            }
+        },
+        "KnockedDown": "転倒",
+        "KnowledgeSkillAcademic": "学術",
+        "KnowledgeSkillInterests": "趣味",
+        "KnowledgeSkillProfessional": "職業",
+        "KnowledgeSkillStreet": "ストリート",
+        "Labels": {
+            "Action": {
+                "ActiveTest": "テスト",
+                "Category": "カテゴリー",
+                "DamageResistanceTest": "ダメージ抵抗テスト",
+                "ForceReboot": "強制再起動",
+                "Modifier": "修正",
+                "Modifiers": "修正",
+                "OpposedTest": "対抗テスト",
+                "SpiritType": "精霊の種類",
+                "SpriteType": "スプライトの種類"
+                "MatrixAction": "マトリックス動作"
+            },
+            "Actions": {
+                "BruteForce": "強制介入する",
+                "HackontheFly": "即興ハッキング"
+            },
+            "ActorSheet": {
+                "AddNetwork": "直接接続ネットワーク",
+                "AddOneMark": "マークを1つ追加",
+                "ColdSim": "コールド・シム",
+                "Compilations": "コンパイル（コンパイル済）",
+                "ConnectToDriver": "ドライバーに接続",
+                "ConnectedTo": "接続先:",
+                "CreateInventory": "所持品スロットを作成",
+                "CritterPowers": "クリッター・パワー",
+                "DeviceRating": "デバイス・レーティング",
+                "DeviceSetup": "デバイス設定",
+                "DisabledOptionCritterPowers": "選択的クリッター・パワー - 無効",
+                "DisabledOptionSpritePowers": "選択的スプライト・パワー - 無効",
+                "DisplayingPersona": "ペルソナを表示中",
+                "EnabledOptionCritterPowers": "選択的クリーター・パワー - 有効",
+                "EnabledOptionSpritePowers": "選択的スプライト・パワー - 有効",
+                "Hacking": "ハッキング",
+                "ICConfiguration": "IC構成",
+                "Icons": "アイコン",
+                "ManageNetwork": "ネットワーク管理",
+                "MarkNetwork": "マーク・ネットワーク",
+                "MarkedIcons": "マークしたアイコン",
+                "Matrix": "マトリックス",
+                "MatrixActions": "マトリックス・アクション",
+                "Network": "ネットワーク",
+                "Networks": "ネットワーク一覧",
+                "NoNetwork": "ネットワークなし",
+                "NotorietyShort": "悪名",
+                "Offline": "オフライン",
+                "OpenSourceDocument": "出典を開く",
+                "OwnedIcons": "オーナーアイコン",
+                "Persona": "ペルソナ",
+                "PersonalInventory": "身に付けているもの",
+                "PhysicalTrack": "身体ＣＭ",
+                "PublicAwarenessShort": "公的認知度",
+                "RemoveOneMark": "マークを1つ除去",
+                "ResetActorForNewRun": "新規ランリセット",
+                "Rituals": "儀式",
+                "RollDroneInfiltration": "ドローン隠密判定",
+                "RollDronePerception": "ドローン知覚判定",
+                "RollPilotVehicleTest": "車両操縦判定",
+                "SetMonitor": "モニターは手動で設定する必要があります。",
+                "SetupPAN": "デバイスをPANに追加",
+                "Spells": "呪文",
+                "SpiritConfiguration": "精霊構成",
+                "SpriteConfiguration": "スプライト構成",
+                "SpritePowers": "スプライト・パワー",
+                "StreetCredShort": "ストリートの評判",
+                "StunTrack": "精神ＣＭ",
+                "TestKBoardModifiers": "{skip}: ダイアログをスキップ。 {descr}: 解説のみ表示。",
+                "VehicleConfiguration": "ヴィークル構成"
+            },
+            "Item": {
+                "AvailabilityAdjustment": "入手値をレーティングに連動させる",
+                "CostAdjustment": "価格をレーティングに連動させる",
+                "EssenceAdjustment": "エッセンスをレーティングに連動させる"
+            },
+            "Inventory": {
+                "All": "全て",
+                "Carried": "運搬中",
+                "OpenInventory": "所持品"
+            },
+            "MarkPlacement": {
+                "PlaceOnDevice": "デバイスに配置",
+                "PlaceOnMainIcon": "ペルソナ／ホストに配置"
+            },
+            "Matrix": {
+                "AttackShort": "A",
+                "SleazeShort": "S",
+                "DataProcessingShort": "D",
+                "FirewallShort": "F",
+                "Global": "グローバル",
+                "Local": "ローカル",
+                "Public": "公共",
+                "TargetDevice": "標的：デバイス",
+                "TargetMainIcon": "標的：メインアイコン"
+            },
+            "Message": {
+                "ClickToSelect": "クリックしてシーン上で選択",
+                "FailedAttackAction": "マトリックス攻撃アクションに失敗",
+                "OverwatchConvergence": "監視収束（コンバージェンス）",
+                "TargetedIcon": "標的アイコン",
+                "TestEffects": "適用された効果"
+            },
+            "Sheet": {
+                "AddOne": "1つ加算",
+                "ClearNetwork": "全てのデバイスからネットワークをクリア",
+                "ItemEffects": "アイテム効果",
+                "MissingNetworkDevices": "ネットワークデバイスをドラッグ＆ドロップで追加することができます。",
+                "NetworkDevices": "ネットワークデバイス",
+                "NotVisible": "非表示",
+                "PAN": "パーソナルネットワーク(PAN)",
+                "RebootDevice": "再起動",
+                "SubtractOne": "1つ減算",
+                "Type": "種別",
+                "Visible": "表示",
+                "WAN": "広域ネットワーク（WAN）"
+            },
+            "Sidebar": {
+                "Changelog": "変更履歴",
+                "Issues": "問題",
+                "Wiki": "Wiki"
+            }
+        },
+        "Languages": "言語",
+        "LastRoll": "最後に促されたロール",
+        "Level": "レベル",
+        "License": "免許",
+        "Licenses": "免許",
+        "Lifestyle": {
+            "label": "ライフスタイル",
+            "FIELDS": {
+                "type": {
+                    "label": "ライフスタイル種別",
+                    "hint": "ライフスタイルの種類"
+                },
+                "cost": {
+                    "label": "維持費",
+                    "hint": "ライフスタイルの月額維持費"
+                },
+                "comforts": {
+                    "label": "快適さ",
+                    "hint": "ライフスタイルの快適さレベル"
+                },
+                "security": {
+                    "label": "セキュリティ",
+                    "hint": "ライフスタイルのセキュリティ・レベル"
+                },
+                "neighborhood": {
+                    "label": "近隣環境",
+                    "hint": "ライフスタイルの近隣環境レベル"
+                },
+                "guests": {
+                    "label": "同居人",
+                    "hint": "同じライフスタイルに滞在している同居人の数"
+                },
+                "permanent": {
+                    "label": "永住",
+                    "hint": "このライフスタイルが永住権（買い切り）であるかどうか"
+                }
+            }
+        },
+        "LifestyleComforts": "快適さ",
+        "LifestyleGuests": "同居人",
+        "LifestyleHigh": "上流",
+        "LifestyleLow": "下流",
+        "LifestyleLuxory": "贅沢",
+        "LifestyleMiddle": "中流",
+        "LifestyleNeighborhood": "近隣環境",
+        "LifestyleOther": "その他",
+        "LifestyleSecurity": "治安",
+        "LifestyleSquatter": "不法居住",
+        "LifestyleStreet": "ストリート",
+        "LifestyleType": "種別",
+        "Lifestyles": "ライフスタイル",
+        "Limit": "リミット",
+        "LimitAstral": "アストラル",
+        "LimitMental": "精神限界",
+        "LimitPhysical": "身体リミット",
+        "LimitSocial": "社交リミット",
+        "LivingPersona": "生体ペルソナ",
+        "Load": "ロード",
+        "Loaded": "ロード済",
+        "Loyalty": "忠実度",
+        "MIGRATION": {
+            "BeginMigration": "移行を開始",
+            "BeginNotification": "Shadowrunシステムのバージョン移行を開始します。現在のバージョン：",
+            "DoNotCloseNotification": "ゲームを閉じたり、FoundryVTTを終了したりしないでください。",
+            "SuccessConfirm": "閉じる",
+            "SuccessDescription": "このワールドに属する既存の要約（コンペンディウム）パックは、この移行プロセスによって更新されました。",
+            "SuccessHeader": "移行完了",
+            "SuccessNotification": "Shadowrunシステムのバージョン移行が正常に完了しました。新バージョン：",
+            "SuccessPacksInfo": "現在のFoundryVTTの技術的制限により、アクター・パックは手動で更新する必要があります。",
+            "SuccessTitle": "成功",
+            "WarningBackup": "ワールドのバックアップを取っていない場合は、下の「移行を開始」ボタンを押す前にバックアップを作成してください。",
+            "WarningDescription": "アップデートを実行できるのはGMのみです。進行中にサーバーを停止したりブラウザを閉じたりすると、ワールドに修復不可能なダメージを与える可能性があります。",
+            "WarningHeader": "移行に関する警告",
+            "WarningRequired": "Shadowrun 5Eシステムは必要なアップデートを開始する必要があります。",
+            "WarningTitle": "警告"
+        },
+        "Magic": "魔法",
+        "ManualGlitches": "手動グリッジ",
+        "ManualHits": "手動ヒット",
+        "ManualOverride": "手動操作優先",
+        "MarkImportedItemReviewed": "インポートされたアイテムをレビュー済みにマークする",
+        "MarkImportedItemTooltip": "インポートされたアイテムをレビュー済みとしてマークします。",
+        "MarkImportsReviewed": "インポートされたアイテムをレビュー済みとマークする",
+        "MarkImportsTooltip": "このアクター上のインポートされたすべてのアイテムをレビュー済みとしてマークします。",
+        "Marks": "マーク",
+        "MatrixAttrAttack": "アタック",
+        "MatrixAttrDataProc": "データ処理",
+        "MatrixAttrFirewall": "ファイアウォール",
+        "MatrixAttrSleaze": "スリーズ",
+        "MatrixDefense": "マトリックス防御",
+        "MatrixFullDefenseAttribute": "マトリックス全力防御能力値",
+        "MatrixNetworkHackingApplication": {
+            "Icons": "アイコン",
+            "Invite": "招待をリクエスト",
+            "Title": "ネットワークへ接続"
+        },
+        "MatrixTarget": "マトリックスターゲット",
+        "MeleeWeaponAttack": "近接武器攻撃",
         "MentalLimit": "精神リミット",
-        "Noise": "ノイズ",
-        "PainTolerancePhysical": "苦痛耐性（身体）",
-        "PainToleranceStun": "苦痛耐性（精神）",
+        "Messages": {
+            "MarkInvitation": {
+                "AcceptInvite": "承認",
+                "AskForInvite": "以下の対象へのマーク招待をリクエストしています：",
+                "InviteAccepted": "{userName}さん、{networkName}へ自由に参加してください！"
+            }
+        },
+        "Metamagic": "メタマジック",
+        "Metamagics": "メタマジック",
+        "Metatype": "メタタイプ",
+        "MigrationComplete": "マイグレーション完了",
+        "MigrationUpdateCompendiumNoUpdateActor": "FoundryVTTの技術的な制限により、現時点ではアクターのコンペディアムパックを更新できません。これらのパックを手動で更新する必要があります.",
+        "MigrationUpdateCompendiumUpdateMessage": "ワールド内に存在するワールド用のコンペディアムパックは同じ様に更新されました",
+        "Migrator": {
+            "Version18_0_0": {
+                "Line1": "バージョン0.18.0以降、所有アイテムにかかる効果は、それらをアクターにコピーする必要なく直接適用されます。",
+                "Line2": "以前にコピーされた効果は削除または無効化する必要があり、アイテムとアクターの効果が変更を適用するのを防ぐためです。デフォルトでは、アイテムの起源を持つすべての効果が削除されます。",
+                "Line3": "アクターに直接作成された効果は影響を受けません。",
+                "Line4": "効果や効果モジュールを多用しており、'アイテム所有効果'に自信がない場合は、このマイグレーションを無効にして、無効化された効果を確認してください。無効化された効果はそのように表示されます。",
+                "Line5": "また、アクターアイテムの有効な効果は今後適用されます。アクターの効果タブで適用されたすべての効果を確認できます。",
+                "OnlyDisable": "効果を無効にするのみ",
+                "Warning": "注意！"
+            }
+        },
+        "Miscellaneous": "その他",
+        "MissingItemForOpposedTest": "行動用のアイテムがないため対抗テストができません",
+        "MissingRessource": {
+            "Ammo": "発射するための弾薬が不足している",
+            "Edge": "消費するエッジが残っていない",
+            "Initiative": "イニシアチブのスコアが足りない",
+            "SomeAmmo": "選択したモードで射撃するための弾薬が足りない、防御側の修正値が減少する。",
+            "SomeAmmoMelee": "近接攻撃を行うための弾薬が不足しています。"
+        },
+        "ModPoints": "改造スロット",
+        "Modification": {
+            "FIELDS": {
+                "type": {
+                    "label": "改造種別",
+                    "hint": "改造の種類"
+                },
+                "mount_point": {
+                    "label": "装着部位",
+                    "hint": "武器のどの部位（マウント・ポイント）に取り付けるか"
+                },
+                "modification_category": {
+                    "label": "改造カテゴリ",
+                    "hint": "この改造が属するカテゴリ"
+                },
+                "dice_pool": {
+                    "label": "ダイスプール",
+                    "hint": "適用されるダイスプール修正値"
+                },
+                "accuracy": {
+                    "label": "精度",
+                    "hint": "適用される精度／限界値の修正値"
+                },
+                "rc": {
+                    "label": "反動補正",
+                    "hint": "適用される反動補正（RC）修正値"
+                },
+                "conceal": {
+                    "label": "隠蔽",
+                    "hint": "適用される隠蔽修正値"
+                },
+                "slots": {
+                    "label": "スロット",
+                    "hint": "この改造が消費するスロット数（ヴィークル）またはポイント（ドローン）"
+                }
+            }
+        },
+        "ModificationCategories": "改造のカテゴリー",
+        "ModificationCategory": "改造カテゴリー",
+        "ModificationSlots": "改造スロット",
+        "Modified": "修正後",
+        "ModifiedArmor": "修正装甲値",
+        "ModifiedDamage": "修正後ダメージ",
+        "ModifiedDrain": "修正後ドレイン",
+        "ModifiedFade": "修正後フェイディング",
+        "Modifier": "修正",
+        "ModifierTypes": {
+            "Armor": "装甲",
+            "AstralDice": "アストラルイニシアティブダイス",
+            "AstralInit": "アストラルイニシアティブ",
+            "AstralLimit": "アストラルリミット",
+            "BackgroundCount": "背景放射",
+            "Composure": "冷静",
+            "ControlRigRating": "制御リグレーティング",
+            "Defense": "防御",
+            "DefenseBlock": "防御 (ブロック)",
+            "DefenseDodge": "防御 (回避)",
+            "DefenseMelee": "防御 (近接攻撃)",
+            "DefenseMulti": "防御 (全力防御)",
+            "DefenseParry": "防御 (受け流し)",
+            "DefenseRanged": "防御 (射撃)",
+            "DifferentGrid": "違うグリッドの利用",
+            "Drain": "ドレイン",
+            "Environmental": "環境修正",
+            "EnvironmentalLight": "環境修正 (光)",
+            "EnvironmentalRange": "環境修正 (射程)",
+            "EnvironmentalVisibility": "環境修正 (視界)",
+            "EnvironmentalWind": "環境修正 (風)",
+            "Essence": "エッセンス",
+            "Fade": "フェイディング",
+            "Global": "グローバル",
+            "JudgeIntentions": "意図を計る",
+            "LiftCarry": "持ち上げ/運搬",
+            "MarkDamage": "マーク毎の追加ダメージ",
+            "Marks": "マーク",
+            "MatrixDice": "マトリックスイニシアティブダイス",
+            "MatrixInit": "マトリックスイニシアティブ",
+            "MatrixTrack": "マトリックスＣＭ",
+            "MeatSpaceDice": "通常イニシアティブダイス",
+            "MeatSpaceInit": "通常イニシアティブ",
+            "Memory": "記憶",
+            "MentalLimit": "精神リミット",
+            "Noise": "ノイズ",
+            "PainTolerancePhysical": "苦痛耐性（身体）",
+            "PainToleranceStun": "苦痛耐性（精神）",
+            "PhysicalLimit": "身体リミット",
+            "PhysicalOverflowTrack": "ダメージオーバーフロー（身体）",
+            "PhysicalTrack": "身体ＣＭ",
+            "PublicGrid": "公共グリッド",
+            "Reach": "リーチ",
+            "Recoil": "反動補正",
+            "Run": "走行",
+            "Soak": "ダメージ抵抗",
+            "SocialLimit": "社交リミット",
+            "StunTrack": "精神ＣＭ",
+            "ThreeMarks": "3マーク",
+            "TwoMarks": "2マーク",
+            "Walk": "歩行",
+            "WoundTolerance": "負傷修正の許容",
+            "Wounds": "負傷"
+        },
+        "MountPoint": "マウント箇所",
+        "MoveInventoryDialog": {
+            "Cancel": "キャンセル",
+            "Move": "移動",
+            "Title": "インベントリを選択する"
+        },
+        "MoveItemInventory": "アイテムをインベントリに移動する",
+        "Movement": "移動",
+        "MovementTypes": {
+            "Run": "走行",
+            "Sprint": "全力疾走"
+        },
+        "Mundane": "マンディン",
+        "Name": "名前",
+        "NetHits": "純ヒット",
+        "Network": "ネットワーク",
+        "NetworkManager": {
+            "AvailableNetworks": "利用可能なネットワーク",
+            "BruteForce": "強制介入",
+            "ConnectedTo": "接続先",
+            "HackOnTheFly": "即興ハッキング",
+            "InviteMark": "マークの招待を要求",
+            "NetworkType": "種別",
+            "NoNetwork": "未接続",
+            "Title": "ネットワークマネージャー"
+        },
+        "Networks": "ネットワーク",
+        "New": "新しい",
+        "NewSpecialization": "新しい専門化"
+        "NoCover": "遮蔽なし",
+        "NoSelectableToken": "キャンバス上に選択可能なトークンがありません",
+        "None": "無し",
+        "Normal": "ノーマル",
+        "NormalSkillButton": "ノーマル",
+        "NormalSpellButton": "ノーマル",
+        "NotExtended": "継続なし",
+        "Notifications": {
+            "AddDevicesToPAN": {
+                "Adding": "追加中：",
+                "FinishedAddingItems": "PANへのデバイス追加が完了しました。接続先が変更されたアイテムシートがある場合は、一度閉じてから再起動してください。",
+                "Starting": "装備中のデバイスをPANに追加しています"
+            },
+            "DeletingStorageReferences": {
+                "Finished": "参照の消去が完了しました",
+                "Item": "アイテムへの参照を消去中：",
+                "Start": "ネットワークおよびマーク（MARK）の参照を削除しています"
+            },
+            "VehicleCannotBeOwnDriver": "車両自身を「ドライバー」に設定することはできません（そのためのオートパイロット／パイロット値です）。"
+        },
+        "Notoriety": "悪評",
+        "Nuyen": "新円",
+        "NuyenManager": {
+            "Title": "新円マネージャー",
+            "Submit": "決定",
+            "Cancel": "キャンセル",
+            "CurrentNuyen": "キャラクターが現在保持している新円の額",
+            "FinalNuyen": "決定後の最終的な新円の額"
+        },
+        "OpenNetworkManager": "ネットワークマネージャーを開く",
+        "OpenOrigin": "アイテムを開く",
+        "OpenSource": "pdfページャーまたはウェブサイトとしてソースを開くことができます。",
+        "OpposedType": "タイプ",
+        "OpposingHits": "対抗側ヒット数",
+        "OpposingNetHits": "純ヒット数",
+        "OriginalDicePool": "元のダイスプール",
+        "OutOfRange": "射程距離外",
+        "Overflow": "オバーフロー",
+        "Override": "上書き",
+        "OverwatchScore": "監視指数(OS)",
+        "OverwatchScoreTracker": {
+            "AddSelect": "選択したトークンにリンクされたアクターを追加",
+            "CantDeleteUserCharacter": "プレイヤーキャラクターをトラッカーから削除することはできません",
+            "DeleteScore": "トラッカーからスコアを削除",
+            "GMOnly": "GODが貴方の位置を追跡しています……",
+            "NotifyNoSelectedTokens": "少なくとも1つのリンクされたトークンを選択する必要があります。",
+            "OnlyLinkedActorsSupported": "リンクされたアクターのみ対応しています。リンクされていないアクターを持つ選択トークンは無視されます。",
+            "ResetScore": "監視スコアをリセット"
+        },
+        "OverwatchScoreTrackerTitle": "ベイビーモニター(監視指数）",
+        "Owner": "オーナー",
+        "PP": "PP",
+        "Parry": "受け流し",
+        "PartialCover": "部分遮蔽",
+        "Passive": "受動",
+        "Personas": "ペルソナ",
         "PhysicalLimit": "身体リミット",
         "PhysicalOverflowTrack": "ダメージオーバーフロー（身体）",
-        "PhysicalTrack": "身体ＣＭ",
+        "PhysicalTrack": "身体トラック",
+        "PlaceTemplate": "テンプレートの場所",
+        "PlusFifteenMinutes": "+15分",
+        "PowerLevel": "レベル",
+        "PowerPoints": "パワーポイント",
+        "PowerType": "パワータイプ",
+        "Powers": "パワー",
+        "Program": {
+            "label": "プログラム",
+            "FIELDS": {
+                "type": {
+                    "label": "プログラム種別",
+                    "hint": "プログラムの種類（表示の整理用）"
+                }
+            }
+        },
+        "ProgramType": "タイプ",
+        "Programs": "プログラム",
+        "PublicAwareness": "公的認知度",
+        "PublicGrid": "公共グリッド",
+        "PushTheLimit": "限界突破",
+        "Qty": "個数",
+        "Quality": {
+            "label": "資質",
+            "FIELDS": {
+                "type": {
+                    "label": "資質種別",
+                    "hint": "この資質の種類（有利／不利／ライフモジュール）"
+                },
+                "karma": {
+                    "label": "カルマ",
+                    "hint": "この資質のカルマ価値"
+                },
+                "rating": {
+                    "label": "レーティング",
+                    "hint": "この資質のレーティング"
+                }
+            }
+        },
+        "QualityType": "資質タイプ",
+        "QualityTypeLifeModule": "ライフモジュール",
+        "QualityTypeNegative": "不利",
+        "QualityTypePositive": "有利",
+        "Quantity": "数量",
+        "QuickInfo": {
+            "DrainForce": "ドレイン フォース{sign}{drain}"
+        },
+        "Radius": "半径",
+        "Range": "射程",
+        "RangeWeaponAttack": "射撃",
+        "Rating": "レーティング",
         "Reach": "リーチ",
-        "Recoil": "反動補正",
+        "Reagent": "原質",
+        "RebootConfirmationDialog": {
+            "Cancel": "キャンセル",
+            "Confirm": "再起動",
+            "Description": "このデバイスを再起動してもよろしいですか？",
+            "Title": "再起動の確認"
+        },
+        "RecklessSpellButton": "無謀な呪文行使",
+        "Recoil": "反動",
+        "RecoilCompensation": "反動修正",
+        "Refresh": "リフレッシュ",
+        "RemoveBonus": "ボーナスを削除する",
+        "RemoveSpecialization": "専門化を削除する",
+        "ReputationManager": {
+            "Title": "評判マネージャー",
+            "Submit": "決定",
+            "Cancel": "キャンセル"
+        },
+        "Resist": "抵抗",
+        "RestoreDefaultSkills": "デフォルトのスキルに戻す",
+        "RightClickToClear": "右クリックでクリア",
+        "Ritual": {
+            "label": "儀式",
+            "FIELDS": {
+                "type": {
+                    "label": "儀式種別",
+                    "hint": "実行する儀式の種類"
+                },
+                "descriptors": {
+                    "label": "記述子",
+                    "hint": "儀式の性質を示す記述子（アンカー、マテリアルなど）"
+                }
+            }
+        },
+        "Roll": "ロール",
+        "RollArmor": "装甲値",
+        "RollComposure": "冷静",
+        "RollCustom": "カスタム",
+        "RollDefense": "防御",
+        "RollDrain": "ドレイン",
+        "RollFade": "フェイディング",
+        "RollJudgeIntentions": "意図を図る",
+        "RollLiftCarry": "持ち上げ/運搬",
+        "RollMemory": "記憶",
+        "RollMode": "ロールモード",
+        "RollOneDie": "ヘイチャマー！　１個より少ないダイスは振る事ができないんだぜ！",
+        "RollSoak": "ダメージ抵抗",
+        "RoundsRemaining": "残弾数",
+        "Rtg": "Rtg",
+        "RtgAboveZero": "Rtg > 0",
         "Run": "走行",
+        "RunningSilent": "サイレント状態",
+        "RunningSilentControlledByDevice": "隠密走行の状態は、現在アクティブなマトリックス・デバイスによって制御されています：",
+        "RunningSpeed": "走行速度",
+        "SIN": "SIN",
+        "SameGrid": "同一グリッド",
+        "SecondAttribute": "副能力値",
+        "SecondChance": "振り直し",
+        "SelectMatrixNetworkDialog": {
+            "Cancel": "キャンセル",
+            "Connect": "接続",
+            "Title": "ネットワークの選択"
+        },
+        "SelectTokenMessage": "最初にトークンを選択する必要があります",
+        "SelectedTargets": "目標選択",
+        "SheetActor": "アクターシート",
+        "SheetItem": "アイテムシート",
+        "Side": "サイド",
+        "SituationalModifier": "状況修正",
+        "SituationalModifiersApplication": {
+                "Category": {
+                "Magic": "アストラル",
+                "Matrix": "マトリックス",
+                "Physical": "物理"
+            },
+            "ClearLocalAll": "個別修正の削除",
+            "ClearLocalAllTokens": "シーンのコマすべての修正を削除する",
+            "Magic": {
+                "BackgroundCount": "背景放射（ドメイン）"
+            },
+            "Matrix": {
+                "Noise": "ノイズ"
+            },
+            "Title": "環境修正",
+            "Total": "結果"
+        },
+        "Skill": {
+            "abbr": {
+                "Native": "N"
+            },
+            "AeronauticsMechanic": "航空機整備",
+            "Alchemy": "錬金術",
+            "AnimalHandling": "動物調教",
+            "Arcana": "アルカナ",
+            "Archery": "弓術",
+            "Armorer": "武器整備",
+            "Artificing": "呪物作成",
+            "Artisan": "工芸",
+            "Assensing": "霊視",
+            "AstralCombat": "アストラル戦闘",
+            "Automatics": "自動火器",
+            "AutomotiveMechanic": "自動車整備",
+            "Banishing": "放逐",
+            "Binding": "束縛",
+            "Biotechnology": "バイオ技術",
+            "Blades": "刀剣",
+            "Chemistry": "化学実務",
+            "Clubs": "棍棒",
+            "Compiling": "コンパイル",
+            "Computer": "コンピューター",
+            "Con": "虚言",
+            "Counterspelling": "呪文対抗",
+            "Cybercombat": "サイバー戦闘",
+            "Cybertechnology": "サイバー技術",
+            "Decompiling": "デコンパイル",
+            "Demolitions": "爆破",
+            "Disenchanting": "解呪",
+            "Disguise": "変装",
+            "Diving": "潜水",
+            "ElectronicWarfare": "電子戦",
+            "EscapeArtist": "脱出",
+            "Etiquette": "エチケット",
+            "ExoticMelee": "特殊近接武器",
+            "ExoticRange": "特殊射撃武器",
+            "FirstAid": "応急処置",
+            "Flight": "飛行",
+            "Forgery": "偽造",
+            "FreeFall": "自由落下",
+            "Gunnery": "砲術",
+            "Gymnastics": "体術",
+            "Hacking": "ハッキング",
+            "Hardware": "ハードウェア",
+            "HeavyWeapons": "重火器",
+            "Impersonation": "ものまね",
+            "IndustrialMechanic": "工業機器整備",
+            "Instruction": "指導",
+            "Intimidation": "脅迫",
+            "Native": "ネイティブ",
+            "Leadership": "統率",
+            "Locksmith": "錠前",
+            "Longarms": "長銃",
+            "Medicine": "医術",
+            "NauticalMechanic": "船舶整備",
+            "Navigation": "航法",
+            "Negotiation": "交渉",
+            "Palming": "パーミング",
+            "Perception": "知覚",
+            "Performance": "パフォーマンス",
+            "PilotAerospace": "宇宙船操縦",
+            "PilotAircraft": "航空機操縦",
+            "PilotExoticVehicle": "特殊ヴィークル操縦",
+            "PilotGroundCraft": "地上機操縦",
+            "PilotWalker": "歩行機操縦",
+            "PilotWaterCraft": "船舶操縦",
+            "Pistols": "ピストル",
+            "Registering": "レジスター",
+            "RitualSpellcasting": "儀式呪文行使",
+            "Running": "ランニング",
+            "Skill": "技能",
+            "SkillGroup": "技能グループ",
+            "Skills": "技能",
+            "Sneaking": "忍び歩き",
+            "Software": "ソフトウェア",
+            "Spellcasting": "呪文行使",
+            "Summoning": "召喚",
+            "Survival": "サバイバル",
+            "Swimming": "水泳",
+            "Teamwork": {
+                "Glitched": "グリッチ",
+                "ParticipantActor": "アクターを選択",
+                "RollIt": "ロールする",
+                "TakePart": "テストに参加"
+            },
+            "ThrowingWeapons": "投擲武器",
+            "Tracking": "トラッキング",
+            "UnarmedCombat": "素手戦闘"
+        },
         "Soak": "ダメージ抵抗",
+        "SoakTest": "ダメージ抵抗テスト",
+        "Social": "社交",
         "SocialLimit": "社交リミット",
+        "Source": "資料",
+        "SourceFieldEmptyError": "資料のファイルがありません, ソースの有効なテキストを入力してください",
+        "SpareClips": "予備クリップ",
+        "SpecialAttributes": "特殊能力値",
+        "Specialization": "専門化",
+        "Specializations": "専門化",
+        "Spell": {
+            "FIELDS": {
+                "type": {
+                    "label": "呪文種別",
+                    "hint": "物理かマナのどちらに基づいた呪文か"
+                },
+                "category": {
+                    "label": "カテゴリ",
+                    "hint": "呪文が属するカテゴリ（戦闘、探知、幻影、操作など）"
+                },
+                "drain": {
+                    "label": "ドレイン値",
+                    "hint": "呪文のドレイン値。ドレイン抵抗の際、呪文の威力（フォース）に加算されます"
+                },
+                "range": {
+                    "label": "射程",
+                    "hint": "呪文の射程"
+                },
+                "duration": {
+                    "label": "持続時間",
+                    "hint": "呪文の効果時間"
+                },
+                "combat": {
+                    "type": {
+                        "label": "戦闘呪文種別",
+                        "hint": "直接呪文か間接呪文か"
+                    }
+                },
+                "detection": {
+                    "type": {
+                        "label": "探知呪文種別",
+                        "hint": "呪文が対象にどのように影響するか"
+                    },
+                    "passive": {
+                        "label": "受動的",
+                        "hint": "その探知呪文が受動的（パッシブ）であるか"
+                    },
+                    "extended": {
+                        "label": "広域",
+                        "hint": "その探知呪文が広域（エクステンデッド）であるか"
+                    }
+                },
+                "illusion": {
+                    "type": {
+                        "label": "幻影呪文種別",
+                        "hint": "幻影呪文の種類（実体的、精神的など）"
+                    },
+                    "sense": {
+                        "label": "感覚",
+                        "hint": "呪文が影響を与える感覚"
+                    }
+                },
+                "manipulation": {
+                    "damaging": {
+                        "label": "ダメージ型",
+                        "hint": "呪文がダメージを与えるかどうか"
+                    },
+                    "mental": {
+                        "label": "精神的",
+                        "hint": "対象に精神的な影響を与えるかどうか"
+                    },
+                    "physical": {
+                        "label": "物理的",
+                        "hint": "物理的形態に影響を与える呪文で、通常は抵抗判定が行われます"
+                    },
+                    "environmental": {
+                        "label": "環境型",
+                        "hint": "特定の対象を持たず、対象に直接影響を与えるのではなく、エリア全体に影響を与える呪文です"
+                    }
+                },
+                "ritual": {
+                    "type": {
+                        "label": "儀式種別",
+                        "hint": "実行する儀式の種類"
+                    }
+                }
+            },
+            "Attack": "呪文攻撃",
+            "Cast": "呪文行使",
+            "CatCombat": "戦闘",
+            "CatDetection": "探知",
+            "CatHealth": "身体",
+            "CatIllusion": "幻影",
+            "CatManipulation": "操作",
+            "CatRitual": "儀式",
+            "Category": "カテゴリー",
+            "CombatDirect": "直接",
+            "CombatIndirect": "間接",
+            "Defense": "呪文防御",
+            "DefenseDirectMana": "呪文防御 (直接, マナ)",
+            "DefenseDirectPhysical": "呪文防御 (直接, 身体)",
+            "DetectionArea": "効果範囲",
+            "DetectionDirectional": "指向性",
+            "DetectionPsychic": "超能力",
+            "IllusionMultiSense": "全感覚",
+            "IllusionObvious": "明白",
+            "IllusionRealistic": "迫真",
+            "IllusionSingleSense": "単一感覚",
+            "ManipulationDamaging": "ダメージ",
+            "ManipulationEnvironmental": "環境",
+            "ManipulationMental": "精神",
+            "ManipulationPhysical": "身体",
+            "Range": "範囲",
+            "RangeLos": "視界",
+            "RangeLosA": "視界 (A)",
+            "RangeTouch": "接触",
+            "Spell": "呪文",
+            "Spells": "呪文",
+            "Type": "呪文タイプ",
+            "TypeMana": "マナ",
+            "TypePhysical": "身体"
+       },
+        "Spirit": {
+            "Bound": "束縛",
+            "Force": "フォース",
+            "MissingSummoner": "アクティブな召喚師はいません",
+            "Services": "助力",
+            "Summoner": "召喚者",
+            "Type": "タイプ",
+            "Types": {
+                "Air": "大気/Air",
+                "Aircraft": "航空機/Aircraft",
+                "Airwave": "電波/Airwave",
+                "Ally": "同盟精霊/Ally",
+                "Anansi": "アナンシ/Anansi",
+                "Anarch": "アナーキー/Anarch",
+                "Arboreal": "アーボリアル/Arboreal",
+                "Automotive": "自動車/Automotive",
+                "Beasts": "獣/Beasts",
+                "Blackjack": "ブラックジャック/Blackjack",
+                "BladeSummoned": "刃より召喚されし者/Blade-Summoned",
+                "Blood": "鮮血/Blood",
+                "BloodShade": "流血/Blood Shade",
+                "Boggle": "ボグル/Boggle",
+                "Bone": "骨/Bone",
+                "Bugul": "ブグル/Bugul",
+                "Carcass": "死骸/Carcass",
+                "Caretaker": "昆虫精霊・巣の世話役/Insect Caretaker",
+                "Ceramic": "セラミック/Ceramic",
+                "Chindi": "チャンディ/Chindi",
+                "CorpsCadavre": "コープス・カダヴル/Corps Cadavre",
+                "Corpse": "死体/Corpse",
+                "Crawler": "クローラー（デーモン）/Crawler (Demon)",
+                "Croki": "クロキ/Croki",
+                "Detritus": "がれき/Detritus",
+                "Duende": "デュエンデ/Duende",
+                "Earth": "大地/Earth",
+                "Ejerian": "エジェリアン/Ejerian",
+                "Elvar": "エルヴァー/Elvar",
+                "Energy": "エネルギー/Energy",
+                "Erinyes": "エリニーズ/Erinyes",
+                "Fire": "炎/Fire",
+                "Ghasts": "ゴースト（デーモン）/Ghasts (Demon)",
+                "GreenMan": "グリーンマン/Greenman",
+                "Gremlin": "グレムリン/Gremlin",
+                "Guardian": "守護者/Guardian",
+                "Guidance": "導き/Guidance",
+                "GumToad": "ガム・トード（デーモン）/Gum Toad (Demon)",
+                "Homunculus": "ホムンクルス/Homunculus",
+                "Hopper": "ホッパー/Hopper",
+                "HorrorShow": "ホラー・ショー/Horror Show",
+                "Imp": "インプ/Imp",
+                "Jarl": "ヤール/Jarl",
+                "Kappa": "河童/Kappa",
+                "Kokopelli": "ココペリ/Kokopelli",
+                "Man": "人/Man",
+                "MasterShedim": "マスターシェディム/MasterShedim",
+                "Metal": "金属/Metal",
+                "Morbi": "モルビ/Morbi",
+                "Muse": "ミューズ/Muse",
+                "Nightmare": "ナイトメア/Nightmare",
+                "Nocnitasa": "ノクニタサ/Nocnitasa",
+                "Nymph": "昆虫精霊・幼虫/Insect Nymph",
+                "Palefire": "蒼白い炎/Palefire",
+                "Phantom": "ファントム/Phantom",
+                "Plant": "植物/Plant",
+                "Preta": "プレタ/Preta",
+                "Queen": "昆虫精霊・女王/Insect Queen",
+                "Rot": "腐敗/Rot",
+                "Scout": "昆虫精霊・斥候/Insect Scout",
+                "Shade": "シェード/Shade",
+                "Shedim": "シェディム/Shedim",
+                "Ship": "船/Ship",
+                "Soldier": "昆虫精霊・兵隊/Insect Soldier",
+                "Stabber": "スタバー/Stabber",
+                "Succubus": "サキュバス/Succubus",
+                "Task": "労役/Task",
+                "ToxicAir": "毒/Noxious",
+                "ToxicBeasts": "獰猛/Abomination",
+                "ToxicEarth": "バーレン/Barren",
+                "ToxicFire": "核/Nuclear",
+                "ToxicMan": "疫病/Plague",
+                "ToxicWater": "スラッジ/Sludge",
+                "Train": "列車/Train",
+                "TsuchigumoWarrior": "土蜘蛛の戦士/Tsuchigumo Warrior",
+                "Tungak": "トゥンガク/Tungak",
+                "Unbreakable": "アンブレイカブル/Unbreakable",
+                "Vrygoths": "ヴリゴス/Vrygoths",
+                "VucubCaquix": "ヴクブ・カキシュ/Vucub Caquix",
+                "Watcher": "ウォッチャー/Watcher",
+                "Water": "水/Water",
+                "Worker": "昆虫精霊・労働者/Insect Worker",
+                "Wraith": "レイス/Wraith"
+            }
+        },
+        "Sprite": {
+            "FIELDS": {
+                "spriteType": {
+                    "label": "スプライト種別",
+                    "hint": "スプライトの種類（データ処理、クラックなど）"
+                },
+                "level": {
+                    "label": "レベル",
+                    "hint": "スプライトのレベル"
+                },
+                "services": {
+                    "label": "サービス",
+                    "hint": "スプライトが提供できるサービスの回数"
+                },
+                "registered": {
+                    "label": "登録済み",
+                    "hint": "スプライトが登録（レジスター）されているかどうか"
+                },
+                "technomancerUuid": {
+                    "label": "テクノマンサー",
+                    "hint": "このスプライトをコンパイルしたテクノマンサー"
+                }
+            },
+            "Level": "レベル",
+            "MissingTechnomancer": "アクティブなテクノマンサーは存在しません",
+            "Registered": "レジスター済み",
+            "Services": "タスク（助力）",
+            "Technomancer": "テクノマンサー",
+            "Type": "タイプ",
+            "Types": {
+                "Companion": "コンパニオン/Companion",
+                "Courier": "クーリエ/Courier",
+                "Crack": "クラック/Crack",
+                "Data": "データ/Data",
+                "Fault": "フォールト/Fault",
+                "Generalist": "ジェネラリスト/Generalist",
+                "Machine": "マシン/Machine"
+            }
+        },
+        "SpritePower": {
+            "Durations": {
+                "Always": "常時",
+                "Instant": "即時",
+                "Permanent": "永続",
+                "Special": "特殊",
+                "Sustained": "維持"
+            },
+            "FIELDS": {
+                "optional": {
+                    "label": "選択式",
+                    "hint": "このスプライト・パワーが選択ルールによるものかどうか"
+                },
+                "duration": {
+                    "label": "持続時間",
+                    "hint": "スプライト・パワーの持続時間"
+                }
+            },
+            "IsOptional": "オプション設定",
+            "Optional": {
+                "DisabledOption": "選択式（無効化）",
+                "EnabledOption": "選択式（有効化）",
+                "Standard": "デフォルト"
+            },
+            "Type": "種別"
+        },
+        "Stock": "ストック",
+        "StreetCred": "ストリートの評判",
         "StunTrack": "精神ＣＭ",
+        "Submersion": "サブマージョン",
+        "Successes": "成功",
+        "Summoning": {
+            "DropSpirit": "束縛する精霊をドラッグ＆ドロップ",
+            "FixedSpirit": "束縛／レジスタ",
+            "SpiritType": "精霊の種類"
+        },
+        "Suppressing": "制圧",
+        "Tabs": {
+            "Actor": {
+                "Actions": "アクション",
+                "Ammo": "弾薬",
+                "Bio": "経歴",
+                "Character": "キャラクター",
+                "Compilations": "コンパイル",
+                "ComplexForms": "複合体",
+                "CritterPowers": "パワー",
+                "Details": "詳細",
+                "Network": "ネットワーク",
+                "Effects": "効果",
+                "IC": "IC",
+                "Inventory": "所持品",
+                "Licenses": "ライセンス",
+                "Magic": "魔術",
+                "MarkedIcons": "マーク済み",
+                "Mods": "改造",
+                "Matrix": "マトリックス",
+                "MatrixActions": "アクション",
+                "NetworkIcons": "アイコン",
+                "Networks": "ネットワーク",
+                "OwnedIcons": "所有",
+                "Social": "社交",
+                "Spirit": "精霊",
+                "Sprite": "スプライト",
+                "SpritePowers": "パワー",
+                "Vehicle": "ヴィークル"
+            },
+            "Item": {
+                "Description": "説明",
+                "Details": "詳細",
+                "Effects": "効果",
+                "Network": "ネットワーク",
+                "SinLicenses": "ライセンス",
+                "SinNetworks": "ネットワーク",
+                "WeaponAmmo": "弾薬",
+                "WeaponMods": "改造"
+            }
+        },
+        "Target": "目標",
+        "TargetDevice": "デバイス",
+        "TargetFile": "ファイル",
+        "TargetOther": "その他",
+        "TargetPersona": "ペルソナ",
+        "TargetSelf": "自身",
+        "TargetSprite": "スプライト",
+        "TargetingNeedsActorWithToken": "現在のアクターがターゲティングするにはリンクされたトークンが必要です",
+        "Temporary": "一時的",
+        "TemporaryModifiers": "一時的な修正",
+        "Test": "テスト",
+        "TestResults": {
+            "AttackBlockedByHardenedArmor": "攻撃は命中したが、硬化装甲によって防がれた",
+            "AttackBlockedByVehicleArmor": "攻撃は命中したが、ヴィークル装甲によって防がれた",
+            "AttackDodged": "攻撃を回避した",
+            "AttackDoesNoPhysicalDamageToVehicle": "攻撃は命中したが、ヴィークルに物理ダメージを与えられなかった",
+            "AttackHits": "攻撃命中",
+            "AttackResisted": "攻撃は抵抗された",
+            "BruteForceFailure": "強制介入失敗！",
+            "BruteForceSuccess": "強制介入成功！",
+            "CheckOverwatchScoreFailure": "監視スコア確認失敗！",
+            "CheckOverwatchScoreSuccess": "監視スコア確認成功！",
+            "Failure": "失敗！",
+            "HackOnTheFlyFailure": "即興ハッキング失敗！",
+            "HackOnTheFlySuccess": "即興ハッキング成功！",
+            "ResistedAllDamage": "ダメージなし！",
+            "ResistedSomeDamage": "ダメージを受けた！",
+            "Results": "結果",
+            "RitualFailure": "儀式は失敗した",
+            "RitualSuccess": "儀式は封結（成功）された",
+            "SoakBlockedByHardenedArmor": "硬化装甲によりダメージなし",
+            "SpiritSummonFailure": "精霊召喚失敗！",
+            "SpiritSummonSuccess": "精霊召喚成功！",
+            "SpriteCompilationSuccess": "コンパイル成功！（スプライト）",
+            "SpriteCompilationFailure": "コンパイル失敗！（スプライト）",
+            "Success": "成功!"
+        },
+        "Tests": {
+            "AttributeOnlyTest": "能力値テスト",
+            "BiofeedbackResistTest": "生体信号フィードバックダメージ抵抗",
+            "BruteForceTest": "強制介入",
+            "CheckOverwatchScoreTest": "監視スコア確認",
+            "CombatSpellDefenseTest": "戦闘呪文防御テスト",
+            "CompileSpriteTest": "スプライトコンパイルテスト",
+            "ComplexFormTest": "複合体スレッド編成テスト",
+            "DrainTest": "ドレイン判定",
+            "DroneInfiltrationTest": "ドローンの忍び歩き",
+            "DronePerceptionTest": "ドローン知覚",
+            "ExtendedTest": "継続テスト",
+            "FadeTest": "フェイディング判定",
+            "HackOnTheFlyTest": "即興ハッキング",
+            "MatrixDefenseTest": "マトリックス防御",
+            "MatrixResistTest": "マトリックス・ダメージ抵抗",
+            "MatrixTest": "マトリックス判定",
+            "MeleeAttackTest": "近接攻撃テスト",
+            "NaturalRecoveryPhysicalTest": "自然回復（身体）テスト",
+            "NaturalRecoveryStunTest": "自然回復（精神）テスト",
+            "OpposedBruteForceTest": "強制介入への対抗",
+            "OpposedCheckOverwatchScoreTest": "監視スコア確認への対抗",
+            "OpposedCompileSpriteTest": "コンパイル対抗テスト",
+            "OpposedHackOnTheFlyTest": "即興ハッキングへの対抗",
+            "OpposedRitualTest": "儀式封結対抗テスト",
+            "OpposedSummonSpiritTest": "精霊召喚対抗テスト",
+            "OpposedTest": "対抗テスト",
+            "PhysicalDefenseTest": "身体防御テスト",
+            "PhysicalResistTest": "身体ダメージ抵抗ロール",
+            "PilotVehicleTest": "パイロットヴィークルテスト",
+            "RangedAttackTest": "射撃武器攻撃テスト",
+            "RitualSpellcastingTest": "儀式呪文行使テスト",
+            "SkillTest": "技能判定",
+            "SpellCastingTest": "呪文行使",
+            "SuccessTest": "成功テスト",
+            "SummonSpiritTest": "精霊召喚",
+            "SuppressionDefenseTest": "制圧射撃防御テスト",
+            "ThrownAttackTest": "投擲武器攻撃"
+        },
+        "Threshold": "目標値",
+        "ToggleActive": "トグルで有効化",
+        "ToggleEquip": "トグルで装備",
+        "ToggleWireless": "トグルでワイアレス",
+        "Tooltips": {
+            "Actor": {
+                "AddOneService": "サービスを1回追加",
+                "Blitz": "エッジを1点消費し、イニシアチブ・ダイスを最大数（5個）振る（電撃戦）",
+                "ConnectNetwork": "このホスト／格子に進入する",
+                "Critter": "クリッター・パワーの使用を許可する",
+                "DefaultCategoryVisibility": "アイテムが登録されていないカテゴリーも表示する",
+                "Description": "このアクターの説明",
+                "DisconnectNetwork": "このホスト／格子から離脱する",
+                "MarkTarget": "この対象に追加のマークを付与する",
+                "MatrixConnectionToggle": "マトリックス接続状態の切り替え：拡張現実（AR）、コールド・シム、ホット・シム",
+                "MatrixRunningSilentToggle": "マトリックス・デバイスを「サイレント状態」と「ペルソナ表示状態」の間で切り替える",
+                "Metatype": "NPCの場合、種族（メタタイプ）によって能力値の修正が自動適用されます",
+                "MiscConfig": "その他の設定と修正",
+                "MissingSummoner": "召喚者が不明です",
+                "MissingTechnomancer": "テクノマンサーが不明です",
+                "NetworksTab": "格子およびホスト",
+                "NoCombatant": "イニシアチブ判定（戦闘に参加している必要があります）",
+                "NPC": "NPCとして、メタヒューマンの能力値修正を適用します",
+                "PlaceMark": "すでにマークされている対象にさらにマークを付与するアクション",
+                "RemoveOneService": "サービスを1回分削除",
+                "ResetActorForNewRun": "ダメージやエッジなどをリセットして、新しいランを行う"
+                "RollInitiative": "イニシアチブを振る",
+                "PickControlledTokenAsDriver": "現在操作中のトークンをドライバーとして選択する",
+                "PickControlledTokenAsSummoner": "現在操作中のトークンを召喚者として選択する",
+                "PickControlledTokenAsTechnomancer": "現在操作中のトークンをコンパイル者（テクノマンサー）として選択する",
+                "RebootPersonaAndClearAllMarks": "ペルソナを再起動し、自分が付与したすべてのマークを消去する",
+                "SetupPAN": "装備中のすべてのワイヤレス・デバイスをこのキャラクターのペルソナ（PAN）に追加する"
+            }
+            "CallInAction": {
+                "ActorType": "呼びだす対象"
+                "LinkActor": "召喚者をドラッグ＆ドロップするか、召喚アクションを行ってください"
+            },
+            "CompilationTest": {
+                "Level": "スプライトのレベル",
+                "PreparedSprite": "召喚アクションで作成されたアクターを使う",
+                "SpriteType": "スプライトの種類"
+            },
+            "Contact": {
+                "LinkActor": "アクターをドラッグ＆ドロップして、このコンタクトにリンクします。"
+            },
+            "Effect": {
+                "AlterApplyToWithChanges": "適用先を変更する前に、現在の変更内容を削除してください。",
+                "ApplyTo": "このエフェクトによる変更は、この対象にのみ適用されます",
+                "CreateEffect": "エフェクトを作成",
+                "DeleteEffect": "エフェクトを削除",
+                "DocumentEffects": "このドキュメントに直接設定されているエフェクト",
+                "EditEffect": "エフェクトを編集",
+                "ItemEffects": "このドキュメント内のアイテムから取得されたエフェクト",
+                "OnlyAllFilteredUsed": "このエフェクトは、選択されたすべての条件に一致する判定にのみ適用されます",
+                "OnlyFilteredUsed": "このエフェクトは、選択された条件の少なくとも1つに一致する判定に適用されます",
+                "OnlyForItemTest": "親アイテムの判定にのみ影響を与えます",
+                "OnlyForWireless": "このエフェクトは、ワイヤレス機能が有効なアイテムにのみ適用されます",
+                "PriorityFieldDisabled": "カスタム優先度は現在サポートされていません"
+            },
+            "Item": {
+                "ActionCategories": "判定のデフォルトカテゴリの代わりに使用するアクションカテゴリを選択します。アクティブ・エフェクトを使用することで、これらのカテゴリを介して判定値を修正できます",
+                "ActionModifier": "判定のデフォルト修正の代わりに使用するダイスプール修正を選択します",
+                "ActionRollMode": "このアクションを実行する際のデフォルトのロールモードです。全体のチャット設定よりも優先されます",
+                "AddQuantity": "個数を1追加。{qtySome}: 5追加。{qtyMany}: 20追加",
+                "AmmoReplaceDamage": "武器ダメージを修正するのではなく、この弾薬のダメージに置き換えるよう設定します",
+                "AvailabilityAdjustment": "アイテムのレーティングに基づいて実際の入手難易度を調整します",
+                "CostAdjustment": "アイテムのレーティングに基づいて実際のコストを調整します",
+                "DisabledForPreparedActor": "準備済みアクター（Prepared Actor）を使用しているため無効です",
+                "EssenceAdjustment": "アイテムのレーティングに基づいて実際のエッセンス・コストを調整します",
+                "RemoveQuantity": "個数を1削除。{qtySome}: 5削除。{qtyMany}: 20削除",
+                "ToggleVisibility": "プレイモード中の表示／非表示を切り替えます",
+                "ToggleFavorite": "これをお気に入りに追加し、お気に入りバーに表示します"
+            },
+            "RangedAttack": {
+                "Recoil": "反動の蓄積値",
+                "RecoilAfterAttack": "この射撃に適用される反動の蓄積値",
+                "RecoilBeforeAttack": "攻撃前に反動を進行させます。",
+                "RecoilCompensation": "武器アクセサリの補正値を含む反動補正合計",
+                "ResetRecoil": "反動の蓄積値をリセット（要射撃以外の単純動作以上の行動）"
+            },
+            "Ritual": {
+                "Force": "儀式のフォース",
+                "ReagentDrams": "儀式を封結する際のドレインを減らす為に使用された原質のドラム数"
+            },
+            "SituationalModifier": {
+                "Recoil": "発射した弾丸の量"
+            },
+            "SummoningTest": {
+                "DragOnCanvas": "精霊をドラッグする",
+                "Force": "召喚する精霊のフォース",
+                "PreparedSpirit": "召喚アクションで作成されたアクターを使う",
+                "ReagentDrams": "原質を使って召喚テストのリミットを設定する",
+                "SpiritType": "召喚する精霊の種類"
+            },
+            "Test": {
+                "Extended": "目標値に到達するまで継続テストとしてロールする",
+                "Limit": "計算後のリミット",
+                "ManualGlitches": "手動設定されたダイスプールのグリッチ値。手動修正と併用する必要があります",
+                "ManualHits": "手動設定されたダイスプールのヒット値。FVTTのダイススローを無視する",
+                "Modifier": "ダイスプールに適用するすべての修正値の合計",
+                "Pool": "ダイスプールの数（サイコロの数）",
+                "PushTheLimit": "エッジ消費による限界突破を使用する",
+                "RollMode": "ロールの結果を送信する範囲",
+                "Threshold": "計算後の目標値"
+            }
+            "MatrixTest": {
+                "SameGridDisabled": "実行者と対象の双方が「グリッド」を使用しているため、同一グリッド内かどうかは自動的に判定されます"
+            },
+            "ToggleEditMode": "編集モードの切り替え"
+        },
+        "Top": "トップ",
+        "Total": "トータル",
+        "Tours": {
+            "CharacterImport": {
+                "Description": "このツアーでは、Chummerキャラクターをインポートする方法の概要を紹介します。詳細は、https://github.com/SR5-FoundryVTT/SR5-FoundryVTT/wiki/Chummer-Character-Import を参照してください。",
+                "GeneralContent": "キャラクターをインポートするには、chummer 5からのエクスポートJSONが必要です。",
+                "GeneralTitle": "キャラクターのインポート",
+                "Title": "キャラクターのインポート-"
+            },
+            "ConditionMonitor": {
+                "ApplyDamageContent": " セルを左クリックしてダメージを適用します。このセルを含む左側のすべてのセルが埋まります。すでにセルが埋まっている場合、右側のセルは埋まりません",
+                "ApplyDamageTitle": "任意のセルを右クリックすると、モニターからすべてのダメージが削除されます。",
+                "Description": "このツアーでは、コンディションモニターの動作の概要を紹介します。",
+                "GeneralContent": "あなたのコンディションモニターです。これは複数のセルから構成されています。特定のセルには数字が書かれています。そこまでのセルが埋まると、負傷修正が増加します。すべてのモニターの負傷修正が合算されます。",
+                "GeneralTitle": "コンディションモニター",
+                "RecoveryContent": "コンディションモニターのラベルをクリックすると、拡張回復テストが表示されます。回復テストの結果は自動的にモニターに適用されます。",
+                "RecoveryTitle": "回復テスト",
+                "Title": "コンディションモニターのツアー",
+                "WoundModifierContent": "このセルまで埋まると負傷修正がセルに書かれた数だけ増加することを示します。",
+                "WoundModifierTitle": "負傷修正"
+            }
+        },
+        "UnderBarrel": "アンダーバレル",
+        "UseEdgeForInitiativeRoll": "エッジを使用して速攻（イニシアティブダイスの5d6化）する",
+        "Value": "数値",
+        "Vehicle": {
+            "Category": "カテゴリ",
+            "Categories": {
+                "Micro": "マイクロ",
+                "Mini": "ミニ",
+                "Small": "スモール",
+                "Medium": "ミディアム",
+                "Large": "ラージ",
+                "Huge": "ヒュージ",
+                "Anthro": "人型",
+                "Missile": "ミサイル"
+            },
+            "ChaseEnvironment": "チェイスの環境",
+            "Clearsight": "鮮明化",
+            "ControlMode": "操縦モード",
+            "ControlModes": {
+                "Autopilot": "オートパイロット",
+                "Manual": "マニュアル",
+                "Remote": "遠隔制御",
+                "Rigger": "リガー"
+            },
+            "Driver": "ドライバー",
+            "Drone": "ドローン",
+            "Environments": {
+                "Handling": "操縦性重視",
+                "Speed": "スピード重視"
+            },
+            "IsDrone": "ドローン？",
+            "IsOffRoad": "オフロード？",
+            "Maneuvering": "機動",
+            "MissingDriver": "アクターをドライバーとしてドラッグ＆ドロップする",
+            "ModificationCategoryTypes": {
+                "body": "ボディ",
+                "cosmetic": "外見",
+                "electromagnetic": "電磁",
+                "power_train": "駆動装置",
+                "protection": "防護",
+                "weapons": "武器"
+            },
+            "OffRoad": "オフロード",
+            "OnRoad": "オンロード",
+            "Stats": {
+                "Acceleration": "加速値",
+                "Handling": "操縦値",
+                "OffRoadHandling": "操縦値 (オフロード)",
+                "OffRoadSpeed": "最高速度 (オフロード)",
+                "Pilot": "パイロット",
+                "Seats": "乗員数",
+                "Sensor": "センサー",
+                "Speed": "最高速度"
+            },
+            "Stealth": "隠密",
+            "Type": "タイプ",
+            "Types": {
+                "Aerospace": "宇宙船",
+                "Air": "航空機",
+                "Exotic": "カテゴリー外/Exotic Craft",
+                "Ground": "地上機",
+                "Walker": "歩行機",
+                "Water": "船舶"
+            },
+            "Vehicle": "ヴィークル"
+        },
+        "VehicleImport": {
+            "MissingPermission": "アクターを作成する権限がありません"
+        },
+        "Vision": {
+            "AstralPerception": "アストラル知覚",
+            "AugmentedReality": "拡張現実（AR)",
+            "LowLight": "低光量視野",
+            "ThermographicVision": "熱映像視野"
+        },
         "Walk": "歩行",
-        "WoundTolerance": "負傷修正の許容",
-        "Wounds": "負傷"
-    },
-    "SR5.MountPoint": "マウント箇所",
-    "SR5.MoveInventoryDialog": {
-        "Cancel": "キャンセル",
-        "Move": "移動",
-        "Title": "インベントリを選択する"
-    },
-    "SR5.MoveItemInventory": "アイテムをインベントリに移動する",
-    "SR5.Movement": "移動",
-    "SR5.Mundane": "マンディン",
-    "SR5.Name": "名前",
-    "SR5.NetHits": "純ヒット",
-    "SR5.New": "新しい",
-    "SR5.NoCover": "遮蔽なし",
-    "SR5.NoSelectableToken": "キャンバス上に選択可能なトークンがありません",
-    "SR5.None": "無し",
-    "SR5.Normal": "ノーマル",
-    "SR5.NormalSkillButton": "ノーマル",
-    "SR5.NormalSpellButton": "ノーマル",
-    "SR5.NotExtended": "継続なし",
-    "SR5.Notoriety": "悪評",
-    "SR5.Nuyen": "新円",
-    "SR5.OpenOrigin": "アイテムを開く",
-    "SR5.OpenSource": "pdfページャーまたはウェブサイトとしてソースを開くことができます。",
-    "SR5.OpposedType": "タイプ",
-    "SR5.OpposingHits": "対抗側ヒット数",
-    "SR5.OpposingNetHits": "純ヒット数",
-    "SR5.OriginalDicePool": "元のダイスプール",
-    "SR5.OutOfRange": "射程距離外",
-    "SR5.Overflow": "オバーフロー",
-    "SR5.Override": "上書き",
-    "SR5.OverwatchScore": "監視指数(OS)",
-    "SR5.OverwatchScoreTracker": {
-        "AddSelect": "選択したトークンのリンクされたアクターを追加する",
-        "CantDeleteUserCharacter": "プレイヤーキャラクターはトラッカーから削除できません",
-        "DeleteScore": "トラッカーからスコアを削除する",
-        "NotifyNoSelectedTokens": "少なくとも1つのリンクされたトークンが選択されている必要があります。",
-        "OnlyLinkedActorsSupported": "リンクされたアクターのみがサポートされています。リンクされていないアクターを持つ選択されたトークンは無視されます。",
-        "ResetScore": "監視指数(OS)をリセットする"
-    },
-    "SR5.OverwatchScoreTrackerTitle": "ベイビーモニター(監視指数）",
-    "SR5.PP": "PP",
-    "SR5.Parry": "受け流し",
-    "SR5.PartialCover": "部分遮蔽",
-    "SR5.Passive": "受動",
-    "SR5.PhysicalLimit": "身体リミット",
-    "SR5.PhysicalOverflowTrack": "ダメージオーバーフロー（身体）",
-    "SR5.PhysicalTrack": "身体トラック",
-    "SR5.PlaceMarks": "マークを付ける",
-    "SR5.PlaceTemplate": "テンプレートの場所",
-    "SR5.PlusFifteenMinutes": "+15分",
-    "SR5.PowerLevel": "レベル",
-    "SR5.PowerPoints": "パワーポイント",
-    "SR5.PowerType": "パワータイプ",
-    "SR5.Powers": "パワー",
-    "SR5.Program": "プログラム",
-    "SR5.ProgramType": "タイプ",
-    "SR5.Programs": "プログラム",
-    "SR5.PublicAwareness": "公的認知度",
-    "SR5.PushTheLimit": "限界突破",
-    "SR5.Qty": "個数",
-    "SR5.Quality": "資質",
-    "SR5.QualityType": "資質タイプ",
-    "SR5.QualityTypeLifeModule": "ライフモジュール",
-    "SR5.QualityTypeNegative": "不利",
-    "SR5.QualityTypePositive": "有利",
-    "SR5.Quantity": "数量",
-    "SR5.QuickInfo": {
-        "DrainForce": "ドレイン フォース{sign}{drain}"
-    },
-    "SR5.Radius": "半径",
-    "SR5.Range": "射程",
-    "SR5.RangeWeaponAttack": "射撃",
-    "SR5.Rating": "レーティング",
-    "SR5.Reach": "リーチ",
-    "SR5.Reagent": "原質",
-    "SR5.RecklessSpellButton": "無謀な呪文行使",
-    "SR5.Recoil": "反動",
-    "SR5.RecoilCompensation": "反動修正",
-    "SR5.RemoveBonus": "ボーナスを削除する",
-    "SR5.RemoveSpecialization": "専門化を削除する",
-    "SR5.Resist": "抵抗",
-    "SR5.RestoreDefaultSkills": "デフォルトのスキルに戻す",
-    "SR5.RightClickToClear": "右クリックでクリア",
-    "SR5.Roll": "ロール",
-    "SR5.RollArmor": "装甲値",
-    "SR5.RollComposure": "冷静",
-    "SR5.RollCustom": "カスタム",
-    "SR5.RollDefense": "防御",
-    "SR5.RollDrain": "ドレイン",
-    "SR5.RollFade": "フェイディング",
-    "SR5.RollJudgeIntentions": "意図を図る",
-    "SR5.RollLiftCarry": "持ち上げ/運搬",
-    "SR5.RollMemory": "記憶",
-    "SR5.RollMode": "ロールモード",
-    "SR5.RollOneDie": "ヘイチャマー！　１個より少ないダイスは振る事ができないんだぜ！",
-    "SR5.RollSoak": "ダメージ抵抗",
-    "SR5.RoundsRemaining": "残弾数",
-    "SR5.Rtg": "Rtg",
-    "SR5.RtgAboveZero": "Rtg > 0",
-    "SR5.Run": "走行",
-    "SR5.RunningSilent": "サイレント状態",
-    "SR5.RunningSpeed": "走行速度",
-    "SR5.SIN": "SIN",
-    "SR5.SecondAttribute": "副能力値",
-    "SR5.SecondChance": "振り直し",
-    "SR5.SelectTokenMessage": "最初にトークンを選択する必要があります",
-    "SR5.SelectedTargets": "目標選択",
-    "SR5.SheetActor": "アクターシート",
-    "SR5.SheetItem": "アイテムシート",
-    "SR5.Side": "サイド",
-    "SR5.SituationalModifier": "状況修正",
-    "SR5.SituationalModifiersApplication": {
-        "Category": {
-            "Magic": "アストラル",
-            "Matrix": "マトリックス",
-            "Physical": "物理"
+        "WalkingSpeed": "歩行速度",
+        "Warnings": {
+            "AlreadyExistingInventory": "同一名称のインベントリが存在します",
+            "AlreadyJoinedNetwork": "{name} は既にこのネットワークに参加しています",
+            "BulkImportPerformanceWarning": "大量のアイテムをインポートした場合、ブラウザを更新するまでFoundryの動作が重くなることがあります。今すぐ更新することをお勧めします。",
+            "CantEditDefaultInventory": "デフォルトのインベントリの名前を変更することはできません",
+            "CantExtendTest": "この判定種別は持続判定にできません。",
+            "CantExtendTestFurther": "残りダイスがないか、または目標値に達したため、これ以上判定を継続できません",
+            "CantRecoverPhysicalWithStunDamage": "スタンダメージが残っている状態では、物理ダメージを回復させることはできません",
+            "CantReloadAtAllDueToAmmo": "弾薬がありません！",
+            "CantReloadFullyDueToAmmo": "弾薬が不足しているため、完全にリロードできませんでした！",
+            "CantReloadPartialDueToAmmo": "複雑アクションでのリロードに必要な弾薬が不足しています！",
+            "CantReloadWithoutSpareClip": "予備のクリップ（マガジン）がありません！",
+            "CantSecondChanceAGlitch": "この判定に「振り直し」は使えません。結果がグリッチしています。",
+            "CantSecondChanceWithoutNoneHits": "この判定に「振り直し」は使えません。失敗ダイスが残っていません。",
+            "CantSpendMulitplePointsOfEdge": "1つの判定またはアクションに対して、エッジを複数点消費することはできません",
+            "CompilationNotConcluded": "コンパイルが完了していません。スプライトの対抗判定を待って、フェーディングを決定してください。",
+            "EdgeRulesCantBeAppliedOnTestsWithoutAnActor": "アクターが紐付いていない判定にエッジを消費することはできません",
+            "HostItemOnlyAcceptIC": "ホストにはICアクターのみ追加できます",
+            "InvalidCompilationLevel": "共振力が低すぎるため、このレベルのスプライトはコンパイルできません",
+            "InvalidMarksCount": "不正な数のマークを付与しようとしています",
+            "InvalidSummoningForce": "設定された精霊のフォースが上限値を超えている",
+            "NegativeLimitValue": "リミット値は正の数である必要があります",
+            "NoFireModeConfigured": "遠隔武器の射撃モードが設定されていません。単発（SS）を使用します。",
+            "OnlyGMCanDoThis": "この操作はGMのみ可能です",
+            "RitualInvalidForce": "儀式のフォースが不正、またはマジカルロッジのレーティングを超えています。",
+            "RitualNotConcluded": "儀式が完了していません。儀式の対抗判定を待って、ドレインを決定してください。",
+            "RitualNotEnoughReagents": "捧げられた原質（リージェント）が不足しています。",
+            "SkillCantBeDefault": "このスキルはデフォルティングできないのでロールできません。",
+            "SummoningNotConcluded": "召喚が完了していません。対抗テストの結果がドレイン値に反映されます。",
+            "TokenSelectionNeeded": "1つ以上のトークンを選択する必要があります"
         },
-        "ClearLocalAll": "個別修正の削除",
-        "ClearLocalAllTokens": "シーンのコマすべての修正を削除する",
-        "Magic": {
-            "BackgroundCount": "背景放射（ドメイン）"
+        "Weapon": {
+            "AmmoCount": "弾数",
+            "Category": {
+                "Melee": "近接",
+                "Range": "射撃",
+                "Thrown": "投擲"
+            },
+            "Cliptype": {
+                "RemovableClip": "着脱式クリップ",
+                "BreakAction": "中折れ式",
+                "BeltFed": "ベルト（弾帯）式",
+                "InternalMagazin": "マガジン内蔵式",
+                "MuzzleLoader": "先込め式",
+                "Cylinder": "シリンダー式",
+                "Drum": "ドラム",
+                "Bow": "弓"
+            },
+            "FIELDS": {
+                "category": {
+                    "label": "武器種別",
+                    "hint": "このアイテムが表す武器の種別。種別によって設定項目が異なります"
+                },
+                "range": {
+                    "modes": {
+                        "single_shot": {
+                            "label": "単発",
+                            "hint": "武器が単発（SS）モードに対応しているか"
+                        },
+                        "semi_auto": {
+                            "label": "半自動",
+                            "hint": "武器が半自動（SA）モードに対応しているか"
+                        },
+                        "burst_fire": {
+                            "label": "バースト",
+                            "hint": "武器がバースト（BF）モードに対応しているか"
+                        },
+                        "full_auto": {
+                            "label": "フルオート",
+                            "hint": "武器がフルオート（FA）モードに対応しているか"
+                        }
+                    },
+                    "ranges": {
+                        "category": {
+                            "label": "射程カテゴリ",
+                            "hint": "種別に基づいて武器の射程を決定します。カスタム値を使用する場合は「マニュアル」を選択してください"
+                        },
+                        "short": {
+                            "label": "近距離",
+                            "hint": "武器の近距離（メートル）"
+                        },
+                        "medium": {
+                            "label": "中距離",
+                            "hint": "武器の中距離（メートル）"
+                        },
+                        "long": {
+                            "label": "遠距離",
+                            "hint": "武器の遠距離（メートル）"
+                        },
+                        "extreme": {
+                            "label": "超遠距離",
+                            "hint": "武器の超遠距離（メートル）"
+                        },
+                        "attribute": {
+                            "label": "射程用能力値",
+                            "hint": "上記の射程に倍率として掛けるアクターの能力値"
+                        }
+                    },
+                    "rc": {
+                        "base": {
+                            "label": "反動補正",
+                            "hint": "武器の反動補正値"
+                        }
+                    }
+                },
+                "thrown": {
+                    "ranges": {
+                        "category": {
+                            "label": "射程カテゴリ",
+                            "hint": "種別に基づいて武器の射程を決定します。カスタム値を使用する場合は「マニュアル」を選択してください"
+                        },
+                        "short": {
+                            "label": "近距離",
+                            "hint": "武器の近距離（メートル）"
+                        },
+                        "medium": {
+                            "label": "中距離",
+                            "hint": "武器の中距離（メートル）"
+                        },
+                        "long": {
+                            "label": "遠距離",
+                            "hint": "武器の遠距離（メートル）"
+                        },
+                        "extreme": {
+                            "label": "超遠距離",
+                            "hint": "武器の超遠距離（メートル）"
+                        },
+                        "attribute": {
+                            "label": "射程用能力値",
+                            "hint": "上記の射程に倍率として掛けるアクターの能力値"
+                        }
+                    },
+                    "blast": {
+                        "radius": {
+                            "label": "爆発半径（m）",
+                            "hint": "武器攻撃の爆発半径（メートル）"
+                        },
+                        "dropoff": {
+                            "label": "威力減衰（/m）",
+                            "hint": "爆発の中心から1メートル離れるごとのダメージ減少値"
+                        }
+                    }
+                },
+                "melee": {
+                    "reach": {
+                        "label": "間合い",
+                        "hint": "武器の間合い（リーチ）。戦闘時の修正値として使用されます"
+                    }
+                }
+            },
+            "FullReload": "全弾リロード",
+            "Mod": "武器アクセサリ（Mod)",
+            "Mode": {
+                "BurstFire": "BF",
+                "BurstFireLong": "BF-LB",
+                "BurstFireShort": "BF",
+                "FullAuto": "FA",
+                "FullAutoLong": "FA-L",
+                "FullAutoShort": "FA",
+                "Modes": "Modes",
+                "SemiAuto": "SA",
+                "SemiAutoBurst": "SA-BF",
+                "SemiAutoShort": "SA",
+                "SingleShot": "SS",
+                "SingleShotShort": "SS"
+            },
+            "Mods": "武器アクセサリ（Mod)",
+            "PartialReload": "一部をリロード",
+            "Range": {
+                "Category": {
+                    "AerodynamicThrownGrenade": "空力型手榴弾",
+                    "AssaultCannon": "アサルトキャノン",
+                    "AssaultRifle": "アサルトライフル",
+                    "Bow": "弓",
+                    "Flamethrower": "火炎放射器",
+                    "GrenadeLauncher": "グレネードランチャー",
+                    "HarpoonGun": "ハープーンガン（銛銃）",
+                    "HarpoonGunUnderwater": "ハープーンガン（銛銃）(水中)",
+                    "HeavyCrossbow": "ヘビークロスボウ",
+                    "HeavyPistol": "ヘビーピストル",
+                    "HoldOutPistol": "ホールドアウトピストル",
+                    "LightCrossbow": "ライトクロスボウ",
+                    "LightMachinegun": "ライトマシンガン",
+                    "LightPistol": "ライトピストル",
+                    "MachinePistol": "マシンピストル",
+                    "Manual": "マニュアル（手動設定）",
+                    "MediumCrossbow": "ミディアムクロスボウ",
+                    "MediumHeavyMachinegun": "ミディアム／ヘビーマシンガン",
+                    "MissileLauncher": "ミサイルランチャー",
+                    "Net": "ネット（網）",
+                    "SMG": "サブマシンガン",
+                    "ShotgunFlechette": "ショットガン (フレシェット)",
+                    "ShotgunSlug": "ショットガン (スラッグ)",
+                    "Shuriken": "手裏剣",
+                    "SniperRifle": "スナイパーライフル",
+                    "SportingRifle": "スポーツライフル",
+                    "StandardThrownGrenade": "通常型手榴弾",
+                    "Taser": "テイザー",
+                    "ThrownKnife": "投げナイフ"
+                },
+                "Extreme": "超遠距離",
+                "Long": "遠距離",
+                "Medium": "中距離",
+                "Ranges": "射程",
+                "Short": "近距離"
+            },
+            "Reach": "リーチ",
+            "Reload": "リロード",
+            "SpareReloads": "予備の弾薬",
+            "Type": "タイプ",
+            "Weapon": "武器"
         },
-        "Matrix": {
-            "Noise": "ノイズ"
-        },
-        "Title": "環境修正",
-        "Total": "結果"
+        "Wireless": "ワイヤレス",
+        "WirelessOffline": "オフライン",
+        "WirelessOnline": "オンライン",
+        "WirelessUnavailable": "利用不可"
     },
-    "SR5.Skill": {
-        "AeronauticsMechanic": "航空機整備",
-        "Alchemy": "錬金術",
-        "AnimalHandling": "動物調教",
-        "Arcana": "アルカナ",
-        "Archery": "弓術",
-        "Armorer": "武器整備",
-        "Artificing": "呪物作成",
-        "Artisan": "工芸",
-        "Assensing": "霊視",
-        "AstralCombat": "アストラル戦闘",
-        "Automatics": "自動火器",
-        "AutomotiveMechanic": "自動車整備",
-        "Banishing": "放逐",
-        "Binding": "束縛",
-        "Biotechnology": "バイオ技術",
-        "Blades": "刀剣",
-        "Chemistry": "化学実務",
-        "Clubs": "棍棒",
-        "Compiling": "コンパイル",
-        "Computer": "コンピューター",
-        "Con": "虚言",
-        "Counterspelling": "呪文対抗",
-        "Cybercombat": "サイバー戦闘",
-        "Cybertechnology": "サイバー技術",
-        "Decompiling": "デコンパイル",
-        "Demolitions": "爆破",
-        "Disenchanting": "解呪",
-        "Disguise": "変装",
-        "Diving": "潜水",
-        "ElectronicWarfare": "電子戦",
-        "EscapeArtist": "脱出",
-        "Etiquette": "エチケット",
-        "ExoticMelee": "特殊近接武器",
-        "ExoticRange": "特殊射撃武器",
-        "FirstAid": "応急処置",
-        "Flight": "飛行",
-        "Forgery": "偽造",
-        "FreeFall": "自由落下",
-        "Gunnery": "砲術",
-        "Gymnastics": "体術",
-        "Hacking": "ハッキング",
-        "Hardware": "ハードウェア",
-        "HeavyWeapons": "重火器",
-        "Impersonation": "ものまね",
-        "IndustrialMechanic": "工業機器整備",
-        "Instruction": "指導",
-        "Intimidation": "脅迫",
-        "Leadership": "統率",
-        "Locksmith": "錠前",
-        "Longarms": "長銃",
-        "Medicine": "医術",
-        "NauticalMechanic": "船舶整備",
-        "Navigation": "航法",
-        "Negotiation": "交渉",
-        "Palming": "パーミング",
-        "Perception": "知覚",
-        "Performance": "パフォーマンス",
-        "PilotAerospace": "宇宙船操縦",
-        "PilotAircraft": "航空機操縦",
-        "PilotExoticVehicle": "特殊ヴィークル操縦",
-        "PilotGroundCraft": "地上機操縦",
-        "PilotWalker": "歩行機操縦",
-        "PilotWaterCraft": "船舶操縦",
-        "Pistols": "ピストル",
-        "Registering": "レジスター",
-        "RitualSpellcasting": "儀式呪文行使",
-        "Running": "ランニング",
-        "Skill": "技能",
-        "Skills": "技能",
-        "Sneaking": "忍び歩き",
-        "Software": "ソフトウェア",
-        "Spellcasting": "呪文行使",
-        "Summoning": "召喚",
-        "Survival": "サバイバル",
-        "Swimming": "水泳",
-        "Teamwork": {
-            "Glitched": "グリッチ",
-            "ParticipantActor": "アクターを選択",
-            "RollIt": "ロールする",
-            "TakePart": "テストに参加"
-        },
-        "ThrowingWeapons": "投擲武器",
-        "Tracking": "トラッキング",
-        "UnarmedCombat": "素手戦闘"
-    },
-    "SR5.Soak": "ダメージ抵抗",
-    "SR5.SoakTest": "ダメージ抵抗テスト",
-    "SR5.Social": "社交",
-    "SR5.SocialLimit": "社交リミット",
-    "SR5.Source": "資料",
-    "SR5.SourceFieldEmptyError": "資料のファイルがありません, ソースの有効なテキストを入力してください",
-    "SR5.SpareClips": "予備クリップ",
-    "SR5.SpecialAttributes": "特殊能力値",
-    "SR5.Specialization": "専門化",
-    "SR5.Specializations": "専門化",
-    "SR5.Spell": {
-        "Attack": "呪文攻撃",
-        "Cast": "呪文行使",
-        "CatCombat": "戦闘",
-        "CatDetection": "探知",
-        "CatHealth": "身体",
-        "CatIllusion": "幻影",
-        "CatManipulation": "操作",
-        "Category": "カテゴリー",
-        "CombatDirect": "直接",
-        "CombatIndirect": "間接",
-        "Defense": "呪文防御",
-        "DefenseDirectMana": "呪文防御 (直接, マナ)",
-        "DefenseDirectPhysical": "呪文防御 (直接, 身体)",
-        "DetectionArea": "効果範囲",
-        "DetectionDirectional": "指向性",
-        "DetectionPsychic": "超能力",
-        "IllusionMultiSense": "全感覚",
-        "IllusionObvious": "明白",
-        "IllusionRealistic": "迫真",
-        "IllusionSingleSense": "単一感覚",
-        "ManipulationDamaging": "ダメージ",
-        "ManipulationEnvironmental": "環境",
-        "ManipulationMental": "精神",
-        "ManipulationPhysical": "身体",
-        "Range": "範囲",
-        "RangeLos": "視界",
-        "RangeLosA": "視界 (A)",
-        "RangeTouch": "接触",
-        "Spell": "呪文",
-        "Spells": "呪文",
-        "Type": "呪文タイプ",
-        "TypeMana": "マナ",
-        "TypePhysical": "身体"
-    },
-    "SR5.Spirit": {
-        "Bound": "束縛",
-        "Force": "フォース",
-        "MissingSummoner": "アクティブな召喚師はいません",
-        "Services": "助力",
-        "Summoner": "召喚者",
-        "Type": "タイプ",
-        "Types": {
-            "Air": "大気/Air",
-            "Aircraft": "航空機/Aircraft",
-            "Airwave": "電波/Airwave",
-            "Anarch": "アナーキー/Anarch",
-            "Arboreal": "アーボリアル/Arboreal",
-            "Automotive": "自動車/Automotive",
-            "Beasts": "獣/Beasts",
-            "Blackjack": "ブラックジャック/Blackjack",
-            "Blood": "鮮血/Blood",
-            "Boggle": "ボグル/Boggle",
-            "Bugul": "ブグル/Bugul",
-            "Carcass": "死骸/Carcass",
-            "Caretaker": "昆虫精霊・巣の世話役/Insect Caretaker",
-            "Ceramic": "セラミック/Ceramic",
-            "Chindi": "チャンディ/Chindi",
-            "Corpse": "死体/Corpse",
-            "Croki": "クロキ/Croki",
-            "Detritus": "がれき/Detritus",
-            "Duende": "デュエンデ/Duende",
-            "Earth": "大地/Earth",
-            "Elvar": "エルヴァー/Elvar",
-            "Energy": "エネルギー/Energy",
-            "Erinyes": "エリニーズ/Erinyes",
-            "Fire": "炎/Fire",
-            "Greenman": "グリーンマン/Greenman",
-            "Guardian": "守護者/Guardian",
-            "Guidance": "導き/Guidance",
-            "Imp": "インプ/Imp",
-            "Jarl": "ヤール/Jarl",
-            "Kappa": "河童/Kappa",
-            "Kokopelli": "ココペリ/Kokopelli",
-            "Man": "人/Man",
-            "MasterShedim": "マスターシェディム/MasterShedim",
-            "Metal": "金属/Metal",
-            "Morbi": "モルビ/Morbi",
-            "Muse": "ミューズ/Muse",
-            "Nightmare": "ナイトメア/Nightmare",
-            "Nocnitasa": "ノクニタサ/Nocnitasa",
-            "Nymph": "昆虫精霊・幼虫/Insect Nymph",
-            "Palefire": "蒼白い炎/Palefire",
-            "Phantom": "ファントム/Phantom",
-            "Plant": "植物/Plant",
-            "Preta": "プレタ/Preta",
-            "Queen": "昆虫精霊・女王/Insect Queen",
-            "Rot": "腐敗/Rot",
-            "Scout": "昆虫精霊・斥候/Insect Scout",
-            "Shade": "シェード/Shade",
-            "Shedim": "シェディム/Shedim",
-            "Ship": "船/Ship",
-            "Soldier": "昆虫精霊・兵隊/Insect Soldier",
-            "Stabber": "スタバー/Stabber",
-            "Succubus": "サキュバス/Succubus",
-            "Task": "労役/Task",
-            "ToxicAir": "毒/Noxious",
-            "ToxicBeasts": "獰猛/Abomination",
-            "ToxicEarth": "バーレン/Barren",
-            "ToxicFire": "核/Nuclear",
-            "ToxicMan": "疫病/Plague",
-            "ToxicWater": "スラッジ/Sludge",
-            "Train": "列車/Train",
-            "Tungak": "トゥンガク/Tungak",
-            "Vucub": "ヴクブ・カキシュ/Vucub Caquix",
-            "Water": "水/Water",
-            "Worker": "昆虫精霊・労働者/Insect Worker",
-            "Wraith": "レイス/Wraith"
-        }
-    },
-    "SR5.Sprite": {
-        "Level": "レベル",
-        "MissingTechnomancer": "アクティブなテクノマンサーは存在しません",
-        "Registered": "レジスター済み",
-        "Services": "タスク（助力）",
-        "Technomancer": "テクノマンサー",
-        "Type": "タイプ",
-        "Types": {
-            "Companion": "コンパニオン/Companion",
-            "Courier": "クーリエ/Courier",
-            "Crack": "クラック/Crack",
-            "Data": "データ/Data",
-            "Fault": "フォールト/Fault",
-            "Generalist": "ジェネラリスト/Generalist",
-            "Machine": "マシン/Machine"
-        }
-    },
-    "SR5.SpritePower": {
-        "IsOptional": "選択性",
-        "Optional": {
-            "DisabledOption": "追加：無効",
-            "EnabledOption": "追加：有効",
-            "Standard": "標準"
-        },
-        "Type": "タイプ"
-    },
-    "SR5.Stock": "ストック",
-    "SR5.StreetCred": "ストリートの評判",
-    "SR5.StunTrack": "精神ＣＭ",
-    "SR5.Submersion": "サブマージョン",
-    "SR5.Successes": "成功",
-    "SR5.Summoning": {
-        "DropSpirit": "束縛する精霊をドラッグ＆ドロップ",
-        "FixedSpirit": "束縛／レジスタ",
-        "SpiritType": "精霊の種類"
-    },
-    "SR5.Suppressing": "制圧",
-    "SR5.Target": "目標",
-    "SR5.TargetDevice": "デバイス",
-    "SR5.TargetFile": "ファイル",
-    "SR5.TargetOther": "その他",
-    "SR5.TargetPersona": "ペルソナ",
-    "SR5.TargetSelf": "自身",
-    "SR5.TargetSprite": "スプライト",
-    "SR5.TargetingNeedsActorWithToken": "現在のアクターがターゲティングするにはリンクされたトークンが必要です",
-    "SR5.Temporary": "一時的",
-    "SR5.TemporaryModifiers": "一時的な修正",
-    "SR5.Test": "テスト",
-    "SR5.TestResults": {
-        "AttackBlockedByHardenedArmor": "攻撃は命中したが、硬化装甲によりダメージを与えられませんでした",
-        "AttackBlockedByVehicleArmor": "攻撃は命中したが、ヴィークルの装甲によりダメージを与えられませんでした",
-        "AttackDodged": "攻撃回避",
-        "AttackDoesNoPhysicalDamageToVehicle": "攻撃は命中したが、物理ダメージを与えられませんでした",
-        "AttackHits": "攻撃命中",
-        "Failure": "失敗!",
-        "ResistedAllDamage": "ダメージを受けない！",
-        "ResistedSomeDamage": "ダメージを受ける！",
-        "Results": "結果",
-        "RitualFailure": "儀式は失敗した",
-        "RitualSuccess": "儀式は封結（成功）された",
-        "SoakBlockedByHardenedArmor": "硬化装甲によりダメージなし",
-        "SpiritSummonFailure": "精霊召喚失敗！",
-        "SpiritSummonSuccess": "精霊召喚成功！",
-        "SpriteCompilationSuccess": "コンパイル成功！（スプライト）",
-        "SpriteCompilationFailure": "コンパイル失敗！（スプライト）",
-        "Success": "成功!"
-    },
-    "SR5.Tests": {
-        "AttributeOnlyTest": "能力値テスト",
-        "CombatSpellDefenseTest": "戦闘呪文防御テスト",
-        "CompileSpriteTest": "スプライトコンパイルテスト",
-        "ComplexFormTest": "複合体スレッド編成テスト",
-        "DrainTest": "ドレインテスト",
-        "DroneInfiltrationTest": "ドローンの潜入テスト",
-        "DronePerceptionTest": "ドローンの知覚テスト",
-        "ExtendedTest": "継続テスト",
-        "FadeTest": "フェイディングテスト",
-        "MeleeAttackTest": "近接攻撃テスト",
-        "NaturalRecoveryPhysicalTest": "自然回復（身体）テスト",
-        "NaturalRecoveryStunTest": "自然回復（精神）テスト",
-        "OpposedCompileSpriteTest": "コンパイル対抗テスト",
-        "OpposedRitualTest": "儀式封結対抗テスト",
-        "OpposedSummonSpiritTest": "精霊召喚対抗テスト",
-        "OpposedTest": "対抗テスト",
-        "PhysicalDefenseTest": "身体防御テスト",
-        "PhysicalResistTest": "身体ダメージ抵抗ロール",
-        "PilotVehicleTest": "パイロットヴィークルテスト",
-        "RangedAttackTest": "射撃武器攻撃テスト",
-        "RitualSpellcastingTest": "儀式呪文行使テスト",
-        "SkillTest": "技能テスト",
-        "SpellCastingTest": "呪文行使テスト",
-        "SuccessTest": "成功テスト",
-        "SummonSpiritTest": "精霊召喚テスト",
-        "SuppressionDefenseTest": "制圧射撃防御テスト",
-        "ThrownAttackTest": "投擲武器攻撃テスト"
-    },
-    "SR5.Threshold": "目標値",
-    "SR5.ToggleActive": "トグルで有効化",
-    "SR5.ToggleEquip": "トグルで装備",
-    "SR5.Tooltips": {
+    "TYPES": {
         "Actor": {
-            "Critter": "クリッター・パワーの使用を許可する",
-            "Grunt": "このアクターにグラント・ルールを適用する",
-            "Metatype": "選択したメタヒューマンの能力値修正を適用します",
-            "MissingSummoner": "召喚者をドラッグ＆ドロップするか、召喚アクションを行ってください",
-            "MissingTechnomancer": "召喚者をドラッグ＆ドロップするか、コンパイルアクションを行ってください",
-            "NPC": "NPCとして、メタヒューマンの能力値修正を適用します",
-            "ResetActorForNewRun": "ダメージやエッジなどをリセットして、新しいランを行う"
-        },
-        "Actor.DefaultCategoryVisibility": "アイテムがない場合でもカテゴリーを表示する",
-        "CallInAction": {
-            "ActorType": "呼びだす対象"
-        },
-        "CompilationTest": {
-            "Level": "スプライトのレベル",
-            "PreparedSprite": "召喚アクションで作成されたアクターを使う",
-            "SpriteType": "スプライトの種類"
-        },
-        "Contact": {
-            "LinkActor": "アクターをドラッグ＆ドロップして、このコンタクトにリンクします。"
-        },
-        "Effect": {
-            "AlterApplyToWithChanges": "効果が適用される対象を変更する前に変更を取り除きます。",
-            "ApplyTo": "この効果の変更は、この対象にのみ適用されます。",
-            "DocumentEffects": "このドキュメントに直接適用される効果",
-            "ItemEffects": "このドキュメント上のアイテムから収集された効果",
-            "OnlyAllFilteredUsed": "この効果は、すべての選択に一致するテストにのみ適用されます。",
-            "OnlyFilteredUsed": "この効果は、少なくとも1つの選択に一致するテストにのみ適用されます。",
-            "OnlyForItemTest": "親アイテムのテストにのみ適用されます。",
-            "OnlyForWireless": "この効果は、ワイヤレスが有効なアイテムにのみ適用されます。"
+            "character": "キャラクター",
+            "critter": "クリッター（非推奨）",
+            "ic": "IC（侵入対抗プログラム）",
+            "spirit": "精霊",
+            "sprite": "スプライト",
+            "vehicle": "ヴィークル／ドローン"
         },
         "Item": {
-            "ActionCategories": "テストのデフォルト カテゴリの代わりに使用するアクション カテゴリを選択します。アクティブ エフェクトを使用すると、カテゴリを使用してテスト値を変更できます",
-            "ActionModifier": "テストのデフォルト修正の代わりに使用するプール修正を選択します",
-            "ActionRollMode": "このアクションを実行するときのデフォルトのロールモードです。グローバルチャットの設定を上書きします。",
-            "AmmoReplaceDamage": "武器のダメージを修正するのではなく、置き換えるように設定する",
-            "DisabledForPreparedActor": "用意されたアクターの使用により無効化されました。"
-        },
-        "Modifiers": {
-            "armor": "アーマーの修正値",
-            "astral_initiative": "アストラルイニシアティブの修正値",
-            "astral_initiative_dice": "アストラルイニシアティブダイスの修正値",
-            "astral_limit": "アストラルリミットの修正値.",
-            "composure": "冷静テストのダイスプールの修正値",
-            "defense": "防御テストのダイスプールの修正値",
-            "defense_block": "割込動作、防御 (ブロック)のダイスプール修正値",
-            "defense_dodge": "割込動作、防御 (回避)のダイスプール修正値",
-            "defense_melee": "近接攻撃に対する防御のダイスプール修正値",
-            "defense_parry": "割込動作、防御 (受け流し)のダイスプール修正値",
-            "defense_ranged": "射撃攻撃に対する防御のダイスプール修正値",
-            "drain": "ドレインテストのダイスプールを変更する",
-            "essence": "エッセンスの修正値",
-            "fade": "フェイディングテストの修正値",
-            "global": "ダメージ軽減テストを除く、すべてのテストプールの修正値",
-            "judge_intentions": "意図を計るテストのダイスプールの修正値",
-            "lift_carry": "持ち上げ/運搬テストのダイスプールの修正値",
-            "matrix_initiative": "マトリックスイニシアティブの修正値",
-            "matrix_initiative_dice": "マトリックスイニシアティブダイスの修正値",
-            "matrix_track": "マトリックスコンディションモニタの修正値",
-            "meat_initiative": "物理イニシアティブの修正値",
-            "meat_initiative_dice": "物理イニシアティブダイスの修正値",
-            "memory": "記憶テストのダイスプールの修正値",
-            "mental_limit": "精神リミットの修正値",
-            "multi_defense": "割込動作、防御 (全力防御)のダイスプール修正値",
-            "pain_tolerance_physical": "身体ＣＭの最初の負傷修正無視出来る範囲の修正値",
-            "pain_tolerance_stun": "精神ＣＭの最初の負傷修正無視出来る範囲の修正値",
-            "physical_limit": "身体リミットの修正値",
-            "physical_overflow_track": "身体ＣＭのオーバーフロー許容値の修正値",
-            "physical_track": "身体ＣＭの修正値.",
-            "reach": "近接攻撃のリーチを変更する",
-            "run": "走行距離を敏捷力の倍数で修正する",
-            "soak": "物理ダメージ抵抗テストの修正値（ＡＰ修正に影響しない）",
-            "social_limit": "社交リミットの修正値",
-            "stun_track": "精神ＣＭの修正値",
-            "walk": "歩行距離を敏捷力の倍数で修正する",
-            "wound_tolerance": "負傷修正適用値をの修正する（－３→－４など）"
-        },
-        "RangedAttack": {
-            "Recoil": "反動の蓄積値",
-            "RecoilAfterAttack": "この射撃に適用される反動の蓄積値",
-            "RecoilBeforeAttack": "攻撃前に反動を進行させます。",
-            "RecoilCompensation": "武器アクセサリの補正値を含む反動補正合計",
-            "ResetRecoil": "反動の蓄積値をリセット（要射撃以外の単純動作以上の行動）"
-        },
-        "Ritual": {
-            "Force": "儀式のフォース",
-            "ReagentDrams": "儀式を封結する際のドレインを減らす為に使用された原質のドラム数"
-        },
-        "SituationalModifier": {
-            "Recoil": "発射した弾丸の量"
-        },
-        "SummoningTest": {
-            "DragOnCanvas": "精霊をドラッグする",
-            "Force": "召喚する精霊のフォース",
-            "PreparedSpirit": "召喚アクションで作成されたアクターを使う",
-            "ReagentDrams": "原質を使って召喚テストのリミットを設定する",
-            "SpiritType": "召喚する精霊の種類"
-        },
-        "Test": {
-            "Extended": "目標値に到達するまで継続テストとしてロールする",
-            "Limit": "計算後のリミット",
-            "ManualGlitches": "手動設定されたダイスプールのグリッチ値。手動修正と併用する必要があります",
-            "ManualHits": "手動設定されたダイスプールのヒット値。FVTTのダイススローを無視する",
-            "Modifier": "ダイスプールに適用するすべての修正値の合計",
-            "Pool": "ダイスプールの数（サイコロの数）",
-            "PushTheLimit": "エッジ消費による限界突破を使用する",
-            "RollMode": "ロールの結果を送信する範囲",
-            "Threshold": "計算後の目標値"
+            "action": "アクション",
+            "adept_power": "アデプト・パワー",
+            "ammo": "弾薬",
+            "armor": "装甲",
+            "bioware": "バイオウェア",
+            "call_in_action": "召喚／コンパイル",
+            "complex_form": "複合体",
+            "contact": "コネ",
+            "critter_power": "クリッター・パワー",
+            "cyberware": "サイバーウェア",
+            "device": "デバイス",
+            "echo": "エコー",
+            "equipment": "装備品",
+            "grid": "格子",
+            "host": "ホスト",
+            "lifestyle": "ライフスタイル",
+            "metamagic": "メタマジック",
+            "modification": "装備改造",
+            "program": "プログラム",
+            "quality": "資質",
+            "ritual": "儀式",
+            "sin": "SIN",
+            "spell": "呪文",
+            "sprite_power": "スプライト・パワー",
+            "vehicle": "ヴィークル",
+            "weapon": "武器"
         }
-    },
-    "SR5.Top": "トップ",
-    "SR5.Total": "トータル",
-    "SR5.Tours": {
-        "CharacterImport": {
-            "Description": "このツアーでは、Chummerキャラクターをインポートする方法の概要を紹介します。詳細は、https://github.com/SR5-FoundryVTT/SR5-FoundryVTT/wiki/Chummer-Character-Import を参照してください。",
-            "GeneralContent": "キャラクターをインポートするには、chummer 5からのエクスポートJSONが必要です。",
-            "GeneralTitle": "キャラクターのインポート",
-            "Title": "キャラクターのインポート-"
-        },
-        "ConditionMonitor": {
-            "ApplyDamageContent": " セルを左クリックしてダメージを適用します。このセルを含む左側のすべてのセルが埋まります。すでにセルが埋まっている場合、右側のセルは埋まりません",
-            "ApplyDamageTitle": "任意のセルを右クリックすると、モニターからすべてのダメージが削除されます。",
-            "Description": "このツアーでは、コンディションモニターの動作の概要を紹介します。",
-            "GeneralContent": "あなたのコンディションモニターです。これは複数のセルから構成されています。特定のセルには数字が書かれています。そこまでのセルが埋まると、負傷修正が増加します。すべてのモニターの負傷修正が合算されます。",
-            "GeneralTitle": "コンディションモニター",
-            "RecoveryContent": "コンディションモニターのラベルをクリックすると、拡張回復テストが表示されます。回復テストの結果は自動的にモニターに適用されます。",
-            "RecoveryTitle": "回復テスト",
-            "Title": "コンディションモニターのツアー",
-            "WoundModifierContent": "このセルまで埋まると負傷修正がセルに書かれた数だけ増加することを示します。",
-            "WoundModifierTitle": "負傷修正"
-        }
-    },
-    "SR5.UnderBarrel": "アンダーバレル",
-    "SR5.UseEdgeForInitiativeRoll": "エッジを使用して速攻（イニシアティブダイスの5d6化）する",
-    "SR5.Value": "数値",
-    "SR5.Vehicle": {
-        "ChaseEnvironment": "チェイスの環境",
-        "Clearsight": "鮮明化",
-        "ControlMode": "操縦モード",
-        "ControlModes": {
-            "Autopilot": "オートパイロット",
-            "Manual": "マニュアル",
-            "Remote": "遠隔制御",
-            "Rigger": "リガー"
-        },
-        "Driver": "ドライバー",
-        "Drone": "ドローン",
-        "Environments": {
-            "Handling": "操縦性重視",
-            "Speed": "スピード重視"
-        },
-        "IsDrone": "ドローン？",
-        "IsOffRoad": "オフロード？",
-        "Maneuvering": "機動",
-        "MissingDriver": "アクターをドライバーとしてドラッグ＆ドロップする",
-        "ModificationCategoryTypes": {
-            "body": "ボディ",
-            "cosmetic": "外見",
-            "electromagnetic": "電磁",
-            "enhancement": "強化",
-            "exotic": "特殊",
-            "power_train": "駆動装置",
-            "protection": "防護",
-            "weapons": "武器"
-        },
-        "Stats": {
-            "Acceleration": "加速値",
-            "Handling": "操縦値",
-            "OffRoadHandling": "操縦値 (オフロード)",
-            "OffRoadSpeed": "最高速度 (オフロード)",
-            "Pilot": "パイロット",
-            "Seats": "乗員数",
-            "Sensor": "センサー",
-            "Speed": "最高速度"
-        },
-        "Stealth": "隠密",
-        "Type": "タイプ",
-        "Types": {
-            "Aerospace": "宇宙船",
-            "Air": "航空機",
-            "Exotic": "カテゴリー外/Exotic Craft",
-            "Ground": "地上機",
-            "Walker": "歩行機",
-            "Water": "船舶"
-        }
-    },
-    "SR5.Vehicle.Vehicle": "ヴィークル",
-    "SR5.VehicleImport.MissingPermission": "アクターを作成する権限がありません",
-    "SR5.Vision": {
-        "AstralPerception": "アストラル知覚",
-        "AugmentedReality": "拡張現実（AR)",
-        "LowLight": "低光量視野",
-        "ThermographicVision": "熱映像視野"
-    },
-    "SR5.Walk": "歩行",
-    "SR5.WalkingSpeed": "歩行速度",
-    "SR5.Warnings": {
-        "AlreadyExistingInventory": "同一名称のインベントリが存在します",
-        "BulkImportPerformanceWarning": "大量のアイテムをインポートした場合、ブラウザを更新するまでFoundryの動作が遅くなることがあります。今すぐ更新することをお勧めします。",
-        "CantEditDefaultInventory": "デフォルトのインベントリは名前を変更できない",
-        "CantExtendTest": "テストタイプの拡張はできません",
-        "CantExtendTestFurther": "サイコロの残りや閾値の到達でテストが延長されることはない",
-        "CantRecoverPhysicalWithStunDamage": "精神ダメージが残っている場合、身体ダメージは回復できない",
-        "CantReloadAtAllDueToAmmo": "弾薬がなくなりました！",
-        "CantReloadFullyDueToAmmo": "完全にリロード（再装填）するのに十分な弾薬がありませんでした！",
-        "CantReloadPartialDueToAmmo": "複雑なリロードアクションのために十分な弾薬がありませんでした！",
-        "CantReloadWithoutSpareClip": "予備のクリップがなくなりました！",
-        "CantSecondChanceAGlitch": "テスト結果はグリッジです。このテストは振り直しできません。",
-        "CantSecondChanceWithoutNoneHits": "このテストは振り直しできません。ヒットのみが残ります",
-        "CantSpendMulitplePointsOfEdge": "1つのテストやアクションに複数のエッジポイントを使用することはできません",
-        "CompilationNotConcluded": "コンパイル対抗テストが行われてません。対抗テストの結果がフェイディング値に反映されます",
-        "EdgeRulesCantBeAppliedOnTestsWithoutAnActor": "エッジポイントはアクターのいないテストには使えません",
-        "HostItemOnlyAcceptIC": "ホストに追加できるのはICアクターのみです。",
-        "InvalidCompilationLevel": "このスプライトレベルでは共振力が低く設定されています",
-        "InvalidMarksCount": "無効な数のマークを配置しようとしています。",
-        "InvalidSummoningForce": "設定された精霊のフォースが上限値を超えている",
-        "NegativeLimitValue": "リミットの設定値は正数のみ",
-        "NoFireModeConfigured": "射撃武器に射撃モードが設定されていません。単発で使用します",
-        "RitualInvalidForce": "儀式のフォースがマジカルロッジのフォースを超えています",
-        "RitualNotConcluded": "儀式が未完了です。儀式の対抗テストが行われてからドレインを行って下さい",
-        "RitualNotEnoughReagents": "提供された資材が不足しています",
-        "SkillCantBeDefault": "このスキルはデフォルトできないのでロールできません。",
-        "SummoningNotConcluded": "召喚対抗テストが行われてません。対抗テストの結果がドレイン値に反映されます",
-        "TokenSelectionNeeded": "1つ以上のトークンを選択する必要があります。"
-    },
-    "SR5.Weapon": {
-        "AmmoCount": "弾数",
-        "Category": {
-            "Melee": "近接",
-            "Range": "射撃",
-            "Thrown": "投擲"
-        },
-        "Cliptype": {
-            "RemovableClip": "着脱式クリップ",
-            "BreakAction": "中折れ式",
-            "BeltFed": "ベルト（弾帯）式",
-            "InternalMagazin": "マガジン内蔵式",
-            "MuzzleLoader": "先込め式",
-            "Cylinder": "シリンダー式",
-            "Drum": "ドラム",
-            "Bow": "弓"
-        },
-        "FullReload": "全弾リロード",
-        "Mod": "武器アクセサリ（Mod)",
-        "Mode": {
-            "BurstFire": "BF",
-            "BurstFireLong": "BF-LB",
-            "BurstFireShort": "BF",
-            "FullAuto": "FA",
-            "FullAutoLong": "FA-L",
-            "FullAutoShort": "FA",
-            "Modes": "Modes",
-            "SemiAuto": "SA",
-            "SemiAutoBurst": "SA-BF",
-            "SemiAutoShort": "SA",
-            "SingleShot": "SS",
-            "SingleShotShort": "SS"
-        },
-        "Mods": "武器アクセサリ（Mod)",
-        "PartialReload": "一部をリロード",
-        "Range": {
-            "Category": {
-                "AerodynamicThrownGrenade": "空力型手榴弾",
-                "AssaultCannon": "アサルトキャノン",
-                "AssaultRifle": "アサルトライフル",
-                "Bow": "弓",
-                "Flamethrower": "火炎放射器",
-                "GrenadeLauncher": "グレネードランチャー",
-                "HarpoonGun": "ハープーンガン（銛銃）",
-                "HarpoonGunUnderwater": "ハープーンガン（銛銃）(水中)",
-                "HeavyCrossbow": "ヘビークロスボウ",
-                "HeavyPistol": "ヘビーピストル",
-                "HoldOutPistol": "ホールドアウトピストル",
-                "LightCrossbow": "ライトクロスボウ",
-                "LightMachinegun": "ライトマシンガン",
-                "LightPistol": "ライトピストル",
-                "MachinePistol": "マシンピストル",
-                "Manual": "マニュアル（手動設定）",
-                "MediumCrossbow": "ミディアムクロスボウ",
-                "MediumHeavyMachinegun": "ミディアム／ヘビーマシンガン",
-                "MissileLauncher": "ミサイルランチャー",
-                "Net": "ネット（網）",
-                "ShotgunFlechette": "ショットガン (フレシェット)",
-                "ShotgunSlug": "ショットガン (スラッグ)",
-                "Shuriken": "手裏剣",
-                "SMG": "サブマシンガン",
-                "SniperRifle": "スナイパーライフル",
-                "SportingRifle": "スポーツライフル",
-                "StandardThrownGrenade": "通常型手榴弾",
-                "Taser": "テイザー",
-                "ThrownKnife": "投げナイフ"
-            },
-            "Extreme": "超遠距離",
-            "Long": "遠距離",
-            "Medium": "中距離",
-            "Ranges": "射程",
-            "Short": "近距離"
-        },
-        "Reach": "リーチ",
-        "Reload": "リロード",
-        "Type": "タイプ",
-        "Weapon": "武器"
-    },
-    "SR5.Wireless": "ワイアレス",
-    "TYPES.Actor.character": "キャラクター",
-    "TYPES.Actor.critter": "クリッター（旧）",
-    "TYPES.Actor.ic": "IC",
-    "TYPES.Actor.spirit": "精霊",
-    "TYPES.Actor.sprite": "スプライト",
-    "TYPES.Actor.vehicle": "ヴィークル/ドローン",
-    "TYPES.Item.action": "アクション",
-    "TYPES.Item.adept_power": "アデプトパワー",
-    "TYPES.Item.ammo": "弾薬",
-    "TYPES.Item.armor": "アーマー",
-    "TYPES.Item.bioware": "バイオウェア",
-    "TYPES.Item.call_in_action": "召喚/コンパイル",
-    "TYPES.Item.complex_form": "複合体",
-    "TYPES.Item.contact": "コンタクト",
-    "TYPES.Item.critter_power": "クリッターパワー",
-    "TYPES.Item.cyberware": "サイバーウェア",
-    "TYPES.Item.device": "デバイス",
-    "TYPES.Item.echo": "エコー",
-    "TYPES.Item.equipment": "装備",
-    "TYPES.Item.host": "ホスト",
-    "TYPES.Item.lifestyle": "ライフスタイル",
-    "TYPES.Item.metamagic": "メタマジック",
-    "TYPES.Item.modification": "装備の改造",
-    "TYPES.Item.program": "プログラム",
-    "TYPES.Item.quality": "資質",
-    "TYPES.Item.ritual": "儀式",
-    "TYPES.Item.sin": "SIN",
-    "TYPES.Item.spell": "呪文",
-    "TYPES.Item.sprite_power": "スプライトパワー",
-    "TYPES.Item.vehicle": "ヴィークル",
-    "TYPES.Item.weapon": "武器"
+    }
 }

@@ -2,7 +2,7 @@
 
 * **製作者**: Brother Sharp
 * **翻訳ファイル提供者**: k_1975, ragi256, yucky, MiyabiRouga
-* **modバージョン**: 2.0
+* **modバージョン**: 3.0
 
 ### インストール方法
 
@@ -14,6 +14,7 @@
 
 ※注意事項　
 シャドウラン5th ゲームシステム0.18.0以降、config.jsonの構造が変わっているため、0.18.0以前の場合はVer1.2をご使用ください。
+FVTT本体12以下、シャドウラン5th ゲームシステム0.25.2以前の場合はVer2.0をご使用ください。
 
 
 ※使用方法　
@@ -38,3 +39,4 @@ https://drive.google.com/file/d/1Vhfe3SNjJqxWd1NCOXG47LIlpWuoi7s5/view?usp=drive
 ・ＦＶＴＴでシャドウラン5th_PL操作編  
 https://drive.google.com/file/d/1P3DqAhUuP514aamT1-kIYoiWbhZzOP_q/view
 
+※Ver11の内容となります。Ver13対応は対処中です。
