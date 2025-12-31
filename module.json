@@ -1,4 +1,5 @@
 {
+	"id": "shadowrun5eja",
 	"name": "shadowrun5eja",
 	"title": "日本語化（シャドウラン5e）",
 	"description": "Shadowrun 5eを日本語化するためのMod",
@@ -22,5 +23,5 @@
 	"dependencies": [],
 	"url" : "https://github.com/MiyabiRouga/shadowrun5eja",
 	"download" : "https://github.com/MiyabiRouga/shadowrun5eja/releases/download/3.0/SR5ja_rel.zip",
-	"manifest" : "https://github.com/MiyabiRouga/shadowrun5eja/releases/latest/download/module.json"
+	"manifest" : "https://raw.githubusercontent.com/MiyabiRouga/shadowrun5eja/master/module.json"
 }

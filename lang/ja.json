@@ -541,7 +541,7 @@
         "BiofeedbackDamage": "生体信号フィードバックダメージ",
         "Biography": "経歴",
         "BlastRadius": "爆発半径",
-        "Blitz": "ブリッツ",
+        "Blitz": "速攻",
         "Block": "ブロック",
         "Bonus": "ボーナス",
         "Bonuses": "ボーナス",
@@ -743,7 +743,7 @@
         "ConditionMonitor": "コンディション・モニター",
         "Connection": "コネクション",
         "ConnectToNetwork": "ネットワークに接続",
-"Contact": {
+        "Contact": {
             "FIELDS": {
                 "type": {
                     "label": "種別",
@@ -942,7 +942,7 @@
             "ApplyUnmodifiedDamage": "負傷の適用はしない",
             "Title": "ダメージ適用"
         },
-"DamageReplace": "ダメージ置換",
+        "DamageReplace": "ダメージ置換",
         "DamageType": "種別",
         "DamageValue": "ダメージ値",
         "DefaultCategoryVisibility": "空のカテゴリを表示",
@@ -998,7 +998,7 @@
         "Dodge": "回避",
         "DontApplyWounds": "負傷を適用しない",
         "Drain": "ドレイン",
-        "DrainAttribute": ドレイン能力値",
+        "DrainAttribute": "ドレイン能力値",
         "DrainValue": "ドレイン",
         "Dropoff": "外す",
         "DuckOrCover": "伏せもしくは遮蔽を取る",
@@ -1249,7 +1249,6 @@
                     "clip_type": {
                         "label": "装填方式",
                         "hint": "武器が使用する装填メカニズムの種類"
-
                     }
                 },
                 "action": {
@@ -1458,7 +1457,7 @@
                         "hint": "アクターシートやアイテムシートの見出しに数量を表示するかどうか"
                     },
                     "conceal": {
-                        "base" : {
+                        "base": {
                             "label": "秘匿性",
                             "hint": "このデバイスが他者からどれだけ隠されているか"
                         }
@@ -1553,7 +1552,7 @@
                 "Modifiers": "修正",
                 "OpposedTest": "対抗テスト",
                 "SpiritType": "精霊の種類",
-                "SpriteType": "スプライトの種類"
+                "SpriteType": "スプライトの種類",
                 "MatrixAction": "マトリックス動作"
             },
             "Actions": {
@@ -1925,7 +1924,7 @@
         },
         "Networks": "ネットワーク",
         "New": "新しい",
-        "NewSpecialization": "新しい専門化"
+        "NewSpecialization": "新しい専門化",
         "NoCover": "遮蔽なし",
         "NoSelectableToken": "キャンバス上に選択可能なトークンがありません",
         "None": "無し",
@@ -2106,7 +2105,7 @@
         "Side": "サイド",
         "SituationalModifier": "状況修正",
         "SituationalModifiersApplication": {
-                "Category": {
+            "Category": {
                 "Magic": "アストラル",
                 "Matrix": "マトリックス",
                 "Physical": "物理"
@@ -2334,7 +2333,7 @@
             "Type": "呪文タイプ",
             "TypeMana": "マナ",
             "TypePhysical": "身体"
-       },
+        },
         "Spirit": {
             "Bound": "束縛",
             "Force": "フォース",
@@ -2645,16 +2644,16 @@
                 "NPC": "NPCとして、メタヒューマンの能力値修正を適用します",
                 "PlaceMark": "すでにマークされている対象にさらにマークを付与するアクション",
                 "RemoveOneService": "サービスを1回分削除",
-                "ResetActorForNewRun": "ダメージやエッジなどをリセットして、新しいランを行う"
+                "ResetActorForNewRun": "ダメージやエッジなどをリセットして、新しいランを行う",
                 "RollInitiative": "イニシアチブを振る",
                 "PickControlledTokenAsDriver": "現在操作中のトークンをドライバーとして選択する",
                 "PickControlledTokenAsSummoner": "現在操作中のトークンを召喚者として選択する",
                 "PickControlledTokenAsTechnomancer": "現在操作中のトークンをコンパイル者（テクノマンサー）として選択する",
                 "RebootPersonaAndClearAllMarks": "ペルソナを再起動し、自分が付与したすべてのマークを消去する",
                 "SetupPAN": "装備中のすべてのワイヤレス・デバイスをこのキャラクターのペルソナ（PAN）に追加する"
-            }
+            },
             "CallInAction": {
-                "ActorType": "呼びだす対象"
+                "ActorType": "呼びだす対象",
                 "LinkActor": "召喚者をドラッグ＆ドロップするか、召喚アクションを行ってください"
             },
             "CompilationTest": {
@@ -2724,7 +2723,7 @@
                 "PushTheLimit": "エッジ消費による限界突破を使用する",
                 "RollMode": "ロールの結果を送信する範囲",
                 "Threshold": "計算後の目標値"
-            }
+            },
             "MatrixTest": {
                 "SameGridDisabled": "実行者と対象の双方が「グリッド」を使用しているため、同一グリッド内かどうかは自動的に判定されます"
             },
