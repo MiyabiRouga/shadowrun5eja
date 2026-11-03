@@ -3,11 +3,17 @@
 	"name": "shadowrun5eja",
 	"title": "日本語化（シャドウラン5e）",
 	"description": "Shadowrun 5eを日本語化するためのMod",
-	"version": "3.1",
-	"author": "Brother Sharp, k_1975, ragi256, yucky, MiyabiRouga",
+	"version": "4.0",
+	"authors": [
+		{"name": "Brother Sharp"},
+		{"name": "k_1975"},
+		{"name": "ragi256"},
+		{"name": "yucky"},
+		{"name": "MiyabiRouga"}
+	],
 	"compatibility": {
-		"minimum": "13",
-		"verified": "13"
+		"minimum": "14",
+		"verified": "14"
 	},
 	"languages": [
 		{
@@ -20,8 +26,7 @@
 	"scripts": [],
 	"styles" : [],
 	"packs": [],
-	"dependencies": [],
 	"url" : "https://github.com/MiyabiRouga/shadowrun5eja",
-	"download" : "https://github.com/MiyabiRouga/shadowrun5eja/releases/download/3.1/SR5ja_rel.zip",
+	"download" : "https://github.com/MiyabiRouga/shadowrun5eja/releases/download/4.0/SR5ja_rel.zip",
 	"manifest" : "https://raw.githubusercontent.com/MiyabiRouga/shadowrun5eja/master/module.json"
 }
